@@ -1,0 +1,5 @@
+# Runtime (build pipeline)
+beautifulsoup4>=4.12
+
+# Tests only
+playwright>=1.40

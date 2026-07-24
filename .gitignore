@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Test artifacts
+/tests/screenshots/*.png
+
+# Local tooling
+.vscode/
+.DS_Store
+
+# NOTE: .cache/pages/*.html and public/data.json are intentionally committed
+# as a working fallback snapshot; CI regenerates them on every run.

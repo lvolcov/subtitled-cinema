@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Subtitled, captioned and audio-described cinema screenings across Greater Manchester — updated automatically." />
+  <title>Subtitled Cinema — Greater Manchester</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">🎬</span>
+        <div>
+          <h1>Subtitled Cinema</h1>
+          <p class="tagline">Subtitled, captioned &amp; audio-described screenings · Greater Manchester</p>
+        </div>
+      </div>
+      <div class="stats" id="stats" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Filters">
+      <div class="search-row">
+        <input id="search" type="search" placeholder="Search film or cinema…"
+               autocomplete="off" aria-label="Search film or cinema" />
+        <button id="nearBtn" class="chip" type="button" aria-pressed="false">📍 Nearest</button>
+      </div>
+
+      <div class="seg" role="group" aria-label="When">
+        <button class="seg-btn active" data-day="all" type="button">All</button>
+        <button class="seg-btn" data-day="today" type="button">Today</button>
+        <button class="seg-btn" data-day="tomorrow" type="button">Tomorrow</button>
+        <button class="seg-btn" data-day="week" type="button">This week</button>
+      </div>
+
+      <div class="select-row">
+        <label>Cinema
+          <select id="cinemaFilter"><option value="">All cinemas</option></select>
+        </label>
+        <label>Access
+          <select id="accessFilter">
+            <option value="">All access</option>
+            <option value="subtitled">Subtitled</option>
+            <option value="audio-described">Audio described</option>
+          </select>
+        </label>
+        <label>Group by
+          <select id="groupBy">
+            <option value="cinema">Cinema</option>
+            <option value="film">Film</option>
+            <option value="day">Day</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <p id="resultSummary" class="result-summary" aria-live="polite"></p>
+    <section id="results" class="results"></section>
+    <p id="emptyState" class="empty" hidden>No screenings match your filters. Try “All” days or clearing the search.</p>
+  </main>
+
+  <footer class="footer wrap">
+    <p id="lastUpdated"></p>
+    <p class="disclaimer">
+      Screenings can change at short notice — always confirm on the cinema’s own site before travelling.
+      Data compiled from public listings. An independent, open-source project.
+    </p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
