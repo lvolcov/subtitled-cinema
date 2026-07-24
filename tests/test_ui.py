@@ -102,14 +102,17 @@ def tearDownModule():
 
 @unittest.skipUnless(HAVE_PW, "playwright not installed")
 class UI(unittest.TestCase):
-    def _page(self, w=390, h=844):
+    def _page(self, w=390, h=844, query=""):
         pg = _browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=2)
+        pg._console_errors = []
+        pg.on("console", lambda m: pg._console_errors.append(m.text) if m.type == "error" else None)
+        pg.on("pageerror", lambda e: pg._console_errors.append(str(e)))
         pg.add_init_script(
             f"window.__NOW__={json.dumps(NOW_ISO)};"
             f"window.__DATA__={json.dumps(DATA)};"
             f"window.__COORDS__={json.dumps(CENTRE)};"
         )
-        pg.goto(BASE + "/index.html")
+        pg.goto(BASE + "/index.html" + query)
         pg.wait_for_selector("body[data-ready='1']")
         return pg
 
@@ -216,6 +219,82 @@ class UI(unittest.TestCase):
         card = pg.locator(".card").first
         self.assertTrue(card.locator("a.primary", has_text="Book").count() >= 0)
         self.assertGreater(pg.locator(".links a", has_text="IMDb").count(), 0)
+        pg.close()
+
+    def test_no_console_errors(self):
+        pg = self._page()
+        pg.click('.card .film-title')          # open a film modal
+        pg.wait_for_selector("#modalRoot:not([hidden])")
+        pg.keyboard.press("Escape")
+        self.assertEqual(pg._console_errors, [])
+        pg.close()
+
+    def test_date_strip_present(self):
+        pg = self._page()
+        # All / Today / Tomorrow + specific upcoming days
+        self.assertGreater(pg.locator("#dateStrip .seg-btn").count(), 3)
+        pg.close()
+
+    def test_film_modal_lists_all_cinemas(self):
+        pg = self._page()
+        # The Odyssey is the most widely shown film -> many cinemas
+        pg.click('.card[data-film="the-odyssey"] .film-title')
+        pg.wait_for_selector("#modalRoot:not([hidden])")
+        self.assertEqual(pg.text_content("#modalTitle").strip(), "The Odyssey")
+        blocks = pg.locator(".modal-cinema").count()
+        self.assertGreater(blocks, 3, "film modal should list many cinemas")
+        # every showtime pill should be present
+        self.assertGreater(pg.locator(".showtime-pill").count(), blocks)
+        # cross-check against the data: distinct future cinemas for this film
+        expected = len({s["cinema_id"] for s in _flat(DATA)
+                        if s["film_id"] == "the-odyssey"
+                        and _dt(s["starts_at"]) >= NOW - timedelta(minutes=60)})
+        self.assertEqual(blocks, expected)
+        self.assertIn("view=film", pg.url)          # colon is %-encoded in the query
+        self.assertIn("the-odyssey", pg.url)
+        pg.close()
+
+    def test_deep_link_opens_film_modal(self):
+        pg = self._page(query="?view=film:moana")
+        pg.wait_for_selector("#modalRoot:not([hidden])")
+        self.assertEqual(pg.text_content("#modalTitle").strip(), "Moana")
+        pg.close()
+
+    def test_cinema_modal_opens(self):
+        pg = self._page()
+        pg.click('.group-title[data-open-cinema]')
+        pg.wait_for_selector("#modalRoot:not([hidden])")
+        self.assertTrue(pg.text_content("#modalTitle").strip())
+        self.assertIn("view=cinema", pg.url)
+        pg.close()
+
+    def test_escape_closes_modal(self):
+        pg = self._page()
+        pg.click('.card .film-title')
+        pg.wait_for_selector("#modalRoot:not([hidden])")
+        pg.keyboard.press("Escape")
+        pg.wait_for_selector("#modalRoot[hidden]", state="attached")
+        self.assertIsNotNone(pg.locator("#modalRoot").get_attribute("hidden"))
+        pg.close()
+
+    def test_filter_chips_and_clear_all(self):
+        pg = self._page()
+        pg.fill("#search", "odyssey")
+        pg.click('#dateStrip .seg-btn[data-day="today"]')
+        self.assertGreaterEqual(pg.locator(".fchip").count(), 2)   # incl. Clear all
+        pg.click(".fchip.clear-all")
+        self.assertEqual(pg.locator(".fchip").count(), 0)
+        self.assertEqual(pg.eval_on_selector("#search", "e=>e.value"), "")
+        self.assertEqual(self._summary_count(pg), expected_visible("all"))
+        pg.close()
+
+    def test_posters_render_for_known_film(self):
+        pg = self._page(query="?cinema=manchester-home")
+        # HOME shows The Odyssey which has a real poster -> at least one <img> loads
+        pg.wait_for_timeout(600)
+        loaded = pg.eval_on_selector_all(
+            ".poster img", "imgs => imgs.filter(i => i.complete && i.naturalWidth > 0).length")
+        self.assertGreater(loaded, 0, "expected at least one real poster image to load")
         pg.close()
 
     def test_screenshots(self):

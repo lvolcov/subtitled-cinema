@@ -34,6 +34,10 @@ jobs:
       - name: Fetch source listings
         run: python -m build.fetch_pages
 
+      - name: Resolve movie posters (refresh cache)
+        run: python -m build.posters
+        continue-on-error: true      # posters are best-effort; never block a deploy
+
       - name: Build data.json
         run: python -m build.build_site
 

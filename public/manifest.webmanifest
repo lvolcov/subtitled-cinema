@@ -1,0 +1,12 @@
+{
+  "name": "Subtitled Cinema — Greater Manchester",
+  "short_name": "Subtitled Cinema",
+  "description": "Subtitled, captioned & audio-described cinema screenings across Greater Manchester.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

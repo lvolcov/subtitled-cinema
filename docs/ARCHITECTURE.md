@@ -8,7 +8,8 @@ Three small Python steps under `build/`:
 
 1. **`fetch_pages.py`** — downloads the source city pages into `.cache/pages/`. A failed or suspicious fetch **never overwrites** a good cached copy, so a bad run can't wipe data.
 2. **`parse_ylc.py`** — parses each page into normalised `Cinema → Film → Screening` objects. Pure and side-effect-free (the "now" used for year inference is passed in), so it's fully unit-testable.
-3. **`build_site.py`** — merges cinemas across the four city pages, **dedupes** (a venue like Stockport Light appears on two pages; identical film+time screenings are collapsed), attaches coordinates + a `last_checked` stamp, and writes `public/data.json`.
+3. **`posters.py`** — resolves a real poster per film from its yourlocalcinema film page (the one `<img alt="">`), caching results in `build/poster_cache.json`. Runs between fetch and build; failures are best-effort and never block a deploy.
+4. **`build_site.py`** — merges cinemas across the four city pages, **dedupes** (a venue like Stockport Light appears on two pages; identical film+time screenings are collapsed), attaches coordinates, posters and a `last_checked` stamp, and writes `public/data.json`. Posters that back multiple different films (a shared page like `foreignlanguage.html`) are blanked so they never mislabel.
 
 Then `actions/upload-pages-artifact` + `deploy-pages` publish `public/`.
 
@@ -83,6 +84,9 @@ Plain static files — no framework, no build:
 - Showtimes are parsed as **local wall-clock** (`new Date(y,m,d,h,min)`) to avoid timezone drift; past screenings (>60 min) are hidden using the same clock.
 - **Dark, mobile-first**; responsive 1→2→3 column card grid; sticky filter bar.
 - Every venue block shows its **last-checked** date and links out to the cinema, so nothing is ever silently wrong.
+- **Detail dialogs & URL state:** tapping a film opens a dialog listing **every cinema showing it** (distance-sorted, each showtime a booking link); tapping a cinema lists all its screenings + a Maps link. All filters and the open dialog are serialised to the query string (`?day=…&cinema=…&view=film:the-odyssey`), so views are shareable and the back button closes dialogs. Dialogs are focus-trapped, Esc-closable, and restore focus (ARIA `role="dialog"`).
+- **Posters** load lazily over the fallback gradient tile and fade in; a broken URL simply removes the `<img>`, leaving the tile — a poster never shows as broken.
+- **Installable:** `manifest.webmanifest` + `theme-color` + an SVG icon make it a PWA; Open Graph tags give shared links a proper preview.
 - **Test hooks:** `window.__DATA__` (preload data), `window.__NOW__` (freeze the clock) and `window.__COORDS__` (inject a location without the geolocation prompt) make the UI deterministically testable.
 
 ## Testing

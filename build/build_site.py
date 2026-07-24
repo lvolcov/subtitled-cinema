@@ -18,6 +18,7 @@ from pathlib import Path
 
 from .parse_ylc import parse_page
 from .cinema_meta import COORDS
+from . import posters
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / ".cache" / "pages"
@@ -45,6 +46,26 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
     ref_date = ref_date or date.today()
     now = now or datetime.now()
     checked = now.replace(microsecond=0).isoformat()
+
+    # posters come from the pre-warmed cache only (build stays offline);
+    # `python3 -m build.posters` / CI refreshes the cache before building.
+    poster_cache = posters.load_cache()
+
+    # A single yourlocalcinema page (e.g. foreignlanguage.html) can back several
+    # different films — its image isn't film-specific, so don't use it as a
+    # poster. Find source_urls shared across >1 distinct film and blank them.
+    _src_films: dict[str, set] = {}
+    for city in CITIES:
+        html = (PAGES_DIR / f"{city}.html").read_text(encoding="utf-8")
+        for cin in parse_page(html, city, ref_date):
+            for film in cin.films:
+                _src_films.setdefault(film.source_url, set()).add(film_id(film.title))
+    shared = {su for su, fids in _src_films.items() if len(fids) > 1}
+
+    def poster_for(source_url):
+        if source_url in shared:
+            return None
+        return poster_cache.get(source_url)
 
     merged: dict[str, dict] = {}   # slug -> cinema dict
     for city in CITIES:
@@ -85,6 +106,7 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
                         "title": film.title,
                         "film_id": fid,
                         "source_url": film.source_url,
+                        "poster_url": poster_for(film.source_url),
                         "imdb_url": imdb_url(film.title),
                         "starts_at": s.starts_at,
                         "certificate": s.certificate,
@@ -103,11 +125,15 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
         for s in entry["screenings"]:
             f = films.setdefault(s["film_id"], {
                 "id": s["film_id"], "title": s["title"],
-                "certificate": s["certificate"], "count": 0,
+                "certificate": s["certificate"], "poster_url": s.get("poster_url"),
+                "count": 0, "cinemas": set(),
             })
             f["count"] += 1
+            f["cinemas"].add(entry["id"])
 
     cinemas.sort(key=lambda c: (c["area"] or c["name"]).lower())
+    for f in films.values():
+        f["cinema_count"] = len(f.pop("cinemas"))
     film_list = sorted(films.values(), key=lambda f: f["title"].lower())
 
     total_screenings = sum(len(c["screenings"]) for c in cinemas)

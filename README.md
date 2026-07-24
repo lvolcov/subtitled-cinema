@@ -4,7 +4,7 @@
 
 A free, self-updating alternative to [yourlocalcinema.com](https://yourlocalcinema.com) — which is a hand-typed static site that goes stale. This one refreshes itself automatically on GitHub Actions and publishes to GitHub Pages. No server, no hosting bill.
 
-![status](https://img.shields.io/badge/status-working%20MVP-35d07f) ![tests](https://img.shields.io/badge/tests-37%20passing-2ad1ff)
+![status](https://img.shields.io/badge/status-working%20MVP-35d07f) ![tests](https://img.shields.io/badge/tests-45%20passing-2ad1ff)
 
 ---
 
@@ -18,9 +18,14 @@ If you rely on subtitles, finding a screening you can actually watch is painful.
 
 - **Aggregates accessible screenings** across **12 cinemas** in Greater Manchester (Manchester, Stockport, Altrincham, Didsbury and nearby towns).
 - **Subtitled / captioned** screenings, plus **foreign-language films with English subtitles** (HOME's arthouse programme), plus **audio-described** support (parsed and badged when the source lists any).
-- **Browse & filter**: search box, day (All / Today / Tomorrow / This week), by cinema, by access type, and **group by cinema / film / day**.
-- **📍 Nearest** — with your permission, sorts cinemas by distance and shows miles.
-- **Certificate + accessibility + IMAX + "orig + subs" badges**, generated poster tiles, IMDb search link, and a **Book** link to the cinema chain.
+- **🎬 Real movie posters** for each film, with a graceful gradient-initials fallback.
+- **Pick a film → see every cinema showing it.** Tap a film to open a detail view listing all cinemas + showtimes for it, sorted by distance, each showtime linking straight to booking.
+- **Cinema detail** — tap a cinema to see all its subtitled screenings and open it in Maps.
+- **Browse & filter**: search, a **date strip** (All / Today / Tomorrow / then each upcoming day), by cinema, by access type, and **group by cinema / film / day**. Active filters show as removable chips with a "Clear all".
+- **📍 Nearest** — with your permission, sorts by distance (persisted) and shows miles.
+- **Shareable & bookmarkable** — filters and the open film/cinema live in the URL, so links share exactly what you see and the back button works.
+- **Installable (PWA)** with Open Graph link previews; certificate / captioned / subtitles / IMAX / audio-described badges; IMDb links.
+- **Accessible**: 0 axe violations, full keyboard + screen-reader support, focus-trapped dialogs, skip link, reduced-motion aware.
 - **Honest about freshness** — every venue shows when it was last checked; past screenings (>60 min ago) drop off automatically.
 
 Live numbers from the last build: **12 cinemas · 133 screenings · 16 films**.
@@ -48,15 +53,17 @@ subtitled-cinema/
 ├── build/                    # the pipeline (Python)
 │   ├── fetch_pages.py        # download source pages -> .cache/pages/
 │   ├── parse_ylc.py          # parse both page layouts -> normalised screenings
+│   ├── posters.py            # resolve movie posters -> build/poster_cache.json
 │   ├── cinema_meta.py        # hand-curated coordinates for "nearest"
-│   └── build_site.py         # merge + dedupe -> public/data.json
+│   └── build_site.py         # merge + dedupe + posters -> public/data.json
 ├── public/                   # the site GitHub Pages serves
 │   ├── index.html
-│   ├── assets/{styles.css, app.js}
+│   ├── assets/{styles.css, app.js, icon.svg}
+│   ├── manifest.webmanifest
 │   └── data.json             # generated
 ├── tests/
 │   ├── test_parse.py         # 24 parser + pipeline unit tests
-│   ├── test_ui.py            # 13 Playwright UI tests (+ screenshots)
+│   ├── test_ui.py            # 21 Playwright UI tests (+ screenshots)
 │   └── screenshots/          # visual output from the UI tests
 ├── .cache/pages/             # committed source snapshot (CI refreshes it)
 ├── .github/workflows/        # build+deploy, and CI tests
@@ -71,7 +78,7 @@ subtitled-cinema/
 make install     # beautifulsoup4 + playwright chromium
 make all         # fetch fresh listings + build public/data.json
 make serve       # http://localhost:8000
-make test        # 37 tests (parser + Playwright UI)
+make test        # 45 tests (parser + Playwright UI)
 ```
 
 No build step for the site itself — `public/` is plain static files.
@@ -79,7 +86,7 @@ No build step for the site itself — `public/` is plain static files.
 ## Testing
 
 - **`tests/test_parse.py`** — showtime parsing (carry-forward times, year rollover), accessibility/certificate extraction, chain detection, both page layouts, and the merge/dedupe pipeline.
-- **`tests/test_ui.py`** — drives the real page in headless Chromium: renders, no mobile overflow, every filter (day/search/cinema/access), group-by, nearest-with-distance, and links. Expected counts are computed in Python by mirroring the JS rules, so they're not brittle magic numbers. Writes screenshots to `tests/screenshots/`.
+- **`tests/test_ui.py`** — drives the real page in headless Chromium: renders, no mobile overflow, every filter (day/search/cinema/access), group-by, nearest-with-distance, the **film detail modal (film → all cinemas)**, **cinema detail**, **deep-links** (`?view=film:…`), filter chips + clear-all, Esc-to-close, **real posters load**, and **zero console errors**. Expected counts are computed in Python by mirroring the JS rules, so they're not brittle magic numbers. Writes screenshots to `tests/screenshots/`.
 
 ## Decisions at a glance
 
@@ -98,7 +105,7 @@ No build step for the site itself — `public/` is plain static files.
 
 - **V1 (now):** source from yourlocalcinema's four city pages — fast to ship, immediately better UX.
 - **V2:** scrape the cinema chains directly (Odeon/Vue/Cineworld JSON APIs) for exact **per-showing booking deep-links** and independence from YLC. See [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md).
-- Real posters/runtimes via a film metadata source; more cities.
+- Runtimes/synopses via a film metadata source; vendored (self-hosted) posters; more cities.
 
 ## Docs
 

@@ -3,27 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="description" content="Subtitled, captioned and audio-described cinema screenings across Greater Manchester — updated automatically." />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0d10" />
   <title>Subtitled Cinema — Greater Manchester</title>
+  <meta name="description" content="Subtitled, captioned and audio-described cinema screenings across Greater Manchester — updated automatically. Pick a film and see every cinema showing it." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Subtitled Cinema — Greater Manchester" />
+  <meta property="og:description" content="Every subtitled, captioned & audio-described screening near you. Pick a film, see all cinemas showing it." />
+  <meta property="og:site_name" content="Subtitled Cinema" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="assets/icon.svg" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <a class="skip" href="#results">Skip to listings</a>
+
   <header class="topbar">
     <div class="wrap topbar-inner">
       <div class="brand">
         <span class="brand-mark" aria-hidden="true">🎬</span>
         <div>
           <h1>Subtitled Cinema</h1>
-          <p class="tagline">Subtitled, captioned &amp; audio-described screenings · Greater Manchester</p>
+          <p class="tagline">Subtitled, captioned &amp; audio-described · Greater Manchester</p>
         </div>
       </div>
       <div class="stats" id="stats" aria-live="polite"></div>
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="wrap" id="main">
     <section class="controls" aria-label="Filters">
       <div class="search-row">
         <input id="search" type="search" placeholder="Search film or cinema…"
@@ -31,12 +44,7 @@
         <button id="nearBtn" class="chip" type="button" aria-pressed="false">📍 Nearest</button>
       </div>
 
-      <div class="seg" role="group" aria-label="When">
-        <button class="seg-btn active" data-day="all" type="button">All</button>
-        <button class="seg-btn" data-day="today" type="button">Today</button>
-        <button class="seg-btn" data-day="tomorrow" type="button">Tomorrow</button>
-        <button class="seg-btn" data-day="week" type="button">This week</button>
-      </div>
+      <div class="datestrip" id="dateStrip" role="group" aria-label="Choose a day"></div>
 
       <div class="select-row">
         <label>Cinema
@@ -45,7 +53,7 @@
         <label>Access
           <select id="accessFilter">
             <option value="">All access</option>
-            <option value="subtitled">Subtitled</option>
+            <option value="subtitled">Subtitled / captioned</option>
             <option value="audio-described">Audio described</option>
           </select>
         </label>
@@ -57,10 +65,18 @@
           </select>
         </label>
       </div>
+
+      <div id="activeChips" class="active-chips" aria-label="Active filters"></div>
     </section>
 
     <p id="resultSummary" class="result-summary" aria-live="polite"></p>
-    <section id="results" class="results"></section>
+
+    <div id="skeleton" class="skeleton" aria-hidden="true">
+      <div class="sk-group"></div>
+      <div class="sk-cards"><div class="sk-card"></div><div class="sk-card"></div><div class="sk-card"></div></div>
+    </div>
+
+    <section id="results" class="results" tabindex="-1"></section>
     <p id="emptyState" class="empty" hidden>No screenings match your filters. Try “All” days or clearing the search.</p>
   </main>
 
@@ -68,9 +84,21 @@
     <p id="lastUpdated"></p>
     <p class="disclaimer">
       Screenings can change at short notice — always confirm on the cinema’s own site before travelling.
-      Data compiled from public listings. An independent, open-source project.
+      Data compiled from public listings. An independent, open-source project ·
+      <a href="https://github.com/lvolcov/subtitled-cinema" target="_blank" rel="noopener">source on GitHub</a>.
     </p>
   </footer>
+
+  <!-- detail dialog (film or cinema) -->
+  <div id="modalRoot" class="modal-root" hidden>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="modal-close" type="button" data-close aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Back to top" hidden>↑</button>
 
   <script src="assets/app.js"></script>
 </body>
