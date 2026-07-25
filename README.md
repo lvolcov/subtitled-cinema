@@ -35,13 +35,14 @@ Live numbers from the last build: **12 cinemas · 133 screenings · 16 films**.
 GitHub Pages only serves static files, so all the work happens **before** publish, inside **GitHub Actions** (see [`.github/workflows/build.yml`](.github/workflows/build.yml)):
 
 ```
-        ┌──────────────── GitHub Actions (cron: every 6h) ────────────────┐
-        │                                                                 │
-  source│  fetch_pages.py  ──▶  build_site.py  ──▶  public/data.json      │
-  pages ┼─▶ download 4     ──▶  parse + merge  ──▶  + static site  ──▶ ────┼─▶ GitHub Pages
-        │   city pages          + dedupe             (dark, mobile)        │      (public URL)
-        │                                                                 │
-        └─────────────────────────────────────────────────────────────────┘
+     ┌──────────────────── GitHub Actions (cron: every 6h) ────────────────────┐
+     │                                                                          │
+source  fetch_pages.py     posters.py         build_site.py                     │
+pages ─▶ download 4    ─▶  resolve a       ─▶ parse + merge + dedupe   ─▶ ───────┼─▶ GitHub Pages
+     │   city pages         poster/film         + coords + posters              │      (public URL)
+     │                      (cached)            → public/data.json + site       │
+     │                                                                          │
+     └──────────────────────────────────────────────────────────────────────────┘
 ```
 
 The visitor just loads a fast static page (`index.html` + `data.json`); all filtering, search and distance sorting happen in the browser. Full detail in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
@@ -107,7 +108,36 @@ No build step for the site itself — `public/` is plain static files.
 - **V2:** scrape the cinema chains directly (Odeon/Vue/Cineworld JSON APIs) for exact **per-showing booking deep-links** and independence from YLC. See [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md).
 - Runtimes/synopses via a film metadata source; vendored (self-hosted) posters; more cities.
 
+## Troubleshooting & FAQ
+
+**The listings look out of date.** The site rebuilds every 6 hours; new
+screenings appear within that window. Every venue also shows a "last checked"
+date and links out to the cinema — always confirm there before travelling.
+
+**A poster is missing / shows a coloured tile with initials.** Some films have no
+poster on the source (e.g. National Theatre Live), and the foreign-language
+arthouse titles share one source page so their poster is deliberately blanked to
+avoid mislabelling. The tile is the intended fallback. To refresh posters:
+`python3 -m build.posters`.
+
+**"Nearest" does nothing.** It needs location permission; if denied it silently
+falls back to A–Z. Grant location and tap 📍 Nearest again (the choice is
+remembered).
+
+**Booking opens the chain homepage, not the exact showing.** Correct for now —
+the source doesn't expose per-showing links. Exact deep-links are the V2 goal
+(see [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md)).
+
+**A GitHub Actions run shows a "Node.js 20 is deprecated" warning.** Harmless —
+it's a GitHub platform notice, not a failure, and not fixable from this repo.
+
+**How do I add a cinema or a whole city?** Cities are data, not code — see the
+recipes in [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md).
+
 ## Docs
 
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — pipeline, `data.json` schema, frontend, testing.
-- [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md) — where the data comes from, the venues found, and the path to direct scraping.
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — full technical detail: pipeline modules, exact `data.json` schema, parsing internals, frontend state/URL model, testing, deployment, extension.
+- [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md) — where the data comes from, every venue found, poster resolution, data caveats, the freshness contract, and the V2 first-party-scraping plan.
+- [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) — setup, `make` commands, common recipes (add a city/cinema/poster), conventions, and testing gotchas.
+- [`docs/UX-AUDIT.md`](docs/UX-AUDIT.md) — the accessibility/usability audit that drove v2: method, findings, what shipped, and a bug it caught.
+- [`CHANGELOG.md`](CHANGELOG.md) — version history (v1 MVP, v2 UX pass) and roadmap.
