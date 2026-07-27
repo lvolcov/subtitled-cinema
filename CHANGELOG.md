@@ -8,6 +8,25 @@ This is a continuously-deployed static site (GitHub Actions → GitHub Pages), s
 
 ---
 
+## [v5] — 2026-07-27 — Smart per-film booking links
+
+### Added
+- **Booking links now open the *film*, not the chain homepage** (`build/booking.py`).
+  **Cineworld** → its title search; **Vue** → the film's own page (slug verified
+  against myvue.com at build time so it never 404s, cached in
+  `booking_vue_cache.json`); **everyone else** (Odeon, Everyman, Picturehouse,
+  Curzon, HOME, Light, independents) → a Google search `"<title>" <cinema> tickets`
+  that lands on that venue's page for the film. Each screening carries its own
+  `book` URL in `data.json`.
+
+### Known limits
+- The exact **date/time** still can't be pre-selected — public listings expose no
+  per-showing booking URL, so the film page is where you choose the time. Odeon
+  can't be linked directly (its site sits behind a bot queue), so it uses the
+  Google fallback. True per-showing deep-links need first-party chain APIs (V2).
+
+---
+
 ## [v4] — 2026-07-27 — Whole-UK coverage + direct IMDb links + national "nearest"
 
 ### Added

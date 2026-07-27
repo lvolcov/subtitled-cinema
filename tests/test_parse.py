@@ -236,6 +236,14 @@ class BuildPipeline(unittest.TestCase):
         nearest = min(miles(newcastle, p) for p in placed)
         self.assertLess(nearest, 5, f"nearest cinema to Newcastle is {nearest:.1f} mi away")
 
+    def test_every_screening_has_a_smart_book_link(self):
+        # each showtime links to the film (chain site or a scoped search), never a
+        # dead/homepage link.
+        for c in self.data["cinemas"]:
+            for s in c["screenings"]:
+                self.assertTrue(s.get("book", "").startswith("https://"),
+                                f"{c['id']} / {s['title']} has no smart book link")
+
     def test_screenings_sorted(self):
         for c in self.data["cinemas"]:
             times = [s["starts_at"] for s in c["screenings"]]

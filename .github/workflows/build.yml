@@ -46,6 +46,10 @@ jobs:
         run: python -m build.imdb
         continue-on-error: true      # falls back to search links; never block a deploy
 
+      - name: Verify Vue film-page links (smart booking)
+        run: python -m build.booking
+        continue-on-error: true      # falls back to search links; never block a deploy
+
       - name: Cache per-venue coordinates (YLC locator feed)
         run: python -m build.coords_feed
         continue-on-error: true      # per-venue coords for "nearest"; never block a deploy

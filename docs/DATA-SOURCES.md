@@ -105,9 +105,15 @@ us the IMDb id. Anything still unresolved shows the clean gradient-initials tile
   Delivery Service*, *Angel's Egg*, *Girlfriends*). These are badged **"Subtitles"**
   (they carry subtitles inherently), distinct from English films badged
   **"Captioned"** (accessibility captions).
-- **Booking links** point at the **chain website**, not the exact showing — the
-  source doesn't expose per-showing booking URLs reliably. Exact per-showing
-  deep-links are the main V2 goal.
+- **Booking links** are per-*film* "smart links" (`build/booking.py`), not the
+  chain homepage: **Cineworld** → its title search, **Vue** → the film's page
+  (slug verified against myvue.com at build time, cached), **everyone else**
+  (Odeon — its site sits behind a bot queue that hides good vs bad URLs —
+  Everyman/Picturehouse/Curzon/HOME/Light/independents) → a Google search
+  `"<title>" <cinema name> tickets`, which lands on that venue's page for the
+  film. The exact date/time still can't be pre-selected — public listings expose
+  no per-showing booking URL, so the film page is where you pick the time. Exact
+  per-showing deep-links remain the V2 goal (first-party chain APIs).
 - **No runtimes / synopses** — the source doesn't provide them. Certificates
   (U/PG/12A/15/18) *are* parsed. **IMDb links are direct `tt…` links** where
   Wikidata resolves the id (most mainstream films); the rest keep an honest IMDb

@@ -77,7 +77,7 @@
         SESSIONS.push({
           title: s.title, film_id: s.film_id, poster: s.poster_url, cert: s.certificate,
           acc: s.accessibility || [], lang: s.language, screen: s.screen_type, imdb: s.imdb_url,
-          when: when, cinema: c, book: c.booking_url || "#"
+          when: when, cinema: c, book: s.book || c.booking_url || "#"
         });
       });
     });

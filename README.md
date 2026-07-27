@@ -124,9 +124,12 @@ avoid mislabelling. The tile is the intended fallback. To refresh posters:
 falls back to A–Z. Grant location and tap 📍 Nearest again (the choice is
 remembered).
 
-**Booking opens the chain homepage, not the exact showing.** Correct for now —
-the source doesn't expose per-showing links. Exact deep-links are the V2 goal
-(see [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md)).
+**Booking opens the film, but not the exact showing.** Each showtime is a "smart
+link" to that film on the cinema's own site (Cineworld search / Vue film page) or
+a precise Google search for the film at that venue — not the chain homepage. The
+exact date/time still can't be pre-selected because public listings expose no
+per-showing booking URL, so the film page is where you pick your time. Exact
+per-showing deep-links are the V2 goal (see [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md)).
 
 **A GitHub Actions run shows a "Node.js 20 is deprecated" warning.** Harmless —
 it's a GitHub platform notice, not a failure, and not fixable from this repo.

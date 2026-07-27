@@ -21,6 +21,7 @@ from .cinema_meta import COORDS
 from . import posters
 from . import posters_wiki
 from . import imdb
+from . import booking
 from . import geocode
 from . import geocode_name
 from . import coords_feed
@@ -61,6 +62,7 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
     poster_cache = posters.load_cache()
     wiki_cache = posters_wiki.load_cache()
     imdb_cache = imdb.load_cache()      # film_id -> "tt…" (direct IMDb links)
+    vue_cache = booking.load_vue_cache()  # Vue slug -> exists? (per-film booking)
     geo_cache = geocode.load_cache()    # outward postcode -> [lat,lng] (nearest)
     feed_coords = coords_feed._as_sets(coords_feed.load_cache())  # per-venue coords
     name_geo = geocode_name.load_cache()   # venue name -> [lat,lng] (Nominatim)
@@ -139,6 +141,7 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
                         "source_url": film.source_url,
                         "poster_url": poster_for(film.source_url, fid),
                         "imdb_url": imdb_url(film.title, imdb_cache.get(fid)),
+                        "book": booking.link_for(cin.chain, film.title, cin.name, vue_cache),
                         "starts_at": s.starts_at,
                         "certificate": s.certificate,
                         "accessibility": s.accessibility,
