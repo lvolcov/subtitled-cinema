@@ -86,6 +86,10 @@ def _cinemas_by_chain(chain):
 
 def setUpModule():
     global _server, _pw, _browser, DATA
+    # Pin the UI tests to a small, stable subset of towns so assertions stay
+    # deterministic (the full national set has, e.g., a cinema literally named
+    # "St Albans Odyssey" that would break a search-for-"odyssey" test) and fast.
+    build_site.CITIES = ["manchester", "stockport", "altrincham", "didsbury"]
     DATA = build_site.build(ref_date=REF, now=datetime(2026, 7, 24, 9, 0))
     build_site.main()  # ensure public/data.json exists too, then serve public/
     _server = subprocess.Popen(

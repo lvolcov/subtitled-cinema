@@ -38,6 +38,18 @@ jobs:
         run: python -m build.posters
         continue-on-error: true      # posters are best-effort; never block a deploy
 
+      - name: Resolve Wikipedia poster fallbacks
+        run: python -m build.posters_wiki
+        continue-on-error: true
+
+      - name: Resolve direct IMDb ids (via Wikidata)
+        run: python -m build.imdb
+        continue-on-error: true      # falls back to search links; never block a deploy
+
+      - name: Geocode venues by postcode (for "nearest")
+        run: python -m build.geocode
+        continue-on-error: true      # falls back to curated coords; never block a deploy
+
       - name: Build data.json
         run: python -m build.build_site
 

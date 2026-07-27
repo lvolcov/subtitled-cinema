@@ -187,9 +187,25 @@ class BuildPipeline(unittest.TestCase):
             keys = [(s["film_id"], s["starts_at"]) for s in c["screenings"]]
             self.assertEqual(len(keys), len(set(keys)), f"dupes in {c['id']}")
 
-    def test_all_cinemas_have_coords(self):
-        missing = [c["id"] for c in self.data["cinemas"] if c["lat"] is None]
-        self.assertEqual(missing, [], f"missing coords: {missing}")
+    def test_curated_coords_present(self):
+        # every hand-curated venue keeps its coordinate (nationwide scale means we
+        # can't hand-curate all 500+ venues, so this is the invariant that holds
+        # regardless of the geocode cache).
+        from build.cinema_meta import COORDS
+        for c in self.data["cinemas"]:
+            if c["id"] in COORDS:
+                self.assertIsNotNone(c["lat"], f"{c['id']} lost its curated coord")
+
+    def test_geocode_fallback_wired(self):
+        # any venue that has coords but isn't hand-curated must have received them
+        # from the postcode geocode cache — proves the nationwide "nearest" path.
+        from build.cinema_meta import COORDS
+        from build import geocode
+        geo = geocode.load_cache()
+        for c in self.data["cinemas"]:
+            if c["lat"] is not None and c["id"] not in COORDS and c["postcode"]:
+                self.assertEqual([c["lat"], c["lng"]], geo.get(c["postcode"]),
+                                 f"{c['id']} coord not from geocode cache")
 
     def test_screenings_sorted(self):
         for c in self.data["cinemas"]:

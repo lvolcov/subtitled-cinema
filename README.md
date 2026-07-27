@@ -1,10 +1,10 @@
 # subtitled-cinema
 
-**A fast, honest, mobile-first guide to subtitled, captioned and audio-described cinema screenings across Greater Manchester.**
+**A fast, honest, mobile-first guide to subtitled, captioned and audio-described cinema screenings across the UK.**
 
 A free, self-updating alternative to [yourlocalcinema.com](https://yourlocalcinema.com) — which is a hand-typed static site that goes stale. This one refreshes itself automatically on GitHub Actions and publishes to GitHub Pages. No server, no hosting bill.
 
-![status](https://img.shields.io/badge/status-working%20MVP-35d07f) ![tests](https://img.shields.io/badge/tests-45%20passing-2ad1ff)
+![status](https://img.shields.io/badge/status-working-35d07f) ![coverage](https://img.shields.io/badge/coverage-whole%20UK-2ad1ff)
 
 ---
 
@@ -16,7 +16,7 @@ If you rely on subtitles, finding a screening you can actually watch is painful.
 
 ## What it does today
 
-- **Aggregates accessible screenings** across **25 cinemas** covering the whole of Greater Manchester and its ring (Manchester, Salford, Stockport, Altrincham, Bolton, Bury, Rochdale, Oldham, Ashton, Wigan, Warrington and more) — every subtitling chain venue plus the independents (Reel, the Rex, Omniplex).
+- **Aggregates accessible screenings** across **~550 cinemas covering the whole UK** — every subtitling chain (Odeon, Vue, Cineworld, Everyman, Picturehouse, Light, Curzon, Omniplex…) plus hundreds of independents, from Aberdeen and Inverness to Cornwall, and across every corner of London.
 - **Subtitled / captioned** screenings, plus **foreign-language films with English subtitles** (HOME's arthouse programme), plus **audio-described** support (parsed and badged when the source lists any).
 - **🎬 Real movie posters** for each film, with a graceful gradient-initials fallback.
 - **Pick a film → see every cinema showing it.** A film rail up top (poster + a "showing at N cinemas" count) is the main way in; tap one to filter the whole list to that film, grouped by cinema and sorted by distance, each showtime linking out to booking.
@@ -24,11 +24,11 @@ If you rely on subtitles, finding a screening you can actually watch is painful.
 - **Browse & filter**: search, a **date strip** (All / Today / Tomorrow / then each upcoming day), a **grouped multi-select cinema picker** (tick a whole chain — Vue, Odeon… — or individual venues), access type, and **group by cinema / film / day**. Filters live in a slim collapsible drawer; active filters show as removable chips with a "Clear all".
 - **📍 Nearest** — with your permission, sorts by distance (persisted) and shows miles.
 - **Shareable & bookmarkable** — filters and the open film/cinema live in the URL, so links share exactly what you see and the back button works.
-- **Installable (PWA)** with Open Graph link previews; certificate / captioned / subtitles / IMAX / audio-described badges; IMDb links.
+- **Installable (PWA)** with Open Graph link previews; certificate / captioned / subtitles / IMAX / audio-described badges; **direct IMDb links** (straight to each film's `tt…` page, resolved via Wikidata).
 - **Accessible**: 0 axe violations, full keyboard + screen-reader support, skip link, reduced-motion aware.
 - **Honest about freshness** — every venue shows when it was last checked; past screenings (>40 min ago) drop off automatically.
 
-Live numbers from the last build: **25 cinemas · 207 screenings · 17 films**.
+Live numbers from the last build: **~550 cinemas · ~4,800 screenings · ~190 films** (varies as past screenings drop off and the source updates).
 
 ## How it works
 
@@ -37,11 +37,11 @@ GitHub Pages only serves static files, so all the work happens **before** publis
 ```
      ┌──────────────────── GitHub Actions (cron: every 6h) ────────────────────┐
      │                                                                          │
-source  fetch_pages.py     posters.py         build_site.py                     │
-pages ─▶ download 4    ─▶  resolve a       ─▶ parse + merge + dedupe   ─▶ ───────┼─▶ GitHub Pages
-     │   city pages         poster/film         + coords + posters              │      (public URL)
-     │                      (cached)            → public/data.json + site       │
-     │                                                                          │
+source  fetch_pages.py    posters / imdb /    build_site.py                     │
+pages ─▶ download ~155 ─▶  geocode resolvers ─▶ parse + merge + dedupe  ─▶ ──────┼─▶ GitHub Pages
+     │   UK town pages      (cached: posters,     + coords + posters             │      (public URL)
+     │                      IMDb ids, coords)     + IMDb links                   │
+     │                                          → public/data.json + site       │
      └──────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -97,7 +97,7 @@ No build step for the site itself — `public/` is plain static files.
 | Hosting | GitHub Pages (free, static) |
 | Stack | Python build pipeline · vanilla static frontend (no framework) |
 | Updates | Automatic via GitHub Actions, **every 6 hours** |
-| Launch area | Greater Manchester + ring (8 yourlocalcinema town pages); built to add cities as data |
+| Coverage | Whole UK (~155 yourlocalcinema town pages, auto-discovered from YLC's store-locator feed) |
 | What counts | Subtitled/captioned **+** audio-described; English subs **&** foreign-with-English-subs |
 | Design | Dark, mobile-first |
 | On scrape failure | Keep last data, stamp "last checked", link out (fetch never wipes cache) |

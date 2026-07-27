@@ -35,14 +35,19 @@ make install
 | `make all` | `fetch` then `build`. |
 | `make serve` | Serve `public/` at http://localhost:8000. |
 | `make test` | Run all 45 tests (parser + Playwright UI). |
-| `make test-parse` | Just the 24 Python parser/pipeline tests (fast, no browser). |
-| `make test-ui` | Just the 21 Playwright UI tests. |
+| `make test-parse` | Just the 25 Python parser/pipeline tests (fast, no browser). |
+| `make test-ui` | Just the 20 Playwright UI tests. |
 
-Refresh posters explicitly (network) — cache is committed, so this is only
-needed when films change:
+The network-touching resolvers are separate and all cached (caches are committed,
+so a normal `make build` fetches nothing). Refresh them when the data changes:
 
 ```bash
-python3 -m build.posters
+python3 -m build.fetch_pages     # download the ~155 UK town pages
+python3 -m build.posters         # YLC per-film posters
+python3 -m build.posters_wiki    # Wikipedia poster fallback (shared-page films)
+python3 -m build.imdb            # direct IMDb tt ids, via Wikidata
+python3 -m build.geocode         # postcode -> coordinates, via postcodes.io
+python3 -m build.discover_towns  # re-derive the town list from YLC's locator feed
 ```
 
 ## 4. Typical local loop
@@ -65,20 +70,25 @@ refresh — no build step.
 ```
 subtitled-cinema/
 ├── build/                    # Python build pipeline
-│   ├── fetch_pages.py        # download YLC city pages (validates; never wipes cache)
-│   ├── parse_ylc.py          # parse both page layouts → Cinema/Film/Screening (pure)
-│   ├── posters.py            # resolve a poster per film → build/poster_cache.json
-│   ├── cinema_meta.py        # hand-curated {slug: (lat,lng)} for "nearest"
+│   ├── discover_towns.py     # derive the UK town list from YLC's store-locator feed
+│   ├── fetch_pages.py        # download the ~155 town pages (validates; never wipes cache)
+│   ├── parse_ylc.py          # parse all three page layouts → Cinema/Film/Screening (pure)
+│   ├── posters.py            # YLC per-film poster → build/poster_cache.json
+│   ├── posters_wiki.py       # Wikipedia poster fallback → build/poster_wiki_cache.json
+│   ├── imdb.py               # direct IMDb tt ids via Wikidata → build/imdb_cache.json
+│   ├── geocode.py            # postcode → coords via postcodes.io → build/geo_cache.json
+│   ├── cinema_meta.py        # hand-curated {slug: (lat,lng)} (wins over geocode)
 │   ├── build_site.py         # merge + dedupe + enrich → public/data.json
-│   └── poster_cache.json     # committed poster cache (CI refreshes it)
+│   └── *_cache.json          # committed caches (CI refreshes them)
 ├── public/                   # exactly what GitHub Pages serves
 │   ├── index.html
 │   ├── assets/{styles.css, app.js, icon.svg}
 │   ├── manifest.webmanifest
 │   └── data.json             # GENERATED — do not hand-edit
 ├── tests/
-│   ├── test_parse.py         # 24 parser + pipeline unit tests
-│   ├── test_ui.py            # 21 Playwright UI tests
+│   ├── test_parse.py         # 25 parser + pipeline unit tests
+│   ├── audit_coverage.py     # per-town undercount check (not a unit test)
+│   ├── test_ui.py            # 20 Playwright UI tests
 │   └── screenshots/          # written by the UI tests (git-ignored)
 ├── .cache/pages/*.html       # committed source snapshot (CI refreshes it)
 ├── .github/workflows/        # build.yml (deploy), ci.yml (tests)
@@ -90,23 +100,30 @@ subtitled-cinema/
 
 ## 6. Common tasks (recipes)
 
-### 6.1 Add a new city
+### 6.1 Refresh / extend the town list
 
-Cities are data, not code:
+`CITIES` in `build/fetch_pages.py` already covers every UK town page YLC
+publishes. When YLC adds towns, regenerate the list from its own locator feed
+rather than editing by hand:
 
-1. Add the YLC page name to `CITIES` in `build/fetch_pages.py` (e.g. add
-   `"bolton"`). `build/build_site.py` imports the same list, so one edit covers
-   both fetch and build. (Confirm the page exists first — `curl -sI
-   https://yourlocalcinema.com/bolton.html` should 200; YLC only publishes pages
-   where it has data.)
-2. `make fetch` to pull it, then inspect the parse:
-   ```bash
-   python3 -c "from datetime import date; from build.parse_ylc import parse_page; \
-   print([(c.name,c.screening_count) for c in \
-   parse_page(open('.cache/pages/bolton.html').read(),'bolton',date.today())])"
-   ```
-3. Add coordinates for any *new* venues in `build/cinema_meta.py` (see 6.2).
-4. `make build && make test`.
+```bash
+python3 -m build.discover_towns     # prints an up-to-date CITIES = [...] block
+```
+
+Paste the block into `build/fetch_pages.py` (`build_site.py` imports the same
+list, so one edit covers both fetch and build), then `make fetch && make build`.
+To sanity-check one page's parse:
+
+```bash
+python3 -c "from datetime import date; from build.parse_ylc import parse_page; \
+print([(c.name,c.screening_count) for c in \
+parse_page(open('.cache/pages/york.html').read(),'york',date.today())])"
+```
+
+Coordinates for new venues are handled automatically by `build/geocode.py` (from
+each venue's postcode); hand-curate in `cinema_meta.py` only when you want a more
+precise point (see 6.2). Run `python3 -m tests.audit_coverage` to check nothing is
+being under-parsed.
 
 ### 6.2 Add coordinates for a venue (so "nearest" works)
 
@@ -159,8 +176,9 @@ should cover, remember the **test hooks**: `window.__DATA__`, `window.__NOW__`,
   inside it.
 - **Parser = raw facts; builder = enrichment.** Slugs, IMDb links, coordinates,
   posters, dedupe, sorting all live in `build_site.py`, never in a per-page path.
-- **`build()` is offline.** It reads the poster cache; it never fetches. Only
-  `fetch_pages.py` and `posters.py` touch the network.
+- **`build()` is offline.** It reads the committed caches; it never fetches. Only
+  the resolvers (`fetch_pages`, `posters`, `posters_wiki`, `imdb`, `geocode`,
+  `discover_towns`) touch the network.
 - **Times are local wall-clock.** `starts_at` is tz-naive; the frontend parses it
   component-wise. Never introduce `new Date(isoString)` in `app.js`.
 - **Don't hand-edit generated files** (`public/data.json`, `build/poster_cache.json`).

@@ -28,7 +28,7 @@ from dataclasses import dataclass, field, asdict
 from datetime import date, datetime
 from typing import Optional
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 MONTHS = {
     "jan": 1, "january": 1, "feb": 2, "february": 2, "mar": 3, "march": 3,
@@ -69,10 +69,23 @@ CHAIN_URL = {
 }
 
 
-def detect_chain(name: str, img_alts=()) -> Optional[str]:
+# chain booking domains -> chain, for when a logo has no alt text but does link out
+CHAIN_DOMAINS = {
+    "odeon.co.uk": "Odeon", "myvue.com": "Vue", "cineworld": "Cineworld",
+    "picturehouses.com": "Picturehouse", "lightcinemas": "Light",
+    "everymancinema": "Everyman", "homemcr": "HOME", "curzon.com": "Curzon",
+    "theregentmarple": "Regent",
+}
+
+
+def detect_chain(name: str, img_alts=(), hrefs=()) -> Optional[str]:
     hay = (name + " " + " ".join(img_alts)).lower()
     for kw, chain in CHAIN_KEYWORDS:
         if kw in hay:
+            return chain
+    href_hay = " ".join(hrefs).lower()
+    for domain, chain in CHAIN_DOMAINS.items():
+        if domain in href_hay:
             return chain
     return None
 
@@ -278,6 +291,46 @@ def _parse_layout_a(soup: BeautifulSoup, city: str, ref: date) -> list:
 POSTCODE_RE = re.compile(r"\b([A-Z]{1,2}\d{1,2}[A-Z]?)(?:\s*\d[A-Z]{0,2})?\b")
 
 
+# junk that leaks into venue headings on badly-nested aggregation pages
+_HEADING_CUTS = ("subtitled", "captioned", "audio described", "none listed",
+                 "click for", "ask cinema", "ask the cinema")
+
+
+def _is_namable(name: str) -> bool:
+    """Whether a heading gave us a real venue name (vs an unnamable fragment)."""
+    return bool(name) and name != "Unknown cinema" and any(ch.isalpha() for ch in name)
+
+
+def _venue_name(name: str, city: str, chain: Optional[str] = None) -> tuple:
+    """Fall back to the town (plus chain, if a logo told us one) when a heading
+    gave us nothing usable — some pages list a single cinema with no heading at all
+    (e.g. island towns, or a lone Curzon). Better to show its shows under
+    "Oxford Curzon" / "Orkney" than to drop them. Returns (name, used_fallback)."""
+    if _is_namable(name):
+        return name, False
+    label = city.replace("-", " ").title()
+    if chain:
+        label = f"{label} {chain}"
+    return label, True
+
+
+def _truncate_heading(full: str) -> str:
+    """Trim film/showtime text and site chrome that malformed markup dumps into a
+    venue heading, and strip stray link-target tokens (target=, layerNN)."""
+    cut = len(full)
+    m = DATE_TOKEN_RE.search(full)
+    if m:
+        cut = min(cut, m.start())
+    low = full.lower()
+    for kw in _HEADING_CUTS:
+        i = low.find(kw)
+        if i >= 0:
+            cut = min(cut, i)
+    full = full[:cut]
+    full = re.sub(r"\b(?:target|layer\d+)\b", " ", full, flags=re.I)
+    return re.sub(r"\s+", " ", full).strip(" -–,")
+
+
 def _name_from_segment(nodes) -> tuple:
     """Assemble (name, area, postcode) from the text nodes before a film-block.
 
@@ -296,8 +349,18 @@ def _name_from_segment(nodes) -> tuple:
         else:
             texts.append(str(n).strip())
 
+    # an "area" is sometimes a long comma-list of served districts — keep the last
+    # one (nearest the venue), e.g. "Tottenham, …, Whitechapel" -> "Whitechapel".
     area = strongs[0] if strongs else None
+    if area and "," in area:
+        area = area.split(",")[-1].strip()
     full = re.sub(r"\s+", " ", " ".join(t for t in texts if t)).strip()
+    # a served-districts list (many commas) collapses to the venue's own district
+    if full.count(",") >= 3:
+        full = full.split(",")[-1].strip()
+    full = _truncate_heading(full)
+    if area:
+        area = _truncate_heading(area)
 
     postcode = None
     pm = POSTCODE_RE.search(full)
@@ -357,7 +420,10 @@ def _parse_layout_b(soup: BeautifulSoup, city: str, ref: date) -> list:
             if isinstance(n, Tag):
                 hrefs += [a.get("href", "") for a in n.find_all("a")]
                 alts += [img.get("alt", "") for img in n.find_all("img")]
-        chain = detect_chain(name, alts)
+        chain = detect_chain(name, alts, hrefs)
+        name, fell_back = _venue_name(name, city, chain)
+        if fell_back:
+            area = name
         booking = booking_for(chain, hrefs, name=name, postcode=postcode)
         cin = Cinema(name=name, area=area, city=city, chain=chain,
                      postcode=postcode, booking_url=booking)
@@ -368,15 +434,197 @@ def _parse_layout_b(soup: BeautifulSoup, city: str, ref: date) -> list:
 
 
 # --------------------------------------------------------------------------- #
+# layout C: newer templates (document-order walk)
+# --------------------------------------------------------------------------- #
+# yourlocalcinema is migrating town pages to redesigned templates. They keep the
+# same logical shape — an <hr>-delimited venue heading (chain logo + area/brand/
+# postcode text) followed by that venue's listings — but the markup is malformed
+# (unclosed <strong>/<a>/<font> swallow everything into nested tags) and the
+# listings come in two flavours: the old `.film-block` (p.film-title + p.showtime)
+# OR a newer `.film-entry` (title + cert) paired with a following `.film-date`
+# (showtimes). The <hr>-on-direct-children split in layout B can't see through the
+# bad nesting, so we walk the container in document order instead, treating each
+# film unit as a leaf (its inner text isn't venue-name context).
+_NAME_NOISE = (
+    "none listed", "click for info", "ask the cinema", "ask cinema", "important!",
+    "also:", "check local", "check with", "foreign-language", "foreign language",
+    "shows!", "provide acces", "schedule", "subtitles will", "definitely",
+    "set out", "short notice",
+)
+
+
+def _find_listing_container(soup: BeautifulSoup):
+    """The nearest ancestor of the first film unit that also holds the <hr>
+    separators (cinema-list on redesigned pages, a blockquote on .film-entry ones)."""
+    unit = soup.find(class_=["film-block", "film-entry"])
+    if unit is None:
+        return None
+    node = unit.parent
+    while node is not None and getattr(node, "name", None) not in ("body", "html", "[document]"):
+        if node.find("hr"):
+            return node
+        node = node.parent
+    return soup.select_one("div.cinema-list") or soup.body or soup
+
+
+def _is_unit(t: Tag) -> bool:
+    return bool({"film-block", "film-entry", "film-date"} & set(t.get("class") or []))
+
+
+def _walk_events(container: Tag) -> list:
+    """('hr',None) | ('unit',tag) | ('text',str) | ('img',alt) in document order.
+    Does not descend into film units — their text is listings, not venue names."""
+    events = []
+
+    def rec(node):
+        for ch in node.children:
+            if isinstance(ch, Tag):
+                if ch.name in ("style", "script", "head", "noscript"):
+                    continue                       # never venue-name text
+                if ch.name == "hr":
+                    events.append(("hr", None))
+                elif _is_unit(ch):
+                    events.append(("unit", ch))
+                elif ch.name == "img":
+                    events.append(("img", ch.get("alt", "") or ""))
+                else:
+                    rec(ch)
+            elif isinstance(ch, NavigableString):
+                s = str(ch).strip()
+                if s:
+                    events.append(("text", s))
+
+    rec(container)
+    return events
+
+
+def _looks_like_listing(s: str) -> bool:
+    """A film/showtime line that leaked into the heading region (some aggregation
+    pages have badly nested markup) — never part of a venue name."""
+    low = s.lower()
+    return bool(DATE_TOKEN_RE.search(s)) or "subtitled" in low or "captioned" in low \
+        or "audio described" in low or bool(CERT_RE.search(s))
+
+
+def _name_from_fragments(texts, alts) -> tuple:
+    """(name, area, postcode) from the ordered heading text before a venue's units."""
+    keep = [t for t in texts
+            if not any(n in t.lower() for n in _NAME_NOISE)
+            and not _looks_like_listing(t)]
+    full = _truncate_heading(re.sub(r"\s+", " ", " ".join(keep)).strip())
+    postcode = None
+    pm = POSTCODE_RE.search(full)
+    if pm:
+        postcode = pm.group(1)
+        full = full.replace(pm.group(0), " ")
+    name = re.sub(r"[^A-Za-z0-9&/'\-, ]", " ", full)
+    name = re.sub(r"\s+", " ", name).strip(" -–,")
+    area = keep[0].strip(" ,") if keep else name
+    return (name or "Unknown cinema"), (area or name), postcode
+
+
+def _films_from_units(units, ref: date) -> list:
+    """Turn an ordered list of film units into Film objects. Handles both the
+    `.film-block` and the paired `.film-entry`/`.film-date` markups."""
+    films = []
+    i = 0
+    while i < len(units):
+        u = units[i]
+        cls = set(u.get("class") or [])
+        if "film-block" in cls:
+            films.extend(parse_film_block(u, ref))
+            i += 1
+            continue
+        if "film-entry" in cls:
+            a = u.find("a")
+            title = (a.get_text(strip=True) if a else u.get_text(" ", strip=True))
+            source_url = a.get("href") if a else None
+            span = u.find("span")
+            span_text = span.get_text(" ", strip=True) if span else ""
+            attrs = parse_access(span_text or u.get_text(" ", strip=True))
+            times = []
+            if i + 1 < len(units) and "film-date" in set(units[i + 1].get("class") or []):
+                times = parse_showtimes(units[i + 1].get_text(" ", strip=True), ref)
+                i += 2
+            else:
+                i += 1
+            if title and times:
+                film = Film(title=title, source_url=source_url)
+                for iso in times:
+                    film.screenings.append(Screening(
+                        starts_at=iso, accessibility=attrs["accessibility"],
+                        certificate=attrs["certificate"], screen_type=attrs["screen_type"],
+                        note=span_text, language=attrs["language"]))
+                films.append(film)
+            continue
+        i += 1
+    return films
+
+
+def _parse_layout_c(soup: BeautifulSoup, city: str, ref: date) -> list:
+    container = _find_listing_container(soup)
+    if container is None:
+        return []
+    cinemas = []
+    seg_texts, seg_alts, seg_units = [], [], []
+
+    def flush():
+        if not seg_units:
+            return
+        name, area, postcode = _name_from_fragments(seg_texts, seg_alts)
+        chain = detect_chain(name, seg_alts)
+        name, fell_back = _venue_name(name, city, chain)
+        if fell_back:
+            area = name
+        booking = booking_for(chain, (), name=name, postcode=postcode)
+        cin = Cinema(name=name, area=area, city=city, chain=chain,
+                     postcode=postcode, booking_url=booking)
+        cin.films.extend(_films_from_units(seg_units, ref))
+        if cin.screening_count and _is_namable(cin.name):
+            cinemas.append(cin)
+
+    for kind, val in _walk_events(container):
+        if kind == "hr":
+            flush()
+            seg_texts, seg_alts, seg_units = [], [], []
+        elif kind == "unit":
+            seg_units.append(val)
+        elif kind == "text":
+            if not seg_units:            # heading text only, before the listings
+                seg_texts.append(val)
+        elif kind == "img" and val:
+            seg_alts.append(val)
+    flush()
+    return cinemas
+
+
+# --------------------------------------------------------------------------- #
 # public entry point
 # --------------------------------------------------------------------------- #
 def parse_page(html: str, city: str, ref_date: Optional[date] = None) -> list:
-    """Parse one city page into a list of Cinema objects (only those with shows)."""
+    """Parse one city page into a list of Cinema objects (only those with shows).
+
+    Tries the two original layouts first (unchanged); when they find nothing —
+    a page has been migrated to a redesigned/malformed template — falls back to
+    the document-order walk that copes with the newer markup.
+    """
     ref = ref_date or date.today()
     soup = BeautifulSoup(html, "html.parser")
     if soup.select_one("div.cinema"):
-        return _parse_layout_a(soup, city, ref)
-    return _parse_layout_b(soup, city, ref)
+        cinemas = _parse_layout_a(soup, city, ref)
+        if cinemas:
+            return cinemas
+    # The old hr-split (B) and the document-order walk (C) each win on different
+    # templates — B on some malformed aggregation pages, C on redesigned ones where
+    # bad nesting hides the venues from B. Run both and keep the fuller reading so a
+    # migrated page can never silently under-report its venues.
+    b = _parse_layout_b(soup, city, ref)
+    c = _parse_layout_c(soup, city, ref)
+
+    def _score(cs):
+        return (sum(x.screening_count for x in cs), len(cs))
+
+    return b if _score(b) >= _score(c) else c
 
 
 def cinema_to_dict(c: Cinema) -> dict:

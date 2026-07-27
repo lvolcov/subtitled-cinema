@@ -20,7 +20,7 @@ works, how state is managed, how it's tested, and how to extend it.
    │                                                                             │
    │  build/fetch_pages.py    build/posters.py       build/build_site.py         │
    │  ───────────────────     ────────────────       ──────────────────          │
-   │  download the 4 YLC  →   resolve a poster    →  parse each page, merge &     │
+   │  download ~155 YLC →   resolve a poster    →  parse each page, merge &     │
    │  city pages into          per film, cache        dedupe cinemas, attach      │
    │  .cache/pages/*.html      to poster_cache.json   coords + posters + stamps   │
    │                                                  → write public/data.json    │

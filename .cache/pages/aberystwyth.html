@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<script async="true" id="pixel-script-poptin" src="https://cdn.popt.in/pixel.js?id=98668651c0509"></script>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Aberystwyth – Subtitled &amp; Captioned Screenings</title>
+<style>
+:root{
+  --bg:#000;
+  --panel:rgba(11,11,11,.85);
+  --text:#eaeaea;
+  --muted:#bdbdbd;
+  --accent:#00AFFF;
+  --radius:8px;
+  --max-width:1200px;
+  --header-height:90px;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  background:#000;
+  color:var(--text);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 17px;
+}
+
+/* ===== Global link styling ===== */
+
+a{
+  color:#7fd6ff;
+  text-decoration:none;
+  text-underline-offset:2px;
+}
+
+a:hover{
+  color:#aee8ff;
+  text-decoration:underline;
+}
+
+a:visited{
+  color:#7fd6ff;
+}
+
+a[href^="http"]:not([href*="yourlocalcinema.com"]){
+  color:#8fe3ff;
+}
+
+a[href^="http"]:not([href*="yourlocalcinema.com"]):hover{
+  color:#c8f1ff;
+}
+
+a:focus-visible{
+  outline:2px solid #7fd6ff;
+  outline-offset:2px;
+  border-radius:3px;
+}
+
+/* ===== Header ===== */
+
+.topbar{
+  position:sticky;
+  top:0;
+  index:1000;
+  background:var(--panel);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.topbar-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 1rem;
+  height:var(--header-height);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.logo img{
+  height:63px;
+  width:auto;
+  display:block;
+}
+
+.nav-toggle{
+  background:none;
+  border:none;
+  color:var(--text);
+  font-size:2rem;
+  cursor:pointer;
+}
+
+/* ===== Menu ===== */
+
+.menu{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:.8rem;
+}
+
+.menu a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:1.05rem;
+}
+
+@media (max-width:700px){
+  .menu{
+    display:none;
+    position:fixed;
+    top:var(--header-height);
+    left:0;
+    right:0;
+    background:rgba(11,11,11,.95);
+    flex-direction:column;
+    align-items:flex-end;
+  }
+  .menu a{ padding:.3rem 1rem; }
+  body.menu-open .menu{ display:flex; }
+}
+
+/* ===== Main ===== */
+
+main{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:1.5rem 1rem;
+}
+
+/* ===== Filters ===== */
+
+.filters{
+  display:flex;
+  gap:0.5rem;
+  margin-bottom:1.5rem;
+}
+
+.filters button{
+  background:#111;
+  border:1px solid rgba(255,255,255,0.15);
+  color:#ccc;
+  padding:0.4rem 0.7rem;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.filters button.active{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+/* ===== Cinema blocks ===== */
+
+.cinema{
+  background:#111;
+  border-radius:8px;
+  padding:1rem;
+  margin-bottom:1.5rem;
+}
+
+.cinema h2{
+  margin:0.5rem 0 0.5rem 0;
+}
+
+/* ===== Film output ===== */
+
+.film-block{
+  margin-top:1rem;
+}
+
+.film{
+  background:#0c0c0c;
+  border-radius:6px;
+  padding:0.6rem;
+  margin-bottom:1rem;
+}
+
+.film-title{
+  margin:0;
+  font-weight:600;
+}
+
+.showtime{
+  margin:0.2rem 0 0 0;
+  color:#bbb;
+}
+
+/* ===== Tiles ===== */
+
+.tiles{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+  gap:1rem;
+  margin:2rem 0;
+}
+
+.tile{
+  background:#111;
+  border-radius:8px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.tile img{
+  width:100%;
+  display:block;
+}
+
+.tile .desc{
+  padding:0.6rem;
+  font-size:0.9rem;
+  color:#bbb;
+}
+
+/* ===== Footer ===== */
+
+footer{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:2.5rem 1rem 3rem;
+  font-size:.9rem;
+  color:#bdbdbd;
+}
+
+footer .small{ font-size:.85rem; color:#999; }
+
+.social-icons{
+  margin-top:2rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  align-items:center;
+}
+
+.social-icons img{
+  height:60px;
+  width:auto;
+  display:block;
+}
+</style>
+</head>
+<body>
+<!-- ===== HEADER ===== -->
+<div class="topbar">
+<div class="topbar-inner">
+<a class="logo" href="https://www.yourlocalcinema.com">
+<img alt="Your Local Cinema" src="mainlogo.png" width="100"/>
+</a>
+<button class="nav-toggle" onclick="document.body.classList.toggle('menu-open')">☰</button>
+<ul class="menu">
+<li><a href="index.html">Now Showing</a></li>
+<li><a href="locations.html">Locations</a></li>
+<li><a href="trailers.html">Trailers</a></li>
+<li><a href="explain.html">News</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="ireland.html">Ire/NI</a></li>
+</ul>
+</div>
+</div>
+<main>
+<!-- ===== Filters ===== -->
+<div class="filters">
+<button class="active" data-filter="all" type="button">All</button>
+<button data-filter="today" type="button">Today</button>
+<button data-filter="tomorrow" type="button">Tomorrow</button>
+</div>
+<!-- ===== Cinemas ===== --><div class="cinema-list"><a href="https://www.mwldan.co.uk/tags/audiodescribed" target="layer21">
+<hr noshade=""/>
+</a><font color="000000" face="Verdana, Arial, Helvetica, sans-serif" size="-2"><strong><a href="https://www.everymancinema.com/home"></a></strong></font><img height="25" src="mwldan2014.png" width="90"/><br/>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><strong><a href="aberystwyth.html">Cardigan</a></strong> Mwldan <font size="-2"><em> SA43 <br/>
+</em></font></font><div class="film-block"><p class="film-title"><a href="disclosureday.html">Disclosure Day</a> <span class="showtime">subtitled (12a)</span></p><p class="showtime">Sun 26 Jul 20:00, Mon 27 Jul 20:00, Tue 28 Jul 20:00</p><p class="film-title"><a href="evildead.html">Evil Dead Burn</a> <span class="showtime">subtitled (18)</span></p><p class="showtime">Fri 07 Aug 20:30, Sat 08 Aug 20:30, Sun 09 Aug 20:30, Mon 10 Aug 20:30, Tue 11 Aug 20:30, Wed 12 Aug 20:30, Thu 13 Aug 20:30</p><p class="film-title"><a href="theinvite.html">The Invite</a> <span class="showtime">subtitled (15)</span></p><p class="showtime">Fri 31 Jul 18:45, Sat 01 Aug 18:45, Sun 02 Aug 18:45, Mon 03 Aug 18:45, Tue 04 Aug 18:45, Thu 06 Aug 18:45</p><p class="film-title"><a href="minionsandmonsters.html">Minions and Monsters</a> <span class="showtime">subtitled (U)</span></p><p class="showtime">Sun 26 Jul 13:30, Mon 27 Jul 13:30, Tue 28 Jul 13:30, Wed 29 Jul 13:30, Thu 30 Jul 13:30, Fri 31 Jul 16:30, Sat 01 Aug 16:30, Sun 02 Aug 16:30, Mon 03 Aug 16:30, Tue 04 Aug 16:30, Wed 05 Aug 16:30, Fri 07 Aug 18:00, Sat 08 Aug 18:00, Sun 09 Aug 18:00, Mon 10 Aug 18:00, Tue 11 Aug 18:00, Wed 12 Aug 18:00, Thu 13 Aug 18:00, Fri 14 Aug 13:30, Sat 15 Aug 13:30, Sun 16 Aug 13:30, Mon 17 Aug 13:30, Tue 18 Aug 13:30, Wed 19 Aug 13:30, Thu 20 Aug 13:30, Fri 21 Aug 16:30, Sat 22 Aug 16:15</p><p class="film-title"><a href="moana.html">Moana</a> <span class="showtime">subtitled (PG)</span></p><p class="showtime">Sun 26 Jul 12:45, 16:30, Mon 27 Jul 12:45, 16:30, Tue 28 Jul 12:45, 16:30, Wed 29 Jul 12:45, 16:30, Thu 30 Jul 12:45, 16:30, Fri 31 Jul 13:30, 15:45, Sat 01 Aug 13:30, 15:45, Sun 02 Aug 13:30, 15:45, Mon 03 Aug 13:30, 15:45, Tue 04 Aug 13:30, 15:45, Wed 05 Aug 13:30, 15:45, Thu 06 Aug 13:30, 15:45, Fri 07 Aug 15:45, Sat 08 Aug 15:45, Sun 09 Aug 15:45, Mon 10 Aug 15:45, Tue 11 Aug 15:45, Wed 12 Aug 15:45, Thu 13 Aug 15:45, Fri 14 Aug 15:45, Sat 15 Aug 15:45, Sun 16 Aug 15:45, Mon 17 Aug 15:45, Tue 18 Aug 15:45, Wed 19 Aug 15:45, Thu 20 Aug 15:45, Fri 21 Aug 13:15, Sat 22 Aug 13:15</p><p class="film-title"><a href="obsession.html">Obsession</a> <span class="showtime">subtitled (18)</span></p><p class="showtime">Fri 14 Aug 19:30, Sat 15 Aug 19:30, Sun 16 Aug 19:30, Mon 17 Aug 19:30, Tue 18 Aug 19:30, Wed 19 Aug 19:30, Thu 20 Aug 19:30</p><p class="film-title"><a href="theodyssey.html">The Odyssey</a> <span class="showtime">subtitled (15)</span></p><p class="showtime">Sun 26 Jul 12:30, 15:45, 18:45, Mon 27 Jul 12:30, 15:45, 18:45, Tue 28 Jul 12:30, 15:45, 18:45, Wed 29 Jul 12:30, 15:45, 18:45, Thu 30 Jul 12:30, 15:45, 18:45, Fri 31 Jul 19:15, Sat 01 Aug 19:15, Sun 02 Aug 19:15, Mon 03 Aug 19:15, Tue 04 Aug 19:15, Wed 05 Aug 19:15, Thu 06 Aug 19:30, Fri 07 Aug 18:45, Sat 08 Aug 18:45, Sun 09 Aug 18:45, Mon 10 Aug 18:45, Tue 11 Aug 18:45, Wed 12 Aug 18:45, Thu 13 Aug 18:45, Fri 14 Aug 18:45, Sat 15 Aug 18:45, Sun 16 Aug 18:45, Mon 17 Aug 18:45, Tue 18 Aug 18:45, Wed 19 Aug 18:45, Thu 20 Aug 18:45, Fri 21 Aug 16:15, 18:45, Sat 22 Aug 18:45</p><p class="film-title"><a href="toystory.html">Toy Story 5</a> <span class="showtime">subtitled (PG)</span></p><p class="showtime">Sun 26 Jul 16:00, Mon 27 Jul 16:00, Tue 28 Jul 16:00, Wed 29 Jul 16:00, Thu 30 Jul 16:00, Fri 31 Jul 13:00, Sat 01 Aug 13:00, Sun 02 Aug 13:00, Mon 03 Aug 13:00, Tue 04 Aug 13:00, Wed 05 Aug 13:00, Thu 06 Aug 13:00, Fri 07 Aug 13:15, Sat 08 Aug 13:15, Sun 09 Aug 13:15, Mon 10 Aug 13:15, Tue 11 Aug 13:15, Wed 12 Aug 13:15, Thu 13 Aug 13:15, Fri 14 Aug 13:15, Sat 15 Aug 13:15, Sun 16 Aug 13:15, Mon 17 Aug 13:15, Tue 18 Aug 13:15, Wed 19 Aug 13:15, Thu 20 Aug 13:15, Fri 21 Aug 14:00</p></div>
+<hr noshade=""/>
+<img alt="" height="34" src="magiclantern.jpg" width="134"/><br/>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><strong><a href="aberystwyth.html">Gwynedd</a></strong></font> <font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Magic Lantern </font><em> LL36 <br/>
+</em><p class="showtime">NONE listed. Ask cinema to provide accessible subtitled shows! Please read <a href="/explain.html">THIS</a></p>
+<hr noshade=""/>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><strong><a href="aberystwyth.html">Gwynedd</a></strong> Neuadd Dwyfor </font><em> LL53 <br/>
+</em>#match location: "Gwynedd"; company: "<font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Neuadd Dwyfor</font>"#
+<hr noshade=""/>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><strong><a href="aberystwyth.html">Aberystwyth</a></strong> Commodore</font><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><em><br/>
+</em></font><p class="showtime">NONE listed. Ask cinema to provide accessible subtitled shows! Please read <a href="/explain.html">THIS</a></p>
+<hr noshade=""/>
+<img alt="" height="18" src="Aberystwytharts.jpg" width="145"/><br/>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><strong><a href="aberystwyth.html">Aberystwyth</a></strong> Arts Centre, </font><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><em>Ceredigion SY23 <br/>
+</em></font><div class="film-block">
+<p class="film-title"><a href="theodyssey.html">The Odyssey</a> <span class="showtime">subtitled (15)</span></p>
+<p class="showtime">Mon 03 Aug 18:30</p>
+</div>
+<hr noshade=""/>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><strong><a href="aberystwyth.html">Aberystwyth</a></strong> National Library </font><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><em>SY23 <br/>
+</em></font><p class="showtime">NONE listed. Ask cinema to provide accessible subtitled shows! Please read <a href="/explain.html">THIS</a></p>
+<hr noshade=""/>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><strong><a href="AFS.aberystwyth.html">Fishguard</a></strong> Theatr Gwaun </font><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><em>SA65<br/>
+</em></font>#match location: "Fishguard"; company: "<font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Theatr Gwaun</font>"#<br/>
+<strong></strong>
+<hr noshade=""/>
+<em><strong>Also: Check local cinemas for <a href="foreignlanguage.html" target="layer21">foreign-language</a> shows!  <br/>
+<br/>
+IMPORTANT! Shows can cancel/change at short notice. Check the actual website of the cinema you are attending before you set out. Check with cinema staff that the subtitles will DEFINITELY be switched ON. All cinemas CAN schedule subtitled screenings of the latest popular films at convenient, sociable times. Ask them to!</strong></em></div><p>All cinemas can schedule subtitled screenings of popular films. Please ask cinemas to do this – at convenient, sociable times!</p>
+<!-- ===== Tiles ===== -->
+<section class="tiles">
+<div class="tile" data-href="https://www.watchword.cc/locations"><a href="https://www.watchword.cc/locations"><img src="glasses2020.jpg"/></a>
+<div class="desc">Some UK cinemas now provide Subtitle/Caption Glasses!</div></div>
+<div class="tile" data-href="trailers.html"><a href="trailers.html"><img src="trailers.jpg"/>
+<div class="desc">Thousands of Subtitled/Captioned Trailers!</div>
+</a></div>
+<div class="tile" data-href="https://www.surveymonkey.co.uk/r/YourLocalCinema"><a href="https://www.surveymonkey.co.uk/r/YourLocalCinema"><img src="images/wincinemagiftcard.jpg"/></a>
+<div class="desc">Please take a minute to respond to our Survey</div></div>
+<div class="tile" data-href="locations.html"><a href="locations.html"><img src="images/locationsnew.jpg"/></a>
+<div class="desc">Subtitled/Captioned Cinema Locations</div></div>
+<div class="tile" data-href="explain.html"><a href="explain.html"><img src="images/newsnew.jpg"/></a>
+<div class="desc">Subtitled/Captioned Cinema News</div></div>
+<div class="tile" data-href="quote.html"><a href="quote.html"><img src="images/feedbacknew.jpg"/></a>
+<div class="desc">Happy Customers!</div></div>
+<div class="tile" data-href="sponsors.html"><a href="sponsors.html"><img src="images/sponsorsnew2021.jpg"/></a>
+<div class="desc">Our Valued Sponsors</div></div>
+<div class="tile" data-href="https://www.stagetext.org"><a href="https://www.stagetext.org"><img src="images/captionedtheatre.jpg"/></a>
+<div class="desc">Captioned Theatre</div></div>
+</section>
+</main>
+<footer>
+<p class="small"><a href="sponsors.html">© Your Local Cinema 2026<br/>
+  Supported by the National Lottery &amp; the UK Film Industry<br/>
+<img alt="" height="64" src="2026logosA.png" width="246"/>
+<img alt="" height="64" src="2026logosB.png" width="411"/><br/><br/>
+</a></p>
+<div class="social-icons">
+<a href="mailto:subtitles@yourlocalcinema.com"><img alt="Email" src="/email.jpg"/></a>
+<a href="https://twitter.com/yourlocalcinema/likes"><img alt="X" src="/twitter.jpg"/></a>
+<a href="whatsapp://send?abid=yourlocalcinema&amp;text=Hi"><img alt="WhatsApp" src="/whatsapp.jpg"/></a>
+<a href="sms:+447931341377"><img alt="Text" src="/text.jpg"/></a>
+<a href="https://www.facebook.com/YourLocalCinemaDotCom"><img alt="Facebook" src="/facebook.jpg"/></a>
+<a href="tel:08450569824"><img alt="Phone" src="/phone.jpg"/></a>
+<a href="https://www.youtube.com/playlist?list=PLGgjU56Oq2bmA6nkHUOFGbQ8rmYlU_ReB"><img alt="YouTube" src="/youtube.jpg"/></a>
+</div>
+</footer>
+<script>
+(function(){
+
+  const buttons = document.querySelectorAll('.filters button');
+
+  const MONTHS = {
+    jan:0, january:0, feb:1, february:1, mar:2, march:2, apr:3, april:3,
+    may:4, jun:5, june:5, jul:6, july:6, aug:7, august:7,
+    sep:8, sept:8, september:8, oct:9, october:9, nov:10, november:10,
+    dec:11, december:11
+  };
+
+  
+function parseDateTimeFromShowtime(text){
+  if(!text) return null;
+  const t = text.toLowerCase();
+
+  const dm = t.match(/\b(\d{1,2})\s+(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|sept|september|oct|october|nov|november|dec|december)/);
+  if(!dm) return null;
+
+  const day = parseInt(dm[1], 10);
+  const month = MONTHS[dm[2]];
+
+  const tm = t.match(/(\d{1,2}):(\d{2})/);
+  let hour = 0, minute = 0;
+  if(tm){
+    hour = parseInt(tm[1], 10);
+    minute = parseInt(tm[2], 10);
+  }
+
+  const now = new Date();
+  return new Date(now.getFullYear(), month, day, hour, minute, 0, 0);
+}
+
+
+function sameDay(a, b){
+    return a && b &&
+      a.getFullYear() === b.getFullYear() &&
+      a.getMonth() === b.getMonth() &&
+      a.getDate() === b.getDate();
+  }
+
+  // Flatten nested film-blocks if any script created them
+  function fixNestedFilmBlocks(){
+    document.querySelectorAll('.film-block .film-block').forEach(inner => {
+      const outer = inner.parentElement;
+      while(inner.firstChild){
+        outer.insertBefore(inner.firstChild, inner);
+      }
+      inner.remove();
+    });
+  }
+
+  function normalise(){
+  fixNestedFilmBlocks();
+
+  document.querySelectorAll('.film-block').forEach(block => {
+
+    const titles = Array.from(block.querySelectorAll('p.film-title'));
+
+    titles.forEach(titleP => {
+      let p = titleP.nextElementSibling;
+
+      if(!p || !p.classList.contains('showtime')) return;
+
+      const wrap = document.createElement('div');
+      wrap.className = 'film';
+
+      block.insertBefore(wrap, titleP);
+      wrap.appendChild(titleP);
+
+      // Attach ALL following showtime paragraphs to this film
+      let firstTime = null;
+
+      while(p && p.classList.contains('showtime')){
+        const next = p.nextElementSibling;
+        wrap.appendChild(p);
+
+        if(!firstTime) firstTime = p;
+
+        p = next;
+      }
+
+      // Use the first showtime line for filtering
+      if(firstTime){
+        const d = parseDateTimeFromShowtime(firstTime.textContent);
+        if(d){
+          wrap.dataset.time = String(d.getTime());
+        }
+      }
+    });
+  });
+}
+
+
+  function apply(mode){
+    const now = new Date();
+
+    const base = new Date();
+    base.setHours(0,0,0,0);
+
+    const today = new Date(base);
+    const tomorrow = new Date(base);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    const films = document.querySelectorAll('.film');
+
+    films.forEach(f => {
+      let d = null;
+      if(f.dataset.time){
+        d = new Date(parseInt(f.dataset.time, 10));
+      }
+
+      if(!d){
+        f.style.display = "";
+        return;
+      }
+
+      const minutesAgo = (now - d) / 60000;
+      if(minutesAgo > 60){
+        f.style.display = "none";
+        return;
+      }
+
+      if(mode === "all"){
+        f.style.display = "";
+        return;
+      }
+
+      let show = false;
+      if(mode === "today") show = sameDay(d, today);
+      if(mode === "tomorrow") show = sameDay(d, tomorrow);
+
+      f.style.display = show ? "" : "none";
+    });
+
+    // Hide empty cinemas only for filtered views
+    if(mode !== "all"){
+      document.querySelectorAll('.cinema').forEach(cinema => {
+        const any = cinema.querySelector('.film:not([style*="display: none"])');
+        cinema.style.display = any ? "" : "none";
+      });
+    } else {
+      document.querySelectorAll('.cinema').forEach(cinema => {
+        cinema.style.display = "";
+      });
+    }
+  }
+
+  // Initialise
+  normalise();
+  apply("all");
+
+  buttons.forEach(b => {
+    b.addEventListener('click', () => {
+      buttons.forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      apply(b.dataset.filter);
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

@@ -8,6 +8,50 @@ This is a continuously-deployed static site (GitHub Actions → GitHub Pages), s
 
 ---
 
+## [v4] — 2026-07-27 — Whole-UK coverage + direct IMDb links + national "nearest"
+
+### Added
+- **National coverage.** Expanded from 8 Greater Manchester town pages to **all
+  ~155 yourlocalcinema town pages across the UK**, discovered from YLC's own
+  store-locator feed (`build/discover_towns.py`). Coverage jumps from **25 → ~550+
+  cinemas** and **~200 → ~4,800 screenings** — every subtitling chain and
+  independent from Aberdeen to Cornwall, London to Cardiff.
+- **A third parser layout + fuller-reading routing.** YLC is migrating town pages
+  to redesigned templates (malformed nesting; a new `.film-entry`/`.film-date`
+  markup). Added a document-order walk (`_parse_layout_c`) that copes with both,
+  and `parse_page` now runs the old hr-split **and** the new walk and keeps the
+  reading that captures more venues — so a migrated page can never silently
+  under-report. Heading sanitising strips leaked film text, inline `<style>`, and
+  served-district lists; heading-less one-cinema pages fall back to the town name.
+- **Direct IMDb links.** IMDb links now go straight to the film's `tt…` page
+  instead of a search. Resolved via Wikidata (Wikipedia → Wikidata item → IMDb ID
+  P345) in `build/imdb.py`, cached in `build/imdb_cache.json`; films we can't
+  resolve keep the honest search link. (IMDb itself blocks bots, so Wikidata is
+  the reliable, key-less bridge — and the same lookup underpins better posters.)
+- **National "nearest".** Hand-curating coordinates for 550+ venues isn't
+  feasible, so `build/geocode.py` resolves each venue's outward postcode to a
+  district centroid via postcodes.io (free, key-less), cached in
+  `build/geo_cache.json`. Hand-curated `cinema_meta.COORDS` still win where present.
+- **Coverage audit tool** (`tests/audit_coverage.py`): flags any town page whose
+  raw showtime count far exceeds what we parsed (undercount signal). Used to drive
+  the parser fixes; only the Ireland/NI page (a distinct film-organised layout)
+  remains, tracked as a follow-up.
+
+### Changed
+- Posters now also fall back through the Wikidata-verified film, filling more of
+  the (much larger) national film set.
+- `test_all_cinemas_have_coords` → `test_curated_coords_present` +
+  `test_geocode_fallback_wired` (100%-hand-curated is no longer the invariant at
+  national scale).
+
+### Known gaps
+- The **Ireland / Northern Ireland** page uses a film-organised layout (each film
+  lists its cinemas) with titles encoded only in image filenames; it needs a
+  dedicated parser + cross-page title resolution and is deferred (see
+  `docs/DATA-SOURCES.md`).
+
+---
+
 ## [v3] — 2026-07-27 — Full Greater Manchester coverage + controls redesign
 
 ### Added

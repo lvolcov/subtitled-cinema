@@ -15,15 +15,39 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / ".cache" / "pages"
-# Greater Manchester + immediate ring. yourlocalcinema.com only publishes a page
-# per town where it has data, and each page lists every accessible screening
-# within a radius — so these overlap heavily and are merged/deduped downstream.
-# Between them they reach every subtitling cinema in the conurbation, including
-# the outer Odeons (Rochdale, Oldham, Northwich, Warrington) and independents
-# (Wigan Omniplex, Rochdale/Widnes Reel) that the four core towns miss.
+# Whole-UK coverage. yourlocalcinema.com publishes one page per town where it has
+# data; each page lists every accessible screening within a radius, so the pages
+# overlap heavily and are merged/deduped downstream. This is the full set of town
+# pages (derived from YLC's own store-locator feed — see build/discover_towns.py),
+# so between them they reach essentially every subtitling cinema in the UK. Pages
+# with no current subtitled shows simply contribute nothing until they do.
 CITIES = [
-    "manchester", "stockport", "altrincham", "didsbury",
-    "bolton", "bury", "ashton", "warrington",
+    "aberdeen", "aberystwyth", "accrington", "acton", "altrincham", "ashton",
+    "aylesbury", "ayr", "banbury", "barnstable", "basingstoke", "bath",
+    "beckenham", "berwick", "birmingham", "blackpool", "bolton", "bournemouth",
+    "bracknell", "bradford", "braintree", "brentford", "bridgend", "brighton",
+    "bristol", "brixton", "bromborough", "bury", "cambridge", "canterbury",
+    "cardiff", "carlisle", "carmarthen", "castleford", "chelmsford", "chelsea",
+    "cheltenham", "chesterfield", "chichester", "cleethorpes", "clevedon", "colchester",
+    "cornwall", "coventry", "crawley", "crewe", "crouchend", "croydon",
+    "dagenham", "darlington", "derby", "didsbury", "doncaster", "dudley",
+    "dumfries", "dundee", "dunfermline", "eastbourne", "edinburgh", "enfield",
+    "epsom", "exeter", "falkirk", "feltham", "finchley", "fulham",
+    "glasgow", "greenwich", "guildford", "harrogate", "harrow", "hartlepool",
+    "hastings", "hatfield", "hereford", "horsham", "huddersfield", "hull",
+    "huntingdon", "inverness", "ipswich", "ireland", "isleofman", "islington",
+    "jersey", "kettering", "kilmarnock", "kingston", "leeds", "leicester",
+    "lincoln", "liverpool", "livingston", "llandudno", "luton", "maidenhead",
+    "maidstone", "manchester", "mansfield", "middlesbrough", "morecambe", "newcastle",
+    "northampton", "norwich", "nottingham", "orkney", "oxford", "peckham",
+    "perth", "plymouth", "portsmouth", "preston", "reading", "redditch",
+    "reigate", "rugby", "salisbury", "scunthorpe", "sheffield", "shetland",
+    "shrewsbury", "southampton", "southend", "southport", "staines", "stevenage",
+    "stirling", "stockport", "stoke", "stratford", "sunderland", "swansea",
+    "swindon", "tamworth", "taunton", "telford", "thurrock", "torbay",
+    "tunbridge", "uxbridge", "walsall", "wandsworth", "warrington", "waterloo",
+    "watford", "weston", "weymouth", "wimbledon", "woking", "wolverhampton",
+    "worcester", "workington", "wrexham", "yeovil", "york",
 ]
 BASE = "https://yourlocalcinema.com/{city}.html"
 UA = "subtitled-cinema/1.0 (+https://github.com/) build bot"
