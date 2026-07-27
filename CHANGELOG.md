@@ -37,6 +37,16 @@ This is a continuously-deployed static site (GitHub Actions → GitHub Pages), s
   the parser fixes; only the Ireland/NI page (a distinct film-organised layout)
   remains, tracked as a follow-up.
 
+### Fixed
+- **"Nearest" pointed at the wrong city.** Most town pages don't list postcodes,
+  so whole regions (e.g. Newcastle) had **no** coordinates and "Near me" surfaced
+  a cinema 30+ miles away. Now real per-venue coordinates come from the YLC
+  store-locator feed (`build/coords_feed.py`), matched by name tokens — coord
+  coverage 56% → ~92%, and a Newcastle user gets Newcastle cinemas at 0.4 mi.
+- **"Near me" was hidden** inside the Filters drawer. Promoted to a bold,
+  always-visible button in the top bar.
+- Frontend copy still said "Greater Manchester" — now UK-wide.
+
 ### Changed
 - Posters now also fall back through the Wikidata-verified film, filling more of
   the (much larger) national film set.

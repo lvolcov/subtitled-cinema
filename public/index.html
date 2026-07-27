@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#0a0c12" />
-  <title>Subtitled Cinema — Greater Manchester</title>
-  <meta name="description" content="Every subtitled, captioned and audio-described cinema screening across Greater Manchester. Pick a film to see it near you, or browse by date and location — updated automatically." />
+  <title>Subtitled Cinema — UK</title>
+  <meta name="description" content="Every subtitled, captioned and audio-described cinema screening across the UK. Pick a film to see it near you, or browse by date and location — updated automatically." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Subtitled Cinema — Greater Manchester" />
+  <meta property="og:title" content="Subtitled Cinema — UK" />
   <meta property="og:description" content="Pick a film and see every subtitled screening near you, or browse by date and location." />
   <meta property="og:site_name" content="Subtitled Cinema" />
   <meta name="twitter:card" content="summary" />
 
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/styles.css?v=4" />
+  <link rel="stylesheet" href="assets/styles.css?v=5" />
 </head>
 <body>
   <a class="skip" href="#list">Skip to listings</a>
@@ -40,7 +40,7 @@
   <!-- hero + film rail: the single place to pick a film -->
   <section class="hero">
     <div class="wrap">
-      <p class="kicker">Greater Manchester · updated automatically</p>
+      <p class="kicker">Across the UK · updated automatically</p>
       <h1 class="hero-title">See what you can actually watch — <em>with subtitles</em>.</h1>
       <p class="hero-sub">Pick a film to find it near you, or scroll down to browse every accessible screening by date &amp; location.</p>
 
@@ -61,6 +61,7 @@
           <button class="seg-btn" data-group="film" role="tab" aria-selected="false">Film</button>
           <button class="seg-btn" data-group="time" role="tab" aria-selected="false">Day</button>
         </div>
+        <button class="near-btn" id="nearBtn" type="button" aria-pressed="false" title="Sort cinemas by distance from you">📍 Near me</button>
         <input class="search" id="search" type="search" placeholder="Search a film or cinema…" autocomplete="off" aria-label="Search a film or cinema" />
         <button class="filters-btn" id="filtersBtn" type="button" aria-expanded="false" aria-controls="filtersPanel">
           <span aria-hidden="true">⚙</span> Filters<span class="fcount" id="filterCount" hidden></span>
@@ -70,7 +71,6 @@
       <div class="filters-panel" id="filtersPanel" hidden>
         <div class="datestrip" id="dateStrip" role="group" aria-label="Choose a day"></div>
         <div class="controls-row secondary">
-          <button class="near-btn" id="nearBtn" type="button" aria-pressed="false">📍 Near me</button>
           <div class="ms field" id="cinemaMs">Cinemas
             <button class="ms-btn" id="cinemaBtn" type="button" aria-expanded="false" aria-controls="cinemaMenu">All cinemas</button>
             <div class="ms-menu" id="cinemaMenu" role="group" aria-label="Filter by cinema" hidden></div>
@@ -119,6 +119,6 @@
 
   <button id="toTop" class="to-top" type="button" aria-label="Back to top" hidden>↑</button>
 
-  <script src="assets/app.js?v=4"></script>
+  <script src="assets/app.js?v=5"></script>
 </body>
 </html>

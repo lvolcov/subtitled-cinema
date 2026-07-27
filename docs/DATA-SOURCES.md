@@ -112,11 +112,14 @@ us the IMDb id. Anything still unresolved shows the clean gradient-initials tile
   (U/PG/12A/15/18) *are* parsed. **IMDb links are direct `tt…` links** where
   Wikidata resolves the id (most mainstream films); the rest keep an honest IMDb
   *search* link.
-- **Coordinates are approximate.** Hand-curated `cinema_meta.COORDS` are used
-  where present; every other venue with a postcode gets an outward-code centroid
-  from postcodes.io (`build/geocode.py`, cached in `build/geo_cache.json`). Fine
-  for "sort by distance", not for turn-by-turn. Venues with neither (no postcode,
-  not curated) simply don't distance-sort.
+- **Coordinates** come, in priority order, from: hand-curated `cinema_meta.COORDS`
+  → the **YLC store-locator feed** (real per-venue lat/lng, matched to our venue by
+  sorted name tokens since the feed writes "Cineworld Newcastle" where we parse
+  "Newcastle Cineworld" — `build/coords_feed.py`, UK-bounds sanity-checked) → a
+  postcode-district centroid from postcodes.io (`build/geocode.py`). The feed
+  alone places ~86% of venues; together it's ~92%. Fine for "sort by distance",
+  not for turn-by-turn. (The town pages themselves rarely list a postcode, so the
+  feed — not geocoding — is what actually makes national "nearest" work.)
 
 ---
 

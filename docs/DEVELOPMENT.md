@@ -46,7 +46,8 @@ python3 -m build.fetch_pages     # download the ~155 UK town pages
 python3 -m build.posters         # YLC per-film posters
 python3 -m build.posters_wiki    # Wikipedia poster fallback (shared-page films)
 python3 -m build.imdb            # direct IMDb tt ids, via Wikidata
-python3 -m build.geocode         # postcode -> coordinates, via postcodes.io
+python3 -m build.coords_feed     # per-venue coordinates from YLC's locator feed
+python3 -m build.geocode         # postcode -> coordinates (fallback), via postcodes.io
 python3 -m build.discover_towns  # re-derive the town list from YLC's locator feed
 ```
 

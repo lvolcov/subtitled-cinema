@@ -101,8 +101,10 @@ button{font-family:inherit}
 .filters-panel{display:grid;gap:10px;padding-top:1px}
 .filters-panel[hidden]{display:none}
 
-.near-btn{background:var(--panel);border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:9px 14px;cursor:pointer;font-size:.85rem;font-weight:600;white-space:nowrap;align-self:end}
-.near-btn[aria-pressed="true"]{background:color-mix(in srgb,var(--acc2) 20%,var(--panel));border-color:var(--acc2);color:var(--acc2)}
+/* primary, always-visible "locate me" action in the slim bar */
+.near-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;background:var(--acc2);border:1px solid var(--acc2);color:#052027;border-radius:999px;padding:9px 15px;cursor:pointer;font-size:.85rem;font-weight:700;white-space:nowrap}
+.near-btn:hover{filter:brightness(1.08)}
+.near-btn[aria-pressed="true"]{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 0 0 3px color-mix(in srgb,var(--acc2) 32%,transparent)}
 
 .datestrip{display:flex;gap:7px;overflow-x:auto;padding:2px;scrollbar-width:thin}
 .datestrip::-webkit-scrollbar{height:5px}.datestrip::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}

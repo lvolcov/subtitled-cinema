@@ -22,6 +22,7 @@ from . import posters
 from . import posters_wiki
 from . import imdb
 from . import geocode
+from . import coords_feed
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / ".cache" / "pages"
@@ -60,6 +61,20 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
     wiki_cache = posters_wiki.load_cache()
     imdb_cache = imdb.load_cache()      # film_id -> "tt…" (direct IMDb links)
     geo_cache = geocode.load_cache()    # outward postcode -> [lat,lng] (nearest)
+    feed_coords = coords_feed._as_sets(coords_feed.load_cache())  # per-venue coords
+
+    def coords_for(name, postcode):
+        # hand-curated (most precise) -> feed per-venue -> postcode district centroid
+        slug = slugify(name)
+        if slug in COORDS:
+            return COORDS[slug]
+        hit = coords_feed.match(name, feed_coords)
+        if hit:
+            return hit[0], hit[1]
+        if postcode and geo_cache.get(postcode):
+            g = geo_cache[postcode]
+            return g[0], g[1]
+        return None, None
 
     # A single yourlocalcinema page (e.g. foreignlanguage.html) can back several
     # different films — its image isn't film-specific, so don't use it as a
@@ -84,13 +99,7 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
             slug = slugify(cin.name)
             entry = merged.get(slug)
             if entry is None:
-                lat, lng = COORDS.get(slug, (None, None))
-                # fall back to a postcode-district centroid so "nearest" works
-                # nationwide for venues we haven't hand-curated (COORDS wins).
-                if (lat is None or lng is None) and cin.postcode:
-                    geo = geo_cache.get(cin.postcode)
-                    if geo:
-                        lat, lng = geo[0], geo[1]
+                lat, lng = coords_for(cin.name, cin.postcode)
                 entry = {
                     "id": slug,
                     "name": cin.name,
@@ -136,11 +145,9 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
     films: dict[str, dict] = {}
     for entry in merged.values():
         # a venue's postcode can arrive on a later page than its first sighting;
-        # backfill an approximate coordinate now if we still lack one.
-        if (entry["lat"] is None or entry["lng"] is None) and entry["postcode"]:
-            geo = geo_cache.get(entry["postcode"])
-            if geo:
-                entry["lat"], entry["lng"] = geo[0], geo[1]
+        # backfill a coordinate now if we still lack one.
+        if entry["lat"] is None or entry["lng"] is None:
+            entry["lat"], entry["lng"] = coords_for(entry["name"], entry["postcode"])
         entry.pop("_seen", None)
         entry["screenings"].sort(key=lambda x: x["starts_at"])
         cinemas.append(entry)

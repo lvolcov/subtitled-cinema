@@ -196,16 +196,37 @@ class BuildPipeline(unittest.TestCase):
             if c["id"] in COORDS:
                 self.assertIsNotNone(c["lat"], f"{c['id']} lost its curated coord")
 
-    def test_geocode_fallback_wired(self):
-        # any venue that has coords but isn't hand-curated must have received them
-        # from the postcode geocode cache — proves the nationwide "nearest" path.
+    def test_coord_sources_wired(self):
+        # any venue that has coords but isn't hand-curated must have got them from
+        # one of the automatic sources — the YLC locator feed (matched by name) or
+        # the postcode geocode cache — proving the nationwide "nearest" path.
         from build.cinema_meta import COORDS
-        from build import geocode
+        from build import geocode, coords_feed
         geo = geocode.load_cache()
+        feed = coords_feed._as_sets(coords_feed.load_cache())
         for c in self.data["cinemas"]:
-            if c["lat"] is not None and c["id"] not in COORDS and c["postcode"]:
-                self.assertEqual([c["lat"], c["lng"]], geo.get(c["postcode"]),
-                                 f"{c['id']} coord not from geocode cache")
+            if c["lat"] is None or c["id"] in COORDS:
+                continue
+            coord = [c["lat"], c["lng"]]
+            from_feed = coords_feed.match(c["name"], feed)
+            from_geo = geo.get(c["postcode"]) if c["postcode"] else None
+            self.assertTrue(coord == from_feed or coord == from_geo,
+                            f"{c['id']} coord not from feed or geocode")
+
+    def test_nearest_returns_a_local_venue(self):
+        # regression for the "Newcastle -> Stockton 34mi" bug: a user in a city
+        # with cinemas should get one within a few miles, not a distant fallback.
+        from math import radians, sin, cos, asin, sqrt
+
+        def miles(a, b):
+            dlat, dlng = radians(b[0] - a[0]), radians(b[1] - a[1])
+            h = sin(dlat / 2) ** 2 + cos(radians(a[0])) * cos(radians(b[0])) * sin(dlng / 2) ** 2
+            return 3959 * 2 * asin(sqrt(h))
+
+        newcastle = (54.9783, -1.6178)
+        placed = [(c["lat"], c["lng"]) for c in self.data["cinemas"] if c["lat"]]
+        nearest = min(miles(newcastle, p) for p in placed)
+        self.assertLess(nearest, 5, f"nearest cinema to Newcastle is {nearest:.1f} mi away")
 
     def test_screenings_sorted(self):
         for c in self.data["cinemas"]:

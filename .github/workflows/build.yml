@@ -46,7 +46,11 @@ jobs:
         run: python -m build.imdb
         continue-on-error: true      # falls back to search links; never block a deploy
 
-      - name: Geocode venues by postcode (for "nearest")
+      - name: Cache per-venue coordinates (YLC locator feed)
+        run: python -m build.coords_feed
+        continue-on-error: true      # per-venue coords for "nearest"; never block a deploy
+
+      - name: Geocode venues by postcode (fallback for "nearest")
         run: python -m build.geocode
         continue-on-error: true      # falls back to curated coords; never block a deploy
 
