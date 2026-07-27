@@ -196,13 +196,20 @@ class BuildPipeline(unittest.TestCase):
             if c["id"] in COORDS:
                 self.assertIsNotNone(c["lat"], f"{c['id']} lost its curated coord")
 
+    def test_all_cinemas_have_coords(self):
+        # with the feed + postcode + name-geocode chain, every venue should now be
+        # placeable (regression against whole regions having no coordinates).
+        missing = [c["id"] for c in self.data["cinemas"] if c["lat"] is None]
+        self.assertEqual(missing, [], f"venues without coords: {missing}")
+
     def test_coord_sources_wired(self):
         # any venue that has coords but isn't hand-curated must have got them from
-        # one of the automatic sources — the YLC locator feed (matched by name) or
-        # the postcode geocode cache — proving the nationwide "nearest" path.
+        # one of the automatic sources — the YLC locator feed (matched by name),
+        # the postcode geocode cache, or the name geocode — proving the path.
         from build.cinema_meta import COORDS
-        from build import geocode, coords_feed
+        from build import geocode, geocode_name, coords_feed
         geo = geocode.load_cache()
+        name_geo = geocode_name.load_cache()
         feed = coords_feed._as_sets(coords_feed.load_cache())
         for c in self.data["cinemas"]:
             if c["lat"] is None or c["id"] in COORDS:
@@ -210,8 +217,9 @@ class BuildPipeline(unittest.TestCase):
             coord = [c["lat"], c["lng"]]
             from_feed = coords_feed.match(c["name"], feed)
             from_geo = geo.get(c["postcode"]) if c["postcode"] else None
-            self.assertTrue(coord == from_feed or coord == from_geo,
-                            f"{c['id']} coord not from feed or geocode")
+            from_name = name_geo.get(c["name"])
+            self.assertTrue(coord in (from_feed, from_geo, from_name),
+                            f"{c['id']} coord not from feed/postcode/name geocode")
 
     def test_nearest_returns_a_local_venue(self):
         # regression for the "Newcastle -> Stockton 34mi" bug: a user in a city

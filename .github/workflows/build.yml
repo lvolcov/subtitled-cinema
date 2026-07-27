@@ -54,6 +54,10 @@ jobs:
         run: python -m build.geocode
         continue-on-error: true      # falls back to curated coords; never block a deploy
 
+      - name: Geocode remaining venues by name (Nominatim, last resort)
+        run: python -m build.geocode_name
+        continue-on-error: true      # cached; only new coordless venues hit the network
+
       - name: Build data.json
         run: python -m build.build_site
 

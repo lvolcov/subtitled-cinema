@@ -22,6 +22,7 @@ from . import posters
 from . import posters_wiki
 from . import imdb
 from . import geocode
+from . import geocode_name
 from . import coords_feed
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -62,9 +63,11 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
     imdb_cache = imdb.load_cache()      # film_id -> "tt…" (direct IMDb links)
     geo_cache = geocode.load_cache()    # outward postcode -> [lat,lng] (nearest)
     feed_coords = coords_feed._as_sets(coords_feed.load_cache())  # per-venue coords
+    name_geo = geocode_name.load_cache()   # venue name -> [lat,lng] (Nominatim)
 
     def coords_for(name, postcode):
-        # hand-curated (most precise) -> feed per-venue -> postcode district centroid
+        # hand-curated (most precise) -> feed per-venue -> postcode district
+        # centroid -> name geocode (Nominatim, last resort)
         slug = slugify(name)
         if slug in COORDS:
             return COORDS[slug]
@@ -73,6 +76,9 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
             return hit[0], hit[1]
         if postcode and geo_cache.get(postcode):
             g = geo_cache[postcode]
+            return g[0], g[1]
+        g = name_geo.get(name)
+        if g:
             return g[0], g[1]
         return None, None
 

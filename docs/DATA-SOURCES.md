@@ -116,10 +116,12 @@ us the IMDb id. Anything still unresolved shows the clean gradient-initials tile
   → the **YLC store-locator feed** (real per-venue lat/lng, matched to our venue by
   sorted name tokens since the feed writes "Cineworld Newcastle" where we parse
   "Newcastle Cineworld" — `build/coords_feed.py`, UK-bounds sanity-checked) → a
-  postcode-district centroid from postcodes.io (`build/geocode.py`). The feed
-  alone places ~86% of venues; together it's ~92%. Fine for "sort by distance",
-  not for turn-by-turn. (The town pages themselves rarely list a postcode, so the
-  feed — not geocoding — is what actually makes national "nearest" work.)
+  postcode-district centroid from postcodes.io (`build/geocode.py`) → geocoding
+  the venue **name** via OpenStreetMap Nominatim (`build/geocode_name.py`, with a
+  handful of hand-picked overrides for odd names/typos). Together these place
+  **100%** of venues. Fine for "sort by distance", not for turn-by-turn. (The town
+  pages themselves rarely list a postcode, so the feed — not geocoding — is what
+  actually makes national "nearest" work; name-geocoding mops up the rest.)
 
 ---
 
