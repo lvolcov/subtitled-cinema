@@ -77,9 +77,20 @@ def detect_chain(name: str, img_alts=()) -> Optional[str]:
     return None
 
 
-def booking_for(chain: Optional[str], fallback_hrefs=()) -> Optional[str]:
+def booking_for(chain: Optional[str], fallback_hrefs=(),
+                name: Optional[str] = None, postcode: Optional[str] = None) -> Optional[str]:
+    """Best-effort book-out link. Prefer the chain's own site; otherwise a Google
+    search for the venue by name — the source hrefs are unreliable (a logo often
+    links to the wrong brand/branch, e.g. Wigan Omniplex -> Omniplex Birmingham),
+    so a name search lands people on the right cinema. Source href only as a last
+    resort. Never returns a dead '#'.
+    """
     if chain and chain in CHAIN_URL:
         return CHAIN_URL[chain]
+    if name:
+        from urllib.parse import quote_plus
+        terms = " ".join(t for t in (name, postcode, "cinema tickets") if t)
+        return "https://www.google.com/search?q=" + quote_plus(terms)
     return next((h for h in fallback_hrefs if h.startswith("http")), None)
 
 CERT_RE = re.compile(r"\(\s*(U|PG|12A|12|15|18|TBC)\s*\)", re.I)
@@ -248,7 +259,7 @@ def _parse_layout_a(soup: BeautifulSoup, city: str, ref: date) -> list:
         hrefs = [a.get("href", "") for a in div.find_all("a")]
         alts = [img.get("alt", "") for img in div.find_all("img")]
         chain = detect_chain(name, alts)
-        booking = booking_for(chain, hrefs)
+        booking = booking_for(chain, hrefs, name=name)
         cin = Cinema(name=name, area=name, city=city, chain=chain,
                      postcode=None, booking_url=booking)
         for block in div.select("div.film-block"):
@@ -261,7 +272,10 @@ def _parse_layout_a(soup: BeautifulSoup, city: str, ref: date) -> list:
 # --------------------------------------------------------------------------- #
 # layout B: <div class="cinema-list"> split on <hr>
 # --------------------------------------------------------------------------- #
-POSTCODE_RE = re.compile(r"\b([A-Z]{1,2}\d{1,2}[A-Z]?)\b")
+# Capture the outward code (e.g. "OL11") as the stored postcode, but also match
+# and strip any following inward code ("1RB", or a source-truncated "1R") so it
+# doesn't leak into the cinema name ("Rochdale Odeon 1R").
+POSTCODE_RE = re.compile(r"\b([A-Z]{1,2}\d{1,2}[A-Z]?)(?:\s*\d[A-Z]{0,2})?\b")
 
 
 def _name_from_segment(nodes) -> tuple:
@@ -289,7 +303,7 @@ def _name_from_segment(nodes) -> tuple:
     pm = POSTCODE_RE.search(full)
     if pm:
         postcode = pm.group(1)
-        full = full.replace(postcode, " ")
+        full = full.replace(pm.group(0), " ")
 
     brand = full
     if area:
@@ -344,7 +358,7 @@ def _parse_layout_b(soup: BeautifulSoup, city: str, ref: date) -> list:
                 hrefs += [a.get("href", "") for a in n.find_all("a")]
                 alts += [img.get("alt", "") for img in n.find_all("img")]
         chain = detect_chain(name, alts)
-        booking = booking_for(chain, hrefs)
+        booking = booking_for(chain, hrefs, name=name, postcode=postcode)
         cin = Cinema(name=name, area=area, city=city, chain=chain,
                      postcode=postcode, booking_url=booking)
         cin.films.extend(parse_film_block(block, ref))

@@ -19,11 +19,14 @@ from pathlib import Path
 from .parse_ylc import parse_page
 from .cinema_meta import COORDS
 from . import posters
+from . import posters_wiki
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / ".cache" / "pages"
 OUT = ROOT / "public" / "data.json"
-CITIES = ["manchester", "stockport", "altrincham", "didsbury"]
+# Kept in sync with build.fetch_pages.CITIES — the set of yourlocalcinema town
+# pages we cover across Greater Manchester and its ring.
+from .fetch_pages import CITIES
 TIMEZONE = "Europe/London"
 
 
@@ -47,9 +50,12 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
     now = now or datetime.now()
     checked = now.replace(microsecond=0).isoformat()
 
-    # posters come from the pre-warmed cache only (build stays offline);
-    # `python3 -m build.posters` / CI refreshes the cache before building.
+    # posters come from the pre-warmed caches only (build stays offline);
+    # `python3 -m build.posters` / `python3 -m build.posters_wiki` / CI refreshes
+    # them before building. YLC per-film artwork first, Wikipedia (by film_id) as a
+    # fallback for films that arrive via a shared page (foreign-language, NT Live).
     poster_cache = posters.load_cache()
+    wiki_cache = posters_wiki.load_cache()
 
     # A single yourlocalcinema page (e.g. foreignlanguage.html) can back several
     # different films — its image isn't film-specific, so don't use it as a
@@ -62,10 +68,10 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
                 _src_films.setdefault(film.source_url, set()).add(film_id(film.title))
     shared = {su for su, fids in _src_films.items() if len(fids) > 1}
 
-    def poster_for(source_url):
-        if source_url in shared:
-            return None
-        return poster_cache.get(source_url)
+    def poster_for(source_url, fid):
+        # Wikipedia fallback (by film_id) covers shared-page films with no YLC art.
+        ylc = None if source_url in shared else poster_cache.get(source_url)
+        return ylc or wiki_cache.get(fid)
 
     merged: dict[str, dict] = {}   # slug -> cinema dict
     for city in CITIES:
@@ -106,7 +112,7 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
                         "title": film.title,
                         "film_id": fid,
                         "source_url": film.source_url,
-                        "poster_url": poster_for(film.source_url),
+                        "poster_url": poster_for(film.source_url, fid),
                         "imdb_url": imdb_url(film.title),
                         "starts_at": s.starts_at,
                         "certificate": s.certificate,

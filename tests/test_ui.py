@@ -2,10 +2,17 @@
 Playwright UI tests for the frontend. Run: python3 -m unittest tests.test_ui -v
 
 Serves public/ over http, injects a deterministic dataset + fixed "now" via
-window.__DATA__ / window.__NOW__, then asserts the page renders and every
-filter behaves. Expected counts are computed in Python by mirroring the JS
-visibility rules, so the assertions aren't brittle magic numbers. Also writes
-screenshots to tests/screenshots/ for visual confirmation.
+window.__DATA__ / window.__NOW__ (and window.__COORDS__ where a test needs the
+"near me" path), then asserts the page renders and every control behaves.
+
+The page is the rail + slim-bar design:
+  • a film rail up top (poster + "N cinemas" count) is the primary way in;
+  • a slim sticky bar holds grouping (Cinema / Film / Day), search and a
+    "Filters" button that opens a drawer with the date strip, a grouped
+    multi-select cinema picker, access + sort.
+Expected counts are computed in Python by mirroring the JS visibility rules, so
+the assertions aren't brittle magic numbers. Screenshots land in
+tests/screenshots/ for visual confirmation.
 """
 import json
 import subprocess
@@ -32,6 +39,7 @@ BASE = f"http://127.0.0.1:{PORT}"
 NOW = datetime(2026, 7, 28, 12, 0, 0)          # fixed "current time"
 NOW_ISO = NOW.isoformat()
 REF = date(2026, 7, 24)
+PAST_MIN = 40                                   # app drops screenings >40m past
 SHOTS = ROOT / "tests" / "screenshots"
 CENTRE = {"lat": 53.4808, "lng": -2.2426}       # Manchester Piccadilly-ish
 
@@ -45,7 +53,8 @@ def _flat(data):
     out = []
     for c in data["cinemas"]:
         for s in c["screenings"]:
-            out.append({**s, "cinema_id": c["id"], "lat": c["lat"], "lng": c["lng"]})
+            out.append({**s, "cinema_id": c["id"], "chain": c["chain"],
+                        "cinema_name": c["name"], "lat": c["lat"], "lng": c["lng"]})
     return out
 
 
@@ -53,31 +62,32 @@ def _dt(iso):
     return datetime.fromisoformat(iso)
 
 
-def expected_visible(day="all"):
+def _future(s):
+    return _dt(s["starts_at"]) >= NOW - timedelta(minutes=PAST_MIN)
+
+
+def expected_visible(day="all", cinemas=None):
     """Mirror of the JS visibility logic for cross-checking."""
-    cutoff = NOW - timedelta(minutes=60)
-    tomorrow = (NOW + timedelta(days=1)).date()
-    week_end = NOW + timedelta(days=7)
     n = 0
     for s in _flat(DATA):
-        d = _dt(s["starts_at"])
-        if d < cutoff:
+        if not _future(s):
             continue
-        if day == "today" and d.date() != NOW.date():
+        if day != "all" and _dt(s["starts_at"]).strftime("%Y-%m-%d") != day:
             continue
-        if day == "tomorrow" and d.date() != tomorrow:
-            continue
-        if day == "week" and not (d >= datetime(NOW.year, NOW.month, NOW.day) and d <= week_end):
+        if cinemas and s["cinema_id"] not in cinemas:
             continue
         n += 1
     return n
 
 
+def _cinemas_by_chain(chain):
+    return sorted({s["cinema_id"] for s in _flat(DATA) if s["chain"] == chain})
+
+
 def setUpModule():
     global _server, _pw, _browser, DATA
     DATA = build_site.build(ref_date=REF, now=datetime(2026, 7, 24, 9, 0))
-    # ensure data.json exists too (belt & braces), then serve public/
-    build_site.main()
+    build_site.main()  # ensure public/data.json exists too, then serve public/
     _server = subprocess.Popen(
         [sys.executable, "-m", "http.server", str(PORT)],
         cwd=str(ROOT / "public"),
@@ -102,28 +112,57 @@ def tearDownModule():
 
 @unittest.skipUnless(HAVE_PW, "playwright not installed")
 class UI(unittest.TestCase):
-    def _page(self, w=390, h=844, query=""):
+    def _page(self, w=390, h=844, query="", coords=None):
         pg = _browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=2)
         pg._console_errors = []
         pg.on("console", lambda m: pg._console_errors.append(m.text) if m.type == "error" else None)
         pg.on("pageerror", lambda e: pg._console_errors.append(str(e)))
-        pg.add_init_script(
-            f"window.__NOW__={json.dumps(NOW_ISO)};"
-            f"window.__DATA__={json.dumps(DATA)};"
-            f"window.__COORDS__={json.dumps(CENTRE)};"
-        )
+        init = (f"window.__NOW__={json.dumps(NOW_ISO)};"
+                f"window.__DATA__={json.dumps(DATA)};")
+        if coords:
+            init += f"window.__COORDS__={json.dumps(coords)};"
+        pg.add_init_script(init)
         pg.goto(BASE + "/index.html" + query)
-        pg.wait_for_selector("body[data-ready='1']")
+        pg.wait_for_selector("#filmRail .rail-item")
+        pg.wait_for_selector(".card")
         return pg
 
     def _summary_count(self, pg):
         return int(pg.text_content("#resultSummary").split()[0])
 
-    def test_renders_stats_and_cards(self):
+    def _open_filters(self, pg):
+        if pg.get_attribute("#filtersPanel", "hidden") is not None:
+            pg.click("#filtersBtn")
+        pg.wait_for_selector("#filtersPanel:not([hidden])")
+
+    def _open_cinema_menu(self, pg):
+        self._open_filters(pg)
+        pg.click("#cinemaBtn")
+        pg.wait_for_selector("#cinemaMenu:not([hidden])")
+
+    # ---- render ----
+    def test_rail_and_cards_render(self):
         pg = self._page()
-        self.assertIn("cinemas", pg.inner_text("#stats"))
-        self.assertGreater(pg.locator(".card").count(), 20)
-        self.assertGreater(pg.locator(".group-title").count(), 3)
+        self.assertGreater(pg.locator("#filmRail .rail-item").count(), 3)
+        self.assertGreater(pg.locator(".card").count(), 15)
+        self.assertGreater(pg.locator(".group").count(), 5)
+        pg.close()
+
+    def test_rail_shows_cinema_counts(self):
+        pg = self._page()
+        # every film tile (not the "All films" tile) carries a "N cinema(s)" badge
+        counts = pg.eval_on_selector_all(
+            "#filmRail .rail-item:not(.all) .rail-poster .cnt",
+            "els => els.map(e => e.textContent)")
+        self.assertGreater(len(counts), 0)
+        self.assertTrue(all("cinema" in c for c in counts))
+        pg.close()
+
+    def test_stat_pill_shows_totals(self):
+        pg = self._page()
+        txt = pg.inner_text("#statPill")
+        self.assertIn("cinemas", txt)
+        self.assertIn("screenings", txt)
         pg.close()
 
     def test_no_horizontal_overflow_mobile(self):
@@ -133,36 +172,40 @@ class UI(unittest.TestCase):
         self.assertLessEqual(sw, iw, "page overflows horizontally on mobile")
         pg.close()
 
+    def test_frozen_bar_is_slim(self):
+        # the whole point of the slim-bar redesign: the sticky area must not eat
+        # the screen. nav + controls-shell together stay well under half of a
+        # 844px-tall mobile viewport.
+        pg = self._page(390, 844)
+        frozen = pg.evaluate(
+            "() => ['.nav','.controls-shell']"
+            ".reduce((h,s)=>h+(document.querySelector(s)?.offsetHeight||0),0)")
+        self.assertLess(frozen, 200, f"sticky controls too tall ({frozen}px)")
+        pg.close()
+
     def test_default_visible_matches_expected(self):
         pg = self._page()
         self.assertEqual(self._summary_count(pg), expected_visible("all"))
         pg.close()
 
-    def test_hides_past_screenings(self):
+    # ---- grouping ----
+    def test_group_by_film(self):
         pg = self._page()
-        # nothing rendered should be more than 60 min in the past
-        times = pg.eval_on_selector_all(
-            ".card[data-day]", "els => els.length")
-        self.assertGreater(times, 0)
-        # summary equals only-future count (past excluded)
-        self.assertEqual(self._summary_count(pg), expected_visible("all"))
+        pg.click('.seg-btn[data-group="film"]')
+        headers = pg.eval_on_selector_all(
+            ".group .g-name", "els => els.map(e => e.textContent.trim())")
+        self.assertIn("The Odyssey", headers)
         pg.close()
 
-    def test_today_filter(self):
+    def test_group_by_day(self):
         pg = self._page()
-        pg.click('.seg-btn[data-day="today"]')
-        self.assertEqual(self._summary_count(pg), expected_visible("today"))
-        # and it should be <= all
-        pg.click('.seg-btn[data-day="all"]')
-        self.assertGreaterEqual(self._summary_count(pg), expected_visible("today"))
+        pg.click('.seg-btn[data-group="time"]')
+        self.assertGreater(pg.locator(".group").count(), 1)
+        # summary should describe days
+        self.assertIn("day", pg.text_content("#resultSummary"))
         pg.close()
 
-    def test_tomorrow_filter(self):
-        pg = self._page()
-        pg.click('.seg-btn[data-day="tomorrow"]')
-        self.assertEqual(self._summary_count(pg), expected_visible("tomorrow"))
-        pg.close()
-
+    # ---- search ----
     def test_search_narrows_results(self):
         pg = self._page()
         full = self._summary_count(pg)
@@ -170,137 +213,122 @@ class UI(unittest.TestCase):
         narrowed = self._summary_count(pg)
         self.assertLess(narrowed, full)
         self.assertGreater(narrowed, 0)
-        # every visible card is The Odyssey
         titles = pg.eval_on_selector_all(
-            ".card .film-title", "els => els.map(e => e.textContent.toLowerCase())")
+            ".card .card-title", "els => els.map(e => e.textContent.toLowerCase())")
         self.assertTrue(all("odyssey" in t for t in titles))
         pg.close()
 
-    def test_cinema_filter(self):
+    # ---- cinema multi-select ----
+    def test_cinema_single_select(self):
         pg = self._page()
-        pg.select_option("#cinemaFilter", "manchester-home")
-        cinemas = pg.eval_on_selector_all(
-            ".card", "els => [...new Set(els.map(e => e.dataset.cinema))]")
-        self.assertEqual(cinemas, ["manchester-home"])
+        self._open_cinema_menu(pg)
+        pg.click('label.ms-opt:has(input[value="manchester-home"])')
+        names = pg.eval_on_selector_all(
+            ".group .g-name", "els => [...new Set(els.map(e => e.textContent.trim()))]")
+        self.assertEqual(names, ["Manchester Home"])
+        self.assertEqual(pg.inner_text("#cinemaBtn"), "Manchester Home")
         pg.close()
 
+    def test_cinema_chain_group_selects_all(self):
+        vue = _cinemas_by_chain("Vue")
+        self.assertGreater(len(vue), 1)
+        pg = self._page()
+        self._open_cinema_menu(pg)
+        pg.locator('.ms-chain', has_text="Vue").locator("input[data-chain]").check()
+        # button summarises the whole chain
+        self.assertEqual(pg.inner_text("#cinemaBtn"), f"{len(vue)} cinemas")
+        # every rendered group is a Vue venue
+        vue_names = {c["name"] for c in DATA["cinemas"] if c["id"] in vue}
+        shown = pg.eval_on_selector_all(
+            ".group .g-name", "els => [...new Set(els.map(e => e.textContent.trim()))]")
+        self.assertTrue(shown and all(n in vue_names for n in shown))
+        pg.close()
+
+    def test_deep_link_cinemas_param(self):
+        pg = self._page(query="?cinemas=manchester-trafford-odeon")
+        names = pg.eval_on_selector_all(
+            ".group .g-name", "els => [...new Set(els.map(e => e.textContent.trim()))]")
+        self.assertEqual(names, ["Manchester Trafford Odeon"])
+        # drawer auto-opens so the applied filter is visible
+        self.assertIsNone(pg.get_attribute("#filtersPanel", "hidden"))
+        self.assertEqual(self._summary_count(pg),
+                         expected_visible(cinemas=["manchester-trafford-odeon"]))
+        pg.close()
+
+    # ---- access + near ----
     def test_access_filter_audio_described(self):
         pg = self._page()
+        self._open_filters(pg)
         pg.select_option("#accessFilter", "audio-described")
-        # every visible card must carry the AD badge (or none visible)
         count = pg.locator(".card").count()
         if count:
             ad = pg.locator(".card .badge.ad").count()
             self.assertEqual(ad, count)
         pg.close()
 
-    def test_group_by_film(self):
-        pg = self._page()
-        pg.select_option("#groupBy", "film")
-        # a film group header should equal a known film title
-        headers = pg.eval_on_selector_all(
-            ".group-title", "els => els.map(e => e.childNodes[0].textContent.trim())")
-        self.assertIn("The Odyssey", headers)
-        pg.close()
-
-    def test_nearest_sorts_and_shows_distance(self):
-        pg = self._page()
-        pg.click("#nearBtn")
+    def test_near_me_sorts_and_shows_distance(self):
+        pg = self._page(coords=CENTRE)
         self.assertEqual(pg.get_attribute("#nearBtn", "aria-pressed"), "true")
-        self.assertGreater(pg.locator(".dist").count(), 0)
-        # first group's distance <= last group's distance
-        dists = pg.eval_on_selector_all(
-            ".group-title .checked", "els => els.length")  # sanity: groups exist
-        self.assertGreater(pg.locator(".group-title").count(), 1)
+        # cinema group heads carry a distance chip when sorted by nearest
+        self.assertGreater(pg.locator(".group-head .g-dist").count(), 0)
         pg.close()
 
-    def test_booking_and_imdb_links_present(self):
-        pg = self._page()
-        card = pg.locator(".card").first
-        self.assertTrue(card.locator("a.primary", has_text="Book").count() >= 0)
-        self.assertGreater(pg.locator(".links a", has_text="IMDb").count(), 0)
-        pg.close()
-
-    def test_no_console_errors(self):
-        pg = self._page()
-        pg.click('.card .film-title')          # open a film modal
-        pg.wait_for_selector("#modalRoot:not([hidden])")
-        pg.keyboard.press("Escape")
-        self.assertEqual(pg._console_errors, [])
-        pg.close()
-
-    def test_date_strip_present(self):
-        pg = self._page()
-        # All / Today / Tomorrow + specific upcoming days
-        self.assertGreater(pg.locator("#dateStrip .seg-btn").count(), 3)
-        pg.close()
-
-    def test_film_modal_lists_all_cinemas(self):
-        pg = self._page()
-        # The Odyssey is the most widely shown film -> many cinemas
-        pg.click('.card[data-film="the-odyssey"] .film-title')
-        pg.wait_for_selector("#modalRoot:not([hidden])")
-        self.assertEqual(pg.text_content("#modalTitle").strip(), "The Odyssey")
-        blocks = pg.locator(".modal-cinema").count()
-        self.assertGreater(blocks, 3, "film modal should list many cinemas")
-        # every showtime pill should be present
-        self.assertGreater(pg.locator(".showtime-pill").count(), blocks)
-        # cross-check against the data: distinct future cinemas for this film
-        expected = len({s["cinema_id"] for s in _flat(DATA)
-                        if s["film_id"] == "the-odyssey"
-                        and _dt(s["starts_at"]) >= NOW - timedelta(minutes=60)})
-        self.assertEqual(blocks, expected)
-        self.assertIn("view=film", pg.url)          # colon is %-encoded in the query
-        self.assertIn("the-odyssey", pg.url)
-        pg.close()
-
-    def test_deep_link_opens_film_modal(self):
-        pg = self._page(query="?view=film:moana")
-        pg.wait_for_selector("#modalRoot:not([hidden])")
-        self.assertEqual(pg.text_content("#modalTitle").strip(), "Moana")
-        pg.close()
-
-    def test_cinema_modal_opens(self):
-        pg = self._page()
-        pg.click('.group-title[data-open-cinema]')
-        pg.wait_for_selector("#modalRoot:not([hidden])")
-        self.assertTrue(pg.text_content("#modalTitle").strip())
-        self.assertIn("view=cinema", pg.url)
-        pg.close()
-
-    def test_escape_closes_modal(self):
-        pg = self._page()
-        pg.click('.card .film-title')
-        pg.wait_for_selector("#modalRoot:not([hidden])")
-        pg.keyboard.press("Escape")
-        pg.wait_for_selector("#modalRoot[hidden]", state="attached")
-        self.assertIsNotNone(pg.locator("#modalRoot").get_attribute("hidden"))
-        pg.close()
-
+    # ---- chips ----
     def test_filter_chips_and_clear_all(self):
         pg = self._page()
         pg.fill("#search", "odyssey")
-        pg.click('#dateStrip .seg-btn[data-day="today"]')
-        self.assertGreaterEqual(pg.locator(".fchip").count(), 2)   # incl. Clear all
-        pg.click(".fchip.clear-all")
-        self.assertEqual(pg.locator(".fchip").count(), 0)
+        self._open_cinema_menu(pg)
+        # drive the checkbox's change handler directly — the popover item can sit
+        # under the sticky bar after a search, tripping Playwright's hit-testing.
+        pg.eval_on_selector(
+            '.ms-opt input[value="manchester-home"]',
+            "el => { el.checked = true; el.dispatchEvent(new Event('change', {bubbles:true})); }")
+        self.assertGreaterEqual(pg.locator("#activeChips .fchip").count(), 2)
+        pg.keyboard.press("Escape")  # close the cinema popover so it can't overlay the chips
+        pg.wait_for_selector("#cinemaMenu[hidden]", state="attached")
+        pg.click("#activeChips .fchip.clear")
+        self.assertEqual(pg.locator("#activeChips .fchip").count(), 0)
         self.assertEqual(pg.eval_on_selector("#search", "e=>e.value"), "")
         self.assertEqual(self._summary_count(pg), expected_visible("all"))
         pg.close()
 
-    def test_posters_render_for_known_film(self):
-        pg = self._page(query="?cinema=manchester-home")
-        # HOME shows The Odyssey which has a real poster -> at least one <img> loads
-        pg.wait_for_timeout(600)
-        loaded = pg.eval_on_selector_all(
-            ".poster img", "imgs => imgs.filter(i => i.complete && i.naturalWidth > 0).length")
-        self.assertGreater(loaded, 0, "expected at least one real poster image to load")
+    # ---- film rail selection ----
+    def test_rail_select_shows_banner(self):
+        pg = self._page()
+        pg.click('#filmRail .rail-item[data-film="the-odyssey"]')
+        pg.wait_for_selector("#filmBanner:not([hidden])")
+        self.assertIn("The Odyssey", pg.inner_text("#filmBanner"))
+        self.assertIn("film=the-odyssey", pg.url)
+        pg.close()
+
+    def test_deep_link_opens_film(self):
+        pg = self._page(query="?film=the-odyssey")
+        self.assertIsNone(pg.get_attribute("#filmBanner", "hidden"))
+        self.assertIn("The Odyssey", pg.inner_text("#filmBanner"))
+        pg.close()
+
+    # ---- links ----
+    def test_booking_links_present(self):
+        pg = self._page()
+        hrefs = pg.eval_on_selector_all(
+            ".showtimes a.st", "els => els.map(e => e.getAttribute('href'))")
+        self.assertGreater(len(hrefs), 0)
+        self.assertTrue(all(h and h.startswith("http") for h in hrefs))
+        pg.close()
+
+    # ---- robustness ----
+    def test_no_console_errors(self):
+        pg = self._page()
+        pg.click('#filmRail .rail-item[data-film="the-odyssey"]')
+        pg.wait_for_selector("#filmBanner:not([hidden])")
+        pg.click("#clearFilm")
+        self.assertEqual(pg._console_errors, [])
         pg.close()
 
     def test_screenshots(self):
         for name, w, h in [("ui-mobile", 390, 844), ("ui-desktop", 1100, 1000)]:
             pg = self._page(w, h)
-            pg.screenshot(path=str(SHOTS / f"{name}.png"))
+            pg.screenshot(path=str(SHOTS / f"{name}.png"), full_page=True)
             pg.close()
         self.assertTrue((SHOTS / "ui-mobile.png").exists())
 

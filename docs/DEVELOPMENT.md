@@ -94,8 +94,11 @@ subtitled-cinema/
 
 Cities are data, not code:
 
-1. Add the YLC page name to `CITIES` in **both** `build/fetch_pages.py` and
-   `build/build_site.py` (e.g. add `"bolton"`).
+1. Add the YLC page name to `CITIES` in `build/fetch_pages.py` (e.g. add
+   `"bolton"`). `build/build_site.py` imports the same list, so one edit covers
+   both fetch and build. (Confirm the page exists first — `curl -sI
+   https://yourlocalcinema.com/bolton.html` should 200; YLC only publishes pages
+   where it has data.)
 2. `make fetch` to pull it, then inspect the parse:
    ```bash
    python3 -c "from datetime import date; from build.parse_ylc import parse_page; \

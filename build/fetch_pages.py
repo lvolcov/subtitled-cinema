@@ -15,7 +15,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / ".cache" / "pages"
-CITIES = ["manchester", "stockport", "altrincham", "didsbury"]
+# Greater Manchester + immediate ring. yourlocalcinema.com only publishes a page
+# per town where it has data, and each page lists every accessible screening
+# within a radius — so these overlap heavily and are merged/deduped downstream.
+# Between them they reach every subtitling cinema in the conurbation, including
+# the outer Odeons (Rochdale, Oldham, Northwich, Warrington) and independents
+# (Wigan Omniplex, Rochdale/Widnes Reel) that the four core towns miss.
+CITIES = [
+    "manchester", "stockport", "altrincham", "didsbury",
+    "bolton", "bury", "ashton", "warrington",
+]
 BASE = "https://yourlocalcinema.com/{city}.html"
 UA = "subtitled-cinema/1.0 (+https://github.com/) build bot"
 

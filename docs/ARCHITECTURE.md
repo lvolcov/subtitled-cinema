@@ -355,8 +355,8 @@ Two suites, run by `make test` and in CI (`.github/workflows/ci.yml`).
 
 Cities are **data, not code**:
 
-1. Add the city page to the `CITIES` list in `fetch_pages.py` **and**
-   `build_site.py`.
+1. Add the city page to the `CITIES` list in `fetch_pages.py` (`build_site.py`
+   imports it, so a single edit covers both).
 2. Add approximate coordinates for its venues in `cinema_meta.py` (keyed by the
    name slug) so "nearest" works.
 3. If a genuinely new source layout appears, extend `parse_ylc.py` — but the two

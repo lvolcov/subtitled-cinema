@@ -8,9 +8,14 @@ sources.
 
 ## 1. V1 (current): yourlocalcinema.com aggregation
 
-The site sources from **four yourlocalcinema.com (YLC) city pages** — the same
-listings Lucas already relied on, but fetched automatically, cleaned up, and
-re-presented far better.
+The site sources from **eight yourlocalcinema.com (YLC) town pages** spanning the
+whole of Greater Manchester and its ring — the same listings Lucas already
+relied on, but fetched automatically, cleaned up, and re-presented far better.
+Each YLC page lists every accessible screening within a radius of that town, so
+the pages **overlap heavily** and are merged/deduped downstream; together they
+reach every subtitling cinema in the conurbation (including the outer Odeons and
+the independents that the four core towns miss). YLC only publishes a page where
+it has data — the towns below are the full set that currently 200s.
 
 | Page | URL | Layout |
 |---|---|---|
@@ -18,6 +23,10 @@ re-presented far better.
 | Stockport | https://yourlocalcinema.com/stockport.html | B (`div.cinema-list`) |
 | Altrincham | https://yourlocalcinema.com/altrincham.html | B (`div.cinema-list`) |
 | Didsbury | https://yourlocalcinema.com/didsbury.html | B (`div.cinema-list`) |
+| Bolton | https://yourlocalcinema.com/bolton.html | B (`div.cinema-list`) |
+| Bury | https://yourlocalcinema.com/bury.html | B (`div.cinema-list`) |
+| Ashton | https://yourlocalcinema.com/ashton.html | B (`div.cinema-list`) |
+| Warrington | https://yourlocalcinema.com/warrington.html | B (`div.cinema-list`) |
 
 These are **static, hand-maintained HTML pages** — no API. Cinemas send their
 accessible-screening info to YLC, who type it up. We fetch, parse, and
@@ -29,26 +38,46 @@ every 6 hours, searchable, mobile-first — without the multi-week effort of
 wiring up and maintaining a scraper per cinema chain. Direct scraping is the V2
 plan (§5).
 
-### 1.1 Venues found (12 with subtitled screenings)
+### 1.1 Venues found (25 with subtitled screenings)
 
 | # | Cinema | Chain | Area | Postcode | From page(s) | Coords |
 |---|---|---|---|---|---|---|
-| 1 | Manchester Trafford Odeon | Odeon | Manchester | — | manchester | ✓ |
-| 2 | Manchester Great Northern Odeon | Odeon | Manchester | — | manchester | ✓ |
-| 3 | Manchester Quayside Vue | Vue | Manchester | — | manchester | ✓ |
-| 4 | Manchester Printworks Vue | Vue | Manchester | — | manchester | ✓ |
-| 5 | Manchester HOME | HOME | Manchester | — | manchester | ✓ |
-| 6 | Manchester Everyman | Everyman | Manchester | — | manchester | ✓ |
-| 7 | Stockport Light | Light | Stockport | SK1 | manchester **+** stockport | ✓ |
-| 8 | Wilmslow Rex | Rex | Wilmslow | SK9 | stockport | ✓ |
-| 9 | Altrincham Vue | Vue | Altrincham | WA14 | altrincham | ✓ |
-| 10 | Altrincham Everyman | Everyman | Altrincham | WA14 | altrincham | ✓ |
-| 11 | Knutsford Curzon | Curzon | Knutsford | WA16 | altrincham | ✓ |
-| 12 | Didsbury Cineworld | Cineworld | Didsbury | M20 | didsbury | ✓ |
+| 1 | Altrincham Vue | Vue | Altrincham | WA14 | altrincham | ✓ |
+| 2 | Altrincham Everyman | Everyman | Altrincham | WA14 | altrincham | ✓ |
+| 3 | Ashton-Under-Lyne Cineworld | Cineworld | Ashton-Under-Lyne | — | ashton | ✓ |
+| 4 | Bolton Cineworld | Cineworld | Bolton | BL1 | bolton | ✓ |
+| 5 | Bolton Light | Light | Bolton | BL1 | bolton | ✓ |
+| 6 | Bolton Vue | Vue | Bolton | — | bolton | ✓ |
+| 7 | Didsbury Cineworld | Cineworld | Didsbury | M20 | didsbury | ✓ |
+| 8 | Knutsford Curzon | Curzon | Knutsford | WA16 | altrincham | ✓ |
+| 9 | Manchester Everyman | Everyman | Manchester | — | manchester | ✓ |
+| 10 | Manchester Great Northern Odeon | Odeon | Manchester | — | manchester | ✓ |
+| 11 | Manchester Home | HOME | Manchester | — | manchester | ✓ |
+| 12 | Manchester Printworks Vue | Vue | Manchester | — | manchester | ✓ |
+| 13 | Manchester Quayside Vue | Vue | Manchester | — | manchester | ✓ |
+| 14 | Manchester Trafford Odeon | Odeon | Manchester | — | manchester | ✓ |
+| 15 | Northwich Odeon | Odeon | Northwich | CW9 | warrington | ✓ |
+| 16 | Oldham Odeon | Odeon | Oldham | — | ashton | ✓ |
+| 17 | Rochdale Odeon | Odeon | Rochdale | OL11 | bury | ✓ |
+| 18 | Rochdale Reel | Independent | Rochdale | — | bury | ✓ |
+| 19 | St Helens Cineworld | Cineworld | St Helens | WA10 | warrington | ✓ |
+| 20 | Stockport Light | Light | Stockport | SK1 | manchester **+** stockport | ✓ |
+| 21 | Warrington Cineworld | Cineworld | Warrington | WA1 | warrington | ✓ |
+| 22 | Warrington Odeon | Odeon | Warrington | WA5 | warrington | ✓ |
+| 23 | Widnes Cheshire Reel | Independent | Widnes | WA8 | warrington | ✓ |
+| 24 | Wigan Omniplex | Independent | Wigan | — | bolton | ✓ |
+| 25 | Wilmslow Rex | Rex | Wilmslow | SK9 | stockport | ✓ |
 
 *Stockport Light* appears on two source pages; the build **merges** it into one
-cinema whose `cities` list contains both. All 12 have hand-curated coordinates,
-so "nearest" works everywhere.
+cinema whose `cities` list contains both (the same dedupe protects every venue
+that shows up across the overlapping town pages). All 25 have hand-curated
+coordinates, so "nearest" works everywhere.
+
+**Independents & one-off venues** (Rochdale Reel, Widnes Cheshire Reel, Wigan
+Omniplex, Wilmslow Rex) have no reliable chain booking site, so their book-out
+link is a Google search for the venue by name + postcode — the YLC source hrefs
+for these point at the wrong branch (e.g. a Wigan Omniplex logo links to Omniplex
+*Birmingham*), so a name search is the honest, correct-destination fallback.
 
 **Venues deliberately dropped:** the source lists several venues as having *no*
 subtitled screenings — Manchester The Block, Backyard, Cultplex; Heaton Moor

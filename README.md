@@ -16,19 +16,19 @@ If you rely on subtitles, finding a screening you can actually watch is painful.
 
 ## What it does today
 
-- **Aggregates accessible screenings** across **12 cinemas** in Greater Manchester (Manchester, Stockport, Altrincham, Didsbury and nearby towns).
+- **Aggregates accessible screenings** across **25 cinemas** covering the whole of Greater Manchester and its ring (Manchester, Salford, Stockport, Altrincham, Bolton, Bury, Rochdale, Oldham, Ashton, Wigan, Warrington and more) — every subtitling chain venue plus the independents (Reel, the Rex, Omniplex).
 - **Subtitled / captioned** screenings, plus **foreign-language films with English subtitles** (HOME's arthouse programme), plus **audio-described** support (parsed and badged when the source lists any).
 - **🎬 Real movie posters** for each film, with a graceful gradient-initials fallback.
-- **Pick a film → see every cinema showing it.** Tap a film to open a detail view listing all cinemas + showtimes for it, sorted by distance, each showtime linking straight to booking.
-- **Cinema detail** — tap a cinema to see all its subtitled screenings and open it in Maps.
-- **Browse & filter**: search, a **date strip** (All / Today / Tomorrow / then each upcoming day), by cinema, by access type, and **group by cinema / film / day**. Active filters show as removable chips with a "Clear all".
+- **Pick a film → see every cinema showing it.** A film rail up top (poster + a "showing at N cinemas" count) is the main way in; tap one to filter the whole list to that film, grouped by cinema and sorted by distance, each showtime linking out to booking.
+- **Tap a cinema** name to filter to just that venue; cinema cards link out to Maps.
+- **Browse & filter**: search, a **date strip** (All / Today / Tomorrow / then each upcoming day), a **grouped multi-select cinema picker** (tick a whole chain — Vue, Odeon… — or individual venues), access type, and **group by cinema / film / day**. Filters live in a slim collapsible drawer; active filters show as removable chips with a "Clear all".
 - **📍 Nearest** — with your permission, sorts by distance (persisted) and shows miles.
 - **Shareable & bookmarkable** — filters and the open film/cinema live in the URL, so links share exactly what you see and the back button works.
 - **Installable (PWA)** with Open Graph link previews; certificate / captioned / subtitles / IMAX / audio-described badges; IMDb links.
-- **Accessible**: 0 axe violations, full keyboard + screen-reader support, focus-trapped dialogs, skip link, reduced-motion aware.
-- **Honest about freshness** — every venue shows when it was last checked; past screenings (>60 min ago) drop off automatically.
+- **Accessible**: 0 axe violations, full keyboard + screen-reader support, skip link, reduced-motion aware.
+- **Honest about freshness** — every venue shows when it was last checked; past screenings (>40 min ago) drop off automatically.
 
-Live numbers from the last build: **12 cinemas · 133 screenings · 16 films**.
+Live numbers from the last build: **25 cinemas · 207 screenings · 17 films**.
 
 ## How it works
 
@@ -97,14 +97,14 @@ No build step for the site itself — `public/` is plain static files.
 | Hosting | GitHub Pages (free, static) |
 | Stack | Python build pipeline · vanilla static frontend (no framework) |
 | Updates | Automatic via GitHub Actions, **every 6 hours** |
-| Launch area | Greater Manchester (Manchester/Stockport/Altrincham/Didsbury); built to add cities as data |
+| Launch area | Greater Manchester + ring (8 yourlocalcinema town pages); built to add cities as data |
 | What counts | Subtitled/captioned **+** audio-described; English subs **&** foreign-with-English-subs |
 | Design | Dark, mobile-first |
 | On scrape failure | Keep last data, stamp "last checked", link out (fetch never wipes cache) |
 
 ## Roadmap
 
-- **V1 (now):** source from yourlocalcinema's four city pages — fast to ship, immediately better UX.
+- **V1 (now):** source from yourlocalcinema's eight Greater Manchester town pages — fast to ship, immediately better UX, full-conurbation coverage.
 - **V2:** scrape the cinema chains directly (Odeon/Vue/Cineworld JSON APIs) for exact **per-showing booking deep-links** and independence from YLC. See [`docs/DATA-SOURCES.md`](docs/DATA-SOURCES.md).
 - Runtimes/synopses via a film metadata source; vendored (self-hosted) posters; more cities.
 

@@ -1,24 +1,28 @@
 {
-  "generated_at": "2026-07-25T00:33:04",
+  "generated_at": "2026-07-27T12:02:35",
   "timezone": "Europe/London",
   "cities": [
     "manchester",
     "stockport",
     "altrincham",
-    "didsbury"
+    "didsbury",
+    "bolton",
+    "bury",
+    "ashton",
+    "warrington"
   ],
   "stats": {
-    "cinemas": 12,
-    "screenings": 133,
-    "films": 16
+    "cinemas": 25,
+    "screenings": 207,
+    "films": 17
   },
   "films": [
     {
       "id": "angels-egg",
       "title": "Angels Egg",
       "certificate": null,
-      "poster_url": null,
-      "count": 4,
+      "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/21/AngelsEgg1985.jpg",
+      "count": 2,
       "cinema_count": 1
     },
     {
@@ -26,63 +30,63 @@
       "title": "Disclosure Day",
       "certificate": "12A",
       "poster_url": "https://yourlocalcinema.com/disclosureday.jpg",
-      "count": 2,
-      "cinema_count": 2
+      "count": 1,
+      "cinema_count": 1
     },
     {
       "id": "evil-dead-burn",
       "title": "Evil Dead Burn",
       "certificate": "18",
       "poster_url": "https://yourlocalcinema.com/evildeadburn.jpg",
-      "count": 3,
-      "cinema_count": 2
+      "count": 4,
+      "cinema_count": 4
     },
     {
       "id": "girlfriends",
       "title": "Girlfriends",
       "certificate": null,
       "poster_url": null,
-      "count": 6,
+      "count": 4,
       "cinema_count": 1
     },
     {
       "id": "kikis-delivery-service",
       "title": "Kikis Delivery Service",
       "certificate": null,
-      "poster_url": null,
-      "count": 8,
-      "cinema_count": 2
+      "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
+      "count": 12,
+      "cinema_count": 4
     },
     {
       "id": "minions-and-monsters",
       "title": "Minions and Monsters",
       "certificate": "U",
       "poster_url": "https://yourlocalcinema.com/minionsandmonsters.jpg",
-      "count": 9,
-      "cinema_count": 5
+      "count": 13,
+      "cinema_count": 10
     },
     {
       "id": "moana",
       "title": "Moana",
       "certificate": "PG",
       "poster_url": "https://yourlocalcinema.com/moana.jpg",
-      "count": 5,
-      "cinema_count": 4
+      "count": 10,
+      "cinema_count": 10
     },
     {
       "id": "national-theatre-live-the-misanthrope",
       "title": "National Theatre Live - The Misanthrope",
       "certificate": null,
       "poster_url": null,
-      "count": 3,
-      "cinema_count": 3
+      "count": 6,
+      "cinema_count": 6
     },
     {
       "id": "nostalghia",
       "title": "Nostalghia",
       "certificate": null,
-      "poster_url": null,
-      "count": 7,
+      "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/28/Nostalghia_1983_Italian_poster.jpeg",
+      "count": 5,
       "cinema_count": 1
     },
     {
@@ -90,23 +94,23 @@
       "title": "Obsession",
       "certificate": "18",
       "poster_url": "https://yourlocalcinema.com/obsession.jpg",
-      "count": 2,
-      "cinema_count": 2
+      "count": 1,
+      "cinema_count": 1
     },
     {
       "id": "paw-patrol-the-dino-movie",
       "title": "Paw Patrol - The Dino Movie",
       "certificate": "U",
       "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
-      "count": 10,
-      "cinema_count": 5
+      "count": 18,
+      "cinema_count": 10
     },
     {
       "id": "portrait-of-a-lady-on-fire",
       "title": "Portrait of a Lady on Fire",
       "certificate": null,
-      "poster_url": null,
-      "count": 7,
+      "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/cb/Portrait_of_a_Lady_on_Fire.jpg",
+      "count": 4,
       "cinema_count": 1
     },
     {
@@ -114,32 +118,40 @@
       "title": "SpiderMan - Brand New Day",
       "certificate": "12A",
       "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
-      "count": 19,
-      "cinema_count": 6
+      "count": 54,
+      "cinema_count": 16
+    },
+    {
+      "id": "the-end-of-oak-street",
+      "title": "The End Of Oak Street",
+      "certificate": "12A",
+      "poster_url": null,
+      "count": 4,
+      "cinema_count": 4
     },
     {
       "id": "the-invite",
       "title": "The Invite",
       "certificate": "15",
       "poster_url": "https://yourlocalcinema.com/theinvite.jpg",
-      "count": 6,
-      "cinema_count": 3
+      "count": 4,
+      "cinema_count": 2
     },
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
       "certificate": "15",
       "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
-      "count": 37,
-      "cinema_count": 12
+      "count": 59,
+      "cinema_count": 25
     },
     {
       "id": "toy-story-5",
       "title": "Toy Story 5",
       "certificate": "PG",
       "poster_url": "https://yourlocalcinema.com/toystory.jpg",
-      "count": 5,
-      "cinema_count": 3
+      "count": 6,
+      "cinema_count": 4
     }
   ],
   "cinemas": [
@@ -153,7 +165,7 @@
         "altrincham"
       ],
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.3875,
       "lng": -2.349,
       "screenings": [
@@ -274,7 +286,7 @@
         "altrincham"
       ],
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.3873,
       "lng": -2.3513,
       "screenings": [
@@ -326,6 +338,610 @@
       ]
     },
     {
+      "id": "ashton-under-lyne-cineworld",
+      "name": "Ashton-Under-Lyne Cineworld",
+      "area": "Ashton-Under-Lyne",
+      "chain": "Cineworld",
+      "postcode": null,
+      "cities": [
+        "ashton"
+      ],
+      "booking_url": "https://www.cineworld.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.489,
+      "lng": -2.109,
+      "screenings": [
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-26T14:10:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T18:10:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-30T18:30:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T15:20:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T18:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "The End Of Oak Street",
+          "film_id": "the-end-of-oak-street",
+          "source_url": "theendofoakstreet.html",
+          "poster_url": null,
+          "imdb_url": "https://www.imdb.com/find/?q=The+End+Of+Oak+Street",
+          "starts_at": "2026-08-16T14:50:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "Kikis Delivery Service",
+          "film_id": "kikis-delivery-service",
+          "source_url": "foreignlanguage.html",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
+          "starts_at": "2026-08-21T19:30:00",
+          "certificate": null,
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "foreign",
+          "note": "NOTE - some dubbed - double check with cinema - JAPANESE with English subtitles"
+        }
+      ]
+    },
+    {
+      "id": "bolton-cineworld",
+      "name": "Bolton Cineworld",
+      "area": "Bolton Cineworld",
+      "chain": "Cineworld",
+      "postcode": "BL1",
+      "cities": [
+        "bolton"
+      ],
+      "booking_url": "https://www.cineworld.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.5788,
+      "lng": -2.4283,
+      "screenings": [
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-26T14:30:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T14:30:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-30T14:10:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-30T15:20:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T14:10:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T14:10:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-06T14:10:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "The End Of Oak Street",
+          "film_id": "the-end-of-oak-street",
+          "source_url": "theendofoakstreet.html",
+          "poster_url": null,
+          "imdb_url": "https://www.imdb.com/find/?q=The+End+Of+Oak+Street",
+          "starts_at": "2026-08-16T15:50:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        }
+      ]
+    },
+    {
+      "id": "bolton-light",
+      "name": "Bolton Light",
+      "area": "Bolton Light",
+      "chain": "Light",
+      "postcode": "BL1",
+      "cities": [
+        "bolton"
+      ],
+      "booking_url": "https://www.lightcinemas.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.582,
+      "lng": -2.429,
+      "screenings": [
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-26T19:10:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "Moana",
+          "film_id": "moana",
+          "source_url": "moana.html",
+          "poster_url": "https://yourlocalcinema.com/moana.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Moana",
+          "starts_at": "2026-07-28T13:30:00",
+          "certificate": "PG",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (PG)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-30T20:10:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-01T20:10:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-04T10:00:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-05T12:50:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-06T10:00:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "Kikis Delivery Service",
+          "film_id": "kikis-delivery-service",
+          "source_url": "foreignlanguage.html",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
+          "starts_at": "2026-08-28T19:00:00",
+          "certificate": null,
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "foreign",
+          "note": "NOTE - some dubbed - double check with cinema - JAPANESE with English subtitles"
+        },
+        {
+          "title": "Kikis Delivery Service",
+          "film_id": "kikis-delivery-service",
+          "source_url": "foreignlanguage.html",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
+          "starts_at": "2026-08-30T16:30:00",
+          "certificate": null,
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "foreign",
+          "note": "NOTE - some dubbed - double check with cinema - JAPANESE with English subtitles"
+        },
+        {
+          "title": "Kikis Delivery Service",
+          "film_id": "kikis-delivery-service",
+          "source_url": "foreignlanguage.html",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
+          "starts_at": "2026-09-01T19:00:00",
+          "certificate": null,
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "foreign",
+          "note": "NOTE - some dubbed - double check with cinema - JAPANESE with English subtitles"
+        },
+        {
+          "title": "National Theatre Live - The Misanthrope",
+          "film_id": "national-theatre-live-the-misanthrope",
+          "source_url": "ntlive.html",
+          "poster_url": null,
+          "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Misanthrope",
+          "starts_at": "2026-10-01T11:00:00",
+          "certificate": null,
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled"
+        }
+      ]
+    },
+    {
+      "id": "bolton-vue",
+      "name": "Bolton Vue",
+      "area": "Bolton Vue",
+      "chain": "Vue",
+      "postcode": null,
+      "cities": [
+        "bolton"
+      ],
+      "booking_url": "https://www.myvue.com/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.5876,
+      "lng": -2.554,
+      "screenings": [
+        {
+          "title": "Toy Story 5",
+          "film_id": "toy-story-5",
+          "source_url": "toystory.html",
+          "poster_url": "https://yourlocalcinema.com/toystory.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Toy+Story+5",
+          "starts_at": "2026-07-26T12:40:00",
+          "certificate": "PG",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (PG)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T18:50:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-28T17:00:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "Minions and Monsters",
+          "film_id": "minions-and-monsters",
+          "source_url": "minionsandmonsters.html",
+          "poster_url": "https://yourlocalcinema.com/minionsandmonsters.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Minions+and+Monsters",
+          "starts_at": "2026-07-29T12:40:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-29T18:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-30T16:25:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-30T17:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-01T11:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T18:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-04T10:30:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        }
+      ]
+    },
+    {
       "id": "didsbury-cineworld",
       "name": "Didsbury Cineworld",
       "area": "Didsbury",
@@ -335,7 +951,7 @@
         "didsbury"
       ],
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.4188,
       "lng": -2.2196,
       "screenings": [
@@ -383,6 +999,21 @@
           "screen_type": "standard",
           "language": "en",
           "note": "subtitled (15)"
+        },
+        {
+          "title": "The End Of Oak Street",
+          "film_id": "the-end-of-oak-street",
+          "source_url": "theendofoakstreet.html",
+          "poster_url": null,
+          "imdb_url": "https://www.imdb.com/find/?q=The+End+Of+Oak+Street",
+          "starts_at": "2026-08-16T14:30:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
         }
       ]
     },
@@ -396,7 +1027,7 @@
         "altrincham"
       ],
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.3027,
       "lng": -2.3717,
       "screenings": [
@@ -442,7 +1073,7 @@
         "manchester"
       ],
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.476,
       "lng": -2.253,
       "screenings": [
@@ -488,25 +1119,10 @@
         "manchester"
       ],
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.4779,
       "lng": -2.2489,
       "screenings": [
-        {
-          "title": "Disclosure Day",
-          "film_id": "disclosure-day",
-          "source_url": "disclosureday.html",
-          "poster_url": "https://yourlocalcinema.com/disclosureday.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=Disclosure+Day",
-          "starts_at": "2026-07-25T17:30:00",
-          "certificate": "12A",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (12a)"
-        },
         {
           "title": "The Invite",
           "film_id": "the-invite",
@@ -654,180 +1270,15 @@
         "manchester"
       ],
       "booking_url": "https://homemcr.org/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.4738,
       "lng": -2.247,
       "screenings": [
         {
-          "title": "The Invite",
-          "film_id": "the-invite",
-          "source_url": "theinvite.html",
-          "poster_url": "https://yourlocalcinema.com/theinvite.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=The+Invite",
-          "starts_at": "2026-07-24T13:00:00",
-          "certificate": "15",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (15)"
-        },
-        {
-          "title": "Portrait of a Lady on Fire",
-          "film_id": "portrait-of-a-lady-on-fire",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Portrait+of+a+Lady+on+Fire",
-          "starts_at": "2026-07-24T13:20:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "FRENCH with English subtitles"
-        },
-        {
-          "title": "Angels Egg",
-          "film_id": "angels-egg",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Angels+Egg",
-          "starts_at": "2026-07-24T16:00:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "JAPANESE with English subtitles"
-        },
-        {
-          "title": "Girlfriends",
-          "film_id": "girlfriends",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Girlfriends",
-          "starts_at": "2026-07-24T18:15:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "Cantonese with English subtitles"
-        },
-        {
           "title": "Nostalghia",
           "film_id": "nostalghia",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Nostalghia",
-          "starts_at": "2026-07-24T20:15:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "Foreign language with English subtitles"
-        },
-        {
-          "title": "Portrait of a Lady on Fire",
-          "film_id": "portrait-of-a-lady-on-fire",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Portrait+of+a+Lady+on+Fire",
-          "starts_at": "2026-07-25T12:55:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "FRENCH with English subtitles"
-        },
-        {
-          "title": "Nostalghia",
-          "film_id": "nostalghia",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Nostalghia",
-          "starts_at": "2026-07-25T13:00:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "Foreign language with English subtitles"
-        },
-        {
-          "title": "The Odyssey",
-          "film_id": "the-odyssey",
-          "source_url": "theodyssey.html",
-          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
-          "starts_at": "2026-07-25T13:15:00",
-          "certificate": "15",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (15)"
-        },
-        {
-          "title": "Girlfriends",
-          "film_id": "girlfriends",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Girlfriends",
-          "starts_at": "2026-07-25T13:20:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "Cantonese with English subtitles"
-        },
-        {
-          "title": "Angels Egg",
-          "film_id": "angels-egg",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Angels+Egg",
-          "starts_at": "2026-07-25T18:45:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "JAPANESE with English subtitles"
-        },
-        {
-          "title": "Portrait of a Lady on Fire",
-          "film_id": "portrait-of-a-lady-on-fire",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
-          "imdb_url": "https://www.imdb.com/find/?q=Portrait+of+a+Lady+on+Fire",
-          "starts_at": "2026-07-25T20:15:00",
-          "certificate": null,
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "foreign",
-          "note": "FRENCH with English subtitles"
-        },
-        {
-          "title": "Nostalghia",
-          "film_id": "nostalghia",
-          "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/28/Nostalghia_1983_Italian_poster.jpeg",
           "imdb_url": "https://www.imdb.com/find/?q=Nostalghia",
           "starts_at": "2026-07-26T14:45:00",
           "certificate": null,
@@ -842,7 +1293,7 @@
           "title": "Angels Egg",
           "film_id": "angels-egg",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/21/AngelsEgg1985.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Angels+Egg",
           "starts_at": "2026-07-26T17:25:00",
           "certificate": null,
@@ -872,7 +1323,7 @@
           "title": "Portrait of a Lady on Fire",
           "film_id": "portrait-of-a-lady-on-fire",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/cb/Portrait_of_a_Lady_on_Fire.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Portrait+of+a+Lady+on+Fire",
           "starts_at": "2026-07-26T20:00:00",
           "certificate": null,
@@ -902,7 +1353,7 @@
           "title": "Nostalghia",
           "film_id": "nostalghia",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/28/Nostalghia_1983_Italian_poster.jpeg",
           "imdb_url": "https://www.imdb.com/find/?q=Nostalghia",
           "starts_at": "2026-07-27T12:50:00",
           "certificate": null,
@@ -947,7 +1398,7 @@
           "title": "Portrait of a Lady on Fire",
           "film_id": "portrait-of-a-lady-on-fire",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/cb/Portrait_of_a_Lady_on_Fire.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Portrait+of+a+Lady+on+Fire",
           "starts_at": "2026-07-27T18:05:00",
           "certificate": null,
@@ -962,7 +1413,7 @@
           "title": "Angels Egg",
           "film_id": "angels-egg",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/21/AngelsEgg1985.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Angels+Egg",
           "starts_at": "2026-07-27T20:40:00",
           "certificate": null,
@@ -992,7 +1443,7 @@
           "title": "Nostalghia",
           "film_id": "nostalghia",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/28/Nostalghia_1983_Italian_poster.jpeg",
           "imdb_url": "https://www.imdb.com/find/?q=Nostalghia",
           "starts_at": "2026-07-28T12:50:00",
           "certificate": null,
@@ -1022,7 +1473,7 @@
           "title": "Portrait of a Lady on Fire",
           "film_id": "portrait-of-a-lady-on-fire",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/cb/Portrait_of_a_Lady_on_Fire.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Portrait+of+a+Lady+on+Fire",
           "starts_at": "2026-07-28T15:45:00",
           "certificate": null,
@@ -1052,7 +1503,7 @@
           "title": "Nostalghia",
           "film_id": "nostalghia",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/28/Nostalghia_1983_Italian_poster.jpeg",
           "imdb_url": "https://www.imdb.com/find/?q=Nostalghia",
           "starts_at": "2026-07-28T20:10:00",
           "certificate": null,
@@ -1067,7 +1518,7 @@
           "title": "Portrait of a Lady on Fire",
           "film_id": "portrait-of-a-lady-on-fire",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/cb/Portrait_of_a_Lady_on_Fire.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Portrait+of+a+Lady+on+Fire",
           "starts_at": "2026-07-29T13:25:00",
           "certificate": null,
@@ -1082,7 +1533,7 @@
           "title": "Nostalghia",
           "film_id": "nostalghia",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/28/Nostalghia_1983_Italian_poster.jpeg",
           "imdb_url": "https://www.imdb.com/find/?q=Nostalghia",
           "starts_at": "2026-07-29T16:35:00",
           "certificate": null,
@@ -1150,85 +1601,10 @@
         "manchester"
       ],
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.4855,
       "lng": -2.2377,
       "screenings": [
-        {
-          "title": "The Odyssey",
-          "film_id": "the-odyssey",
-          "source_url": "theodyssey.html",
-          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
-          "starts_at": "2026-07-24T17:00:00",
-          "certificate": "15",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (15)"
-        },
-        {
-          "title": "Evil Dead Burn",
-          "film_id": "evil-dead-burn",
-          "source_url": "evildead.html",
-          "poster_url": "https://yourlocalcinema.com/evildeadburn.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=Evil+Dead+Burn",
-          "starts_at": "2026-07-24T18:15:00",
-          "certificate": "18",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (18)"
-        },
-        {
-          "title": "Evil Dead Burn",
-          "film_id": "evil-dead-burn",
-          "source_url": "evildead.html",
-          "poster_url": "https://yourlocalcinema.com/evildeadburn.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=Evil+Dead+Burn",
-          "starts_at": "2026-07-24T18:30:00",
-          "certificate": "18",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (18)"
-        },
-        {
-          "title": "Moana",
-          "film_id": "moana",
-          "source_url": "moana.html",
-          "poster_url": "https://yourlocalcinema.com/moana.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=Moana",
-          "starts_at": "2026-07-25T13:15:00",
-          "certificate": "PG",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (PG)"
-        },
-        {
-          "title": "The Odyssey",
-          "film_id": "the-odyssey",
-          "source_url": "theodyssey.html",
-          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
-          "starts_at": "2026-07-25T19:30:00",
-          "certificate": "15",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (15)"
-        },
         {
           "title": "The Odyssey",
           "film_id": "the-odyssey",
@@ -1601,7 +1977,7 @@
         "manchester"
       ],
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.4709,
       "lng": -2.2967,
       "screenings": [
@@ -1767,55 +2143,10 @@
         "manchester"
       ],
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.4668,
       "lng": -2.3487,
       "screenings": [
-        {
-          "title": "The Invite",
-          "film_id": "the-invite",
-          "source_url": "theinvite.html",
-          "poster_url": "https://yourlocalcinema.com/theinvite.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=The+Invite",
-          "starts_at": "2026-07-24T18:30:00",
-          "certificate": "15",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (15)"
-        },
-        {
-          "title": "Minions and Monsters",
-          "film_id": "minions-and-monsters",
-          "source_url": "minionsandmonsters.html",
-          "poster_url": "https://yourlocalcinema.com/minionsandmonsters.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=Minions+and+Monsters",
-          "starts_at": "2026-07-25T12:00:00",
-          "certificate": "U",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (U)"
-        },
-        {
-          "title": "Obsession",
-          "film_id": "obsession",
-          "source_url": "obsession.html",
-          "poster_url": "https://yourlocalcinema.com/obsession.jpg",
-          "imdb_url": "https://www.imdb.com/find/?q=Obsession",
-          "starts_at": "2026-07-25T17:45:00",
-          "certificate": "18",
-          "accessibility": [
-            "subtitled"
-          ],
-          "screen_type": "standard",
-          "language": "en",
-          "note": "subtitled (18)"
-        },
         {
           "title": "Toy Story 5",
           "film_id": "toy-story-5",
@@ -2045,7 +2376,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-08-21T19:00:00",
           "certificate": null,
@@ -2074,6 +2405,626 @@
       ]
     },
     {
+      "id": "northwich-odeon",
+      "name": "Northwich Odeon",
+      "area": "Northwich Odeon",
+      "chain": "Odeon",
+      "postcode": "CW9",
+      "cities": [
+        "warrington"
+      ],
+      "booking_url": "https://www.odeon.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.259,
+      "lng": -2.518,
+      "screenings": [
+        {
+          "title": "Moana",
+          "film_id": "moana",
+          "source_url": "moana.html",
+          "poster_url": "https://yourlocalcinema.com/moana.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Moana",
+          "starts_at": "2026-07-26T12:15:00",
+          "certificate": "PG",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (PG)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T20:00:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-28T18:00:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T19:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-05T17:45:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        }
+      ]
+    },
+    {
+      "id": "oldham-odeon",
+      "name": "Oldham Odeon",
+      "area": "Oldham",
+      "chain": "Odeon",
+      "postcode": null,
+      "cities": [
+        "ashton"
+      ],
+      "booking_url": "https://www.odeon.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.521,
+      "lng": -2.137,
+      "screenings": [
+        {
+          "title": "Moana",
+          "film_id": "moana",
+          "source_url": "moana.html",
+          "poster_url": "https://yourlocalcinema.com/moana.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Moana",
+          "starts_at": "2026-07-26T12:45:00",
+          "certificate": "PG",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (PG)"
+        },
+        {
+          "title": "Evil Dead Burn",
+          "film_id": "evil-dead-burn",
+          "source_url": "evildead.html",
+          "poster_url": "https://yourlocalcinema.com/evildeadburn.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Evil+Dead+Burn",
+          "starts_at": "2026-07-26T20:45:00",
+          "certificate": "18",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (18)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T20:15:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "Minions and Monsters",
+          "film_id": "minions-and-monsters",
+          "source_url": "minionsandmonsters.html",
+          "poster_url": "https://yourlocalcinema.com/minionsandmonsters.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Minions+and+Monsters",
+          "starts_at": "2026-07-28T13:15:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-29T18:45:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-30T21:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T11:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T20:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-05T17:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-09T10:00:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        }
+      ]
+    },
+    {
+      "id": "rochdale-odeon",
+      "name": "Rochdale Odeon",
+      "area": "Rochdale",
+      "chain": "Odeon",
+      "postcode": "OL11",
+      "cities": [
+        "bury"
+      ],
+      "booking_url": "https://www.odeon.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.592,
+      "lng": -2.178,
+      "screenings": [
+        {
+          "title": "Moana",
+          "film_id": "moana",
+          "source_url": "moana.html",
+          "poster_url": "https://yourlocalcinema.com/moana.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Moana",
+          "starts_at": "2026-07-26T12:30:00",
+          "certificate": "PG",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (PG)"
+        },
+        {
+          "title": "Evil Dead Burn",
+          "film_id": "evil-dead-burn",
+          "source_url": "evildead.html",
+          "poster_url": "https://yourlocalcinema.com/evildeadburn.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Evil+Dead+Burn",
+          "starts_at": "2026-07-26T21:15:00",
+          "certificate": "18",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (18)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T20:00:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "Minions and Monsters",
+          "film_id": "minions-and-monsters",
+          "source_url": "minionsandmonsters.html",
+          "poster_url": "https://yourlocalcinema.com/minionsandmonsters.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Minions+and+Monsters",
+          "starts_at": "2026-07-28T12:15:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-29T17:45:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-30T20:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-31T10:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T11:20:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T20:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-05T18:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-05T18:20:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-06T17:00:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-09T10:00:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "National Theatre Live - The Misanthrope",
+          "film_id": "national-theatre-live-the-misanthrope",
+          "source_url": "ntlive.html",
+          "poster_url": null,
+          "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Misanthrope",
+          "starts_at": "2026-09-28T15:30:00",
+          "certificate": null,
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled"
+        }
+      ]
+    },
+    {
+      "id": "rochdale-reel",
+      "name": "Rochdale Reel",
+      "area": "Rochdale",
+      "chain": null,
+      "postcode": null,
+      "cities": [
+        "bury"
+      ],
+      "booking_url": "https://www.google.com/search?q=Rochdale+Reel+cinema+tickets",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.6136,
+      "lng": -2.1553,
+      "screenings": [
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-28T15:55:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        }
+      ]
+    },
+    {
+      "id": "st-helens-cineworld",
+      "name": "St Helens Cineworld",
+      "area": "St Helens",
+      "chain": "Cineworld",
+      "postcode": "WA10",
+      "cities": [
+        "warrington"
+      ],
+      "booking_url": "https://www.cineworld.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.453,
+      "lng": -2.737,
+      "screenings": [
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-26T13:50:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T16:30:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-30T14:20:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T16:20:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T19:30:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "The End Of Oak Street",
+          "film_id": "the-end-of-oak-street",
+          "source_url": "theendofoakstreet.html",
+          "poster_url": null,
+          "imdb_url": "https://www.imdb.com/find/?q=The+End+Of+Oak+Street",
+          "starts_at": "2026-08-16T13:20:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        }
+      ]
+    },
+    {
       "id": "stockport-light",
       "name": "Stockport Light",
       "area": "Stockport Light",
@@ -2084,7 +3035,7 @@
         "stockport"
       ],
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-07-25T00:33:04",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.4084,
       "lng": -2.1494,
       "screenings": [
@@ -2182,7 +3133,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-08-28T12:30:00",
           "certificate": null,
@@ -2197,7 +3148,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-08-29T12:30:00",
           "certificate": null,
@@ -2212,7 +3163,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-08-30T12:30:00",
           "certificate": null,
@@ -2227,7 +3178,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-08-31T17:30:00",
           "certificate": null,
@@ -2242,7 +3193,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-09-01T18:00:00",
           "certificate": null,
@@ -2257,7 +3208,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-09-02T17:00:00",
           "certificate": null,
@@ -2272,7 +3223,7 @@
           "title": "Kikis Delivery Service",
           "film_id": "kikis-delivery-service",
           "source_url": "foreignlanguage.html",
-          "poster_url": null,
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
           "imdb_url": "https://www.imdb.com/find/?q=Kikis+Delivery+Service",
           "starts_at": "2026-09-03T18:00:00",
           "certificate": null,
@@ -2301,6 +3252,385 @@
       ]
     },
     {
+      "id": "warrington-cineworld",
+      "name": "Warrington Cineworld",
+      "area": "Warrington Cineworld",
+      "chain": "Cineworld",
+      "postcode": "WA1",
+      "cities": [
+        "warrington"
+      ],
+      "booking_url": "https://www.cineworld.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.386,
+      "lng": -2.581,
+      "screenings": [
+        {
+          "title": "Minions and Monsters",
+          "film_id": "minions-and-monsters",
+          "source_url": "minionsandmonsters.html",
+          "poster_url": "https://yourlocalcinema.com/minionsandmonsters.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Minions+and+Monsters",
+          "starts_at": "2026-07-26T13:50:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T17:30:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-30T19:50:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T15:10:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T18:20:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        }
+      ]
+    },
+    {
+      "id": "warrington-odeon",
+      "name": "Warrington Odeon",
+      "area": "Warrington Odeon",
+      "chain": "Odeon",
+      "postcode": "WA5",
+      "cities": [
+        "warrington"
+      ],
+      "booking_url": "https://www.odeon.co.uk/",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.395,
+      "lng": -2.618,
+      "screenings": [
+        {
+          "title": "Moana",
+          "film_id": "moana",
+          "source_url": "moana.html",
+          "poster_url": "https://yourlocalcinema.com/moana.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Moana",
+          "starts_at": "2026-07-26T10:50:00",
+          "certificate": "PG",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (PG)"
+        },
+        {
+          "title": "Evil Dead Burn",
+          "film_id": "evil-dead-burn",
+          "source_url": "evildead.html",
+          "poster_url": "https://yourlocalcinema.com/evildeadburn.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Evil+Dead+Burn",
+          "starts_at": "2026-07-26T21:40:00",
+          "certificate": "18",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (18)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T19:30:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "Minions and Monsters",
+          "film_id": "minions-and-monsters",
+          "source_url": "minionsandmonsters.html",
+          "poster_url": "https://yourlocalcinema.com/minionsandmonsters.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Minions+and+Monsters",
+          "starts_at": "2026-07-28T11:20:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-29T16:00:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-30T21:20:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-07-31T10:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-02T10:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-03T20:40:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "SpiderMan - Brand New Day",
+          "film_id": "spiderman-brand-new-day",
+          "source_url": "spiderman.html",
+          "poster_url": "https://yourlocalcinema.com/spiderman.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=SpiderMan+-+Brand+New+Day",
+          "starts_at": "2026-08-05T18:00:00",
+          "certificate": "12A",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (12a)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-06T17:00:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "film_id": "paw-patrol-the-dino-movie",
+          "source_url": "pawpatrol.html",
+          "poster_url": "https://yourlocalcinema.com/pawpatrol.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Paw+Patrol+-+The+Dino+Movie",
+          "starts_at": "2026-08-09T10:00:00",
+          "certificate": "U",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (U)"
+        },
+        {
+          "title": "National Theatre Live - The Misanthrope",
+          "film_id": "national-theatre-live-the-misanthrope",
+          "source_url": "ntlive.html",
+          "poster_url": null,
+          "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Misanthrope",
+          "starts_at": "2026-09-28T15:30:00",
+          "certificate": null,
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled"
+        }
+      ]
+    },
+    {
+      "id": "widnes-cheshire-reel",
+      "name": "Widnes Cheshire Reel",
+      "area": "Widnes Cheshire Reel",
+      "chain": null,
+      "postcode": "WA8",
+      "cities": [
+        "warrington"
+      ],
+      "booking_url": "https://www.google.com/search?q=Widnes+Cheshire+Reel+WA8+cinema+tickets",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.362,
+      "lng": -2.729,
+      "screenings": [
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-28T15:55:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        }
+      ]
+    },
+    {
+      "id": "wigan-omniplex",
+      "name": "Wigan Omniplex",
+      "area": "Wigan Omniplex",
+      "chain": null,
+      "postcode": null,
+      "cities": [
+        "bolton"
+      ],
+      "booking_url": "https://www.google.com/search?q=Wigan+Omniplex+cinema+tickets",
+      "last_checked": "2026-07-27T12:02:35",
+      "lat": 53.5487,
+      "lng": -2.6461,
+      "screenings": [
+        {
+          "title": "Moana",
+          "film_id": "moana",
+          "source_url": "moana.html",
+          "poster_url": "https://yourlocalcinema.com/moana.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=Moana",
+          "starts_at": "2026-07-26T10:15:00",
+          "certificate": "PG",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (PG)"
+        },
+        {
+          "title": "The Odyssey",
+          "film_id": "the-odyssey",
+          "source_url": "theodyssey.html",
+          "poster_url": "https://yourlocalcinema.com/theodyssey.jpg",
+          "imdb_url": "https://www.imdb.com/find/?q=The+Odyssey",
+          "starts_at": "2026-07-27T20:00:00",
+          "certificate": "15",
+          "accessibility": [
+            "subtitled"
+          ],
+          "screen_type": "standard",
+          "language": "en",
+          "note": "subtitled (15)"
+        }
+      ]
+    },
+    {
       "id": "wilmslow-rex",
       "name": "Wilmslow Rex",
       "area": "Wilmslow",
@@ -2309,8 +3639,8 @@
       "cities": [
         "stockport"
       ],
-      "booking_url": null,
-      "last_checked": "2026-07-25T00:33:04",
+      "booking_url": "https://www.google.com/search?q=Wilmslow+Rex+SK9+cinema+tickets",
+      "last_checked": "2026-07-27T12:02:35",
       "lat": 53.3269,
       "lng": -2.2314,
       "screenings": [

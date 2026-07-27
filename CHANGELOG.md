@@ -8,6 +8,41 @@ This is a continuously-deployed static site (GitHub Actions → GitHub Pages), s
 
 ---
 
+## [v3] — 2026-07-27 — Full Greater Manchester coverage + controls redesign
+
+### Added
+- **Full-conurbation coverage.** Added four more yourlocalcinema town pages —
+  `bolton`, `bury`, `ashton`, `warrington` — taking the source set to **eight**.
+  Coverage jumps from **12 → 25 cinemas** (**133 → 207 screenings**), now
+  including the outer Odeons (Rochdale, Oldham, Northwich, Warrington), more
+  Cineworlds and Vues, and the independents **Wigan Omniplex, Rochdale Reel,
+  Widnes Cheshire Reel** — plus **Odeon at 6 venues** (was 2). `build_site.py`
+  now imports `CITIES` from `fetch_pages.py`, so the source list has one home.
+- **Coordinates** for all 13 new venues in `cinema_meta.py` (nearest-cinema works
+  everywhere).
+- **Slim sticky controls + drawer.** The frozen bar was eating ~half the phone
+  screen; it's now a single slim row (group toggle · search · Filters) with the
+  date strip, cinema picker, access and sort tucked into a collapsible drawer.
+- **Grouped multi-select cinema filter.** The old single-select is now a popover
+  with checkboxes grouped by chain (Vue, Odeon, …); ticking a chain selects all
+  its venues (indeterminate state when partial). URL uses `?cinemas=a,b,c`.
+
+### Fixed
+- **Mobile horizontal overflow.** The controls bar now wraps and the (larger)
+  stat pill is hidden on narrow phones — no more sideways scroll.
+- **Dead booking links.** Chainless/one-off venues (Reel, the Rex, Omniplex) used
+  to link to `#`, and unreliable source hrefs could point at the wrong branch
+  (Wigan Omniplex → Omniplex *Birmingham*). They now fall back to a Google search
+  for the venue by name + postcode.
+- **Leaked postcode in cinema names** ("Rochdale Odeon 1R"): the postcode regex
+  now strips the inward code too.
+
+### Changed
+- **UI tests** rewritten for the rail + slim-bar DOM (20 Playwright checks,
+  including a guard that the sticky area stays under half a phone screen).
+
+---
+
 ## [v2] — 2026-07-25 — UX & accessibility pass
 
 Driven by an axe-core + Playwright audit (see [`docs/UX-AUDIT.md`](docs/UX-AUDIT.md)).
