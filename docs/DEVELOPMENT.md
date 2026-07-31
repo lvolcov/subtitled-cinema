@@ -34,9 +34,9 @@ make install
 | `make build` | Parse + merge + enrich → `public/data.json`. Offline; uses the poster cache. |
 | `make all` | `fetch` then `build`. |
 | `make serve` | Serve `public/` at http://localhost:8000. |
-| `make test` | Run all 45 tests (parser + Playwright UI). |
-| `make test-parse` | Just the 25 Python parser/pipeline tests (fast, no browser). |
-| `make test-ui` | Just the 20 Playwright UI tests. |
+| `make test` | Run all 62 tests (parser + Playwright UI). |
+| `make test-parse` | Just the 37 Python parser/pipeline tests (fast, no browser). |
+| `make test-ui` | Just the 25 Playwright UI tests. |
 
 The network-touching resolvers are separate and all cached (caches are committed,
 so a normal `make build` fetches nothing). Refresh them when the data changes:
@@ -76,6 +76,7 @@ subtitled-cinema/
 │   ├── discover_towns.py     # derive the UK town list from YLC's store-locator feed
 │   ├── fetch_pages.py        # download the ~155 town pages (validates; never wipes cache)
 │   ├── parse_ylc.py          # parse all three page layouts → Cinema/Film/Screening (pure)
+│   ├── regions.py            # town page / venue → UK region (Greater Manchester first)
 │   ├── posters.py            # YLC per-film poster → build/poster_cache.json
 │   ├── posters_wiki.py       # Wikipedia poster fallback → build/poster_wiki_cache.json
 │   ├── imdb.py               # direct IMDb tt ids via Wikidata → build/imdb_cache.json
@@ -89,9 +90,9 @@ subtitled-cinema/
 │   ├── manifest.webmanifest
 │   └── data.json             # GENERATED — do not hand-edit
 ├── tests/
-│   ├── test_parse.py         # 25 parser + pipeline unit tests
+│   ├── test_parse.py         # 37 parser + pipeline unit tests
 │   ├── audit_coverage.py     # per-town undercount check (not a unit test)
-│   ├── test_ui.py            # 20 Playwright UI tests
+│   ├── test_ui.py            # 25 Playwright UI tests
 │   └── screenshots/          # written by the UI tests (git-ignored)
 ├── .cache/pages/*.html       # committed source snapshot (CI refreshes it)
 ├── .github/workflows/        # build.yml (deploy), ci.yml (tests)
@@ -127,6 +128,27 @@ Coordinates for new venues are handled automatically by `build/geocode.py` (from
 each venue's postcode); hand-curate in `cinema_meta.py` only when you want a more
 precise point (see 6.2). Run `python3 -m tests.audit_coverage` to check nothing is
 being under-parsed.
+
+### 6.1b Put a town or venue in the right region
+
+The **Region** picker (top bar) is driven by `build/regions.py`:
+
+```python
+TOWN_REGION = { "manchester": GREATER_MANCHESTER, "york": "Yorkshire", ... }
+VENUE_REGION = { "wilmslow-rex": "North West", ... }   # wins over the town page
+REGION_ORDER = ["Greater Manchester", "North West", ...]   # display order
+```
+
+- **New town page?** add it to `TOWN_REGION` — `test_every_town_page_is_mapped`
+  fails until you do.
+- **A venue filed under the wrong region?** YLC town pages reach across county
+  lines, so a Cheshire venue can land on a Manchester page. Add its slug to
+  `VENUE_REGION`.
+- **New region name?** add it to `REGION_ORDER` too (a test checks every region
+  used is in the order list). Greater Manchester stays first — it's the
+  most-used filter here.
+
+Then `make build` and check `public/data.json`'s `regions` block.
 
 ### 6.2 Add coordinates for a venue (so "nearest" works)
 

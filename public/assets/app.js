@@ -61,7 +61,8 @@
 
   // ---------- state ----------
   var DATA = null, SESSIONS = [], FILMS = [], CINEMAS = {}, COORDS = window.__COORDS__ || null;
-  var state = { film: "", date: "all", group: "cinema", access: "", cinemas: [], sort: "time", q: "" };
+  var RKEY = "sc-region";   // remembered region (this is a "my patch" filter)
+  var state = { film: "", date: "all", group: "cinema", access: "", cinemas: [], sort: "time", q: "", region: "" };
 
   // ---------- load ----------
   function boot(data) {
@@ -81,29 +82,82 @@
         });
       });
     });
-    FILMS = (data.films || []).slice().map(function (f) {
-      var mine = SESSIONS.filter(function (s) { return s.film_id === f.id; });
-      var cinemas = {}; mine.forEach(function (s) { cinemas[s.cinema.id] = 1; });
-      return { id: f.id, title: f.title, cert: f.certificate, poster: f.poster_url,
-        ntimes: mine.length, nvenues: Object.keys(cinemas).length, lang: (mine[0] || {}).lang };
-    }).filter(function (f) { return f.ntimes > 0; })
-      .sort(function (a, b) { return b.ntimes - a.ntimes; });
-
-    var st = DATA.stats || {};
-    $("statPill").innerHTML = "<b>" + st.screenings + "</b> screenings · <b>" + st.cinemas + "</b> cinemas";
     var gen = DATA.generated_at ? new Date(DATA.generated_at) : n;
     $("lastUpdated").textContent = "Last checked " + relDay(gen, n).toLowerCase() + " · " +
       DOW[gen.getDay()] + " " + gen.getDate() + " " + MON[gen.getMonth()] + " " + gen.getFullYear();
 
     if (COORDS) { $("nearBtn").setAttribute("aria-pressed", "true"); state.sort = "near"; $("sortBy").value = "near"; }
-    // build the film rail first — it's the thing users rely on — and never let a
-    // filter-builder error stop it from rendering.
+
+    try { buildRegionSelect(); } catch (e) { console.error("region select failed", e); }
+    readURL();                 // URL wins over the remembered region
+    // everything below is region-scoped (rail, cinema list, dates), so build it
+    // after the region is known. Never let a filter-builder error stop the rail.
+    applyRegionScope();
+    syncGroup(); syncDateStrip(); syncRail(); syncCinemaMenu();
+    $("skeleton").hidden = true; if ($("skeleton")) $("skeleton").remove();
+    render();
+  }
+
+  // ---------- regions ----------
+  // A region narrows *everything*: the film rail, the cinema picker, the date
+  // strip and the list. Greater Manchester is pinned first (see build/regions.py).
+  function regionSessions() {
+    if (!state.region) return SESSIONS;
+    return SESSIONS.filter(function (s) { return s.cinema.region === state.region; });
+  }
+  function inRegion(c) { return !state.region || (c && c.region === state.region); }
+  function computeFilms(sessions) {
+    return (DATA.films || []).slice().map(function (f) {
+      var mine = sessions.filter(function (s) { return s.film_id === f.id; });
+      var cinemas = {}; mine.forEach(function (s) { cinemas[s.cinema.id] = 1; });
+      return { id: f.id, title: f.title, cert: f.certificate, poster: f.poster_url,
+        ntimes: mine.length, nvenues: Object.keys(cinemas).length, lang: (mine[0] || {}).lang };
+    }).filter(function (f) { return f.ntimes > 0; })
+      .sort(function (a, b) { return b.ntimes - a.ntimes; });
+  }
+  function buildRegionSelect() {
+    var sel = $("regionFilter"); if (!sel) return;
+    var regions = (DATA.regions || []).filter(function (r) { return r.screenings > 0; });
+    var opts = ['<option value="">All of the UK</option>'];
+    regions.forEach(function (r) {
+      opts.push('<option value="' + esc(r.name) + '">' + esc(r.name) + "</option>");
+    });
+    sel.innerHTML = opts.join("");
+    // a remembered region is a personal default; a shared link (?region=) wins.
+    var stored = null;
+    try { stored = localStorage.getItem(RKEY); } catch (e) {}
+    if (stored && regions.some(function (r) { return r.name === stored; })) state.region = stored;
+    sel.addEventListener("change", function () {
+      state.region = this.value;
+      try { this.value ? localStorage.setItem(RKEY, this.value) : localStorage.removeItem(RKEY); } catch (e) {}
+      applyRegionScope();
+      syncDateStrip(); syncRail(); syncCinemaMenu();
+      render(); pushURL();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  // Rebuild every region-scoped control, and drop selections the region excludes.
+  function applyRegionScope() {
+    var sessions = regionSessions();
+    FILMS = computeFilms(sessions);
+    if (state.film && !FILMS.some(function (f) { return f.id === state.film; })) state.film = "";
+    state.cinemas = state.cinemas.filter(function (id) { return inRegion(CINEMAS[id]); });
+    if (state.date !== "all" && !sessions.some(function (s) { return dayKey(s.when) === state.date; })) state.date = "all";
     buildRail();
     try { buildCinemaMenu(); } catch (e) { console.error("cinema menu failed", e); }
     try { buildDateStrip(); } catch (e) { console.error("date strip failed", e); }
-    readURL();
-    $("skeleton").hidden = true; if ($("skeleton")) $("skeleton").remove();
-    render();
+    syncRegionUI(sessions);
+  }
+  function syncRegionUI(sessions) {
+    sessions = sessions || regionSessions();
+    var sel = $("regionFilter");
+    if (sel) { sel.value = state.region; sel.parentNode.classList.toggle("on", !!state.region); }
+    var venues = {}; sessions.forEach(function (s) { venues[s.cinema.id] = 1; });
+    var nv = Object.keys(venues).length;
+    $("statPill").innerHTML = "<b>" + sessions.length + "</b> screenings · <b>" + nv + "</b> cinemas" +
+      (state.region ? " in " + esc(state.region) : "");
+    var kicker = document.querySelector(".kicker");
+    if (kicker) kicker.textContent = (state.region || "Across the UK") + " · updated automatically";
   }
 
   if (window.__DATA__) { boot(window.__DATA__); }
@@ -118,7 +172,7 @@
   // Cinemas grouped by chain (Vue, Odeon, …); ungrouped venues under "Independent".
   function chainsModel() {
     var groups = {}, order = [];
-    DATA.cinemas.slice().sort(function (a, b) { return a.name.localeCompare(b.name); })
+    DATA.cinemas.filter(inRegion).sort(function (a, b) { return a.name.localeCompare(b.name); })
       .forEach(function (c) {
         var g = c.chain || "Independent";
         if (!groups[g]) { groups[g] = []; order.push(g); }
@@ -136,7 +190,7 @@
     var tools = document.createElement("div"); tools.className = "ms-tools";
     tools.innerHTML = '<button type="button" data-all>Select all</button><button type="button" data-none>Clear</button>';
     tools.querySelector("[data-all]").addEventListener("click", function () {
-      state.cinemas = DATA.cinemas.map(function (c) { return c.id; }); syncCinemaMenu(); render(); pushURL();
+      state.cinemas = DATA.cinemas.filter(inRegion).map(function (c) { return c.id; }); syncCinemaMenu(); render(); pushURL();
     });
     tools.querySelector("[data-none]").addEventListener("click", function () {
       state.cinemas = []; syncCinemaMenu(); render(); pushURL();
@@ -196,7 +250,7 @@
   }
   function buildDateStrip() {
     var strip = $("dateStrip"), n = now(); strip.innerHTML = "";
-    var days = {}; SESSIONS.forEach(function (s) { days[dayKey(s.when)] = s.when; });
+    var days = {}; regionSessions().forEach(function (s) { days[dayKey(s.when)] = s.when; });
     var keys = Object.keys(days).sort();
     function mk(val, top, sub, active) {
       var b = document.createElement("button"); b.className = "date-btn" + (active ? " active" : "");
@@ -305,19 +359,22 @@
     if (COORDS) { COORDS = null; localStorage.removeItem("sc-coords"); this.setAttribute("aria-pressed", "false"); state.sort = "time"; $("sortBy").value = "time"; render(); }
     else askLocation();
   });
+  // the label collapses to just the 📍 on narrow screens, so only the text
+  // span is rewritten — never the whole button.
+  function setNearLabel(txt) { var el = $("nearLabel"); if (el) el.textContent = txt; }
   function askLocation() {
     var stored = localStorage.getItem("sc-coords");
     if (stored) { try { COORDS = JSON.parse(stored); } catch (e) {} }
     if (COORDS) { applyNear(); return; }
     if (!navigator.geolocation) return;
-    $("nearBtn").textContent = "📍 Locating…";
+    setNearLabel("Locating…");
     navigator.geolocation.getCurrentPosition(function (pos) {
       COORDS = { lat: pos.coords.latitude, lng: pos.coords.longitude };
       localStorage.setItem("sc-coords", JSON.stringify(COORDS)); applyNear();
-    }, function () { $("nearBtn").textContent = "📍 Near me"; }, { timeout: 8000 });
+    }, function () { setNearLabel("Near me"); }, { timeout: 8000 });
   }
   function applyNear() {
-    $("nearBtn").textContent = "📍 Near me"; $("nearBtn").setAttribute("aria-pressed", "true");
+    setNearLabel("Near me"); $("nearBtn").setAttribute("aria-pressed", "true");
     state.sort = "near"; $("sortBy").value = "near"; render();
   }
 
@@ -327,6 +384,7 @@
     return haversine(COORDS.lat, COORDS.lng, c.lat, c.lng);
   }
   function passes(s) {
+    if (state.region && s.cinema.region !== state.region) return false;
     if (state.film && s.film_id !== state.film) return false;
     if (state.cinemas.length && state.cinemas.indexOf(s.cinema.id) < 0) return false;
     if (state.access === "subtitled" && s.acc.indexOf("subtitled") < 0 && s.acc.indexOf("captioned") < 0) return false;
@@ -341,6 +399,8 @@
 
   // ---------- render ----------
   function updateFilterCount() {
+    // the region picker lives in the always-visible bar (and has its own chip),
+    // so it isn't counted in the drawer's badge.
     var n = 0;
     if (state.date !== "all") n++;
     if (state.cinemas.length) n++;
@@ -357,7 +417,13 @@
     updateFilterCount();
     renderFilmBanner();
     var list = $("list"); list.innerHTML = "";
-    if (!rows.length) { $("emptyState").hidden = false; $("resultSummary").textContent = ""; return; }
+    if (!rows.length) {
+      $("emptyState").hidden = false; $("resultSummary").textContent = "";
+      $("emptyState").textContent = state.region
+        ? "No screenings in " + state.region + " match your filters. Try “All dates”, another cinema, or switch the region to All of the UK."
+        : "No screenings match your filters. Try “All” days, another cinema, or clearing the search.";
+      return;
+    }
     $("emptyState").hidden = true;
 
     var groups = groupRows(rows);
@@ -540,6 +606,7 @@
       c.innerHTML = esc(label) + (cls === "clear" ? "" : ' <span class="x">✕</span>');
       c.addEventListener("click", onClear); box.appendChild(c);
     }
+    if (state.region) chip(state.region, clearRegion);
     if (state.date !== "all") { var d = SESSIONS.filter(function (s) { return dayKey(s.when) === state.date; })[0]; if (d) chip(relDay(d.when, now()), function () { state.date = "all"; syncDateStrip(); render(); pushURL(); }); }
     if (state.cinemas.length === 1 && CINEMAS[state.cinemas[0]]) chip(CINEMAS[state.cinemas[0]].name, function () { state.cinemas = []; syncCinemaMenu(); render(); pushURL(); });
     else if (state.cinemas.length > 1) chip(state.cinemas.length + " cinemas", function () { state.cinemas = []; syncCinemaMenu(); render(); pushURL(); });
@@ -547,15 +614,24 @@
     if (state.q) chip('“' + state.q + '”', function () { state.q = ""; $("search").value = ""; render(); });
     if (COORDS) chip("📍 Near me", function () { COORDS = null; localStorage.removeItem("sc-coords"); $("nearBtn").setAttribute("aria-pressed", "false"); state.sort = "time"; $("sortBy").value = "time"; render(); });
     if (box.children.length) chip("Clear all", function () {
-      state = { film: "", date: "all", group: state.group, access: "", cinemas: [], sort: COORDS ? "near" : "time", q: "" };
+      var hadRegion = !!state.region;
+      state = { film: "", date: "all", group: state.group, access: "", cinemas: [], sort: COORDS ? "near" : "time", q: "", region: "" };
       $("search").value = ""; $("accessFilter").value = "";
+      if (hadRegion) { forgetRegion(); applyRegionScope(); }
       syncDateStrip(); syncRail(); syncCinemaMenu(); render(); pushURL();
     }, "clear");
+  }
+  function forgetRegion() { try { localStorage.removeItem(RKEY); } catch (e) {} }
+  function clearRegion() {
+    state.region = ""; forgetRegion();
+    applyRegionScope();
+    syncDateStrip(); syncRail(); syncCinemaMenu(); render(); pushURL();
   }
 
   // ---------- URL state ----------
   function pushURL() {
     var p = new URLSearchParams();
+    if (state.region) p.set("region", state.region);
     if (state.film) p.set("film", state.film);
     if (state.date !== "all") p.set("date", state.date);
     if (state.group !== "cinema") p.set("group", state.group);
@@ -566,12 +642,17 @@
   }
   function readURL() {
     var p = new URLSearchParams(location.search);
+    if (p.get("region") !== null) {
+      var want = p.get("region");
+      var known = (DATA.regions || []).some(function (r) { return r.name === want; });
+      state.region = known ? want : "";      // ?region= (empty) also clears a remembered one
+    }
     if (p.get("group")) state.group = p.get("group");
     if (p.get("film")) state.film = p.get("film");
     if (p.get("date")) state.date = p.get("date");
     if (p.get("cinemas")) state.cinemas = p.get("cinemas").split(",").filter(function (id) { return CINEMAS[id]; });
     if (p.get("access")) { state.access = p.get("access"); $("accessFilter").value = state.access; }
-    syncGroup(); syncDateStrip(); syncRail(); syncCinemaMenu();
+    // the sync* calls happen in boot(), after the region has scoped the controls
     // open the drawer if a shared link arrives with advanced filters applied
     if (state.date !== "all" || state.cinemas.length || state.access) {
       $("filtersPanel").hidden = false; $("filtersBtn").setAttribute("aria-expanded", "true");

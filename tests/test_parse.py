@@ -249,6 +249,65 @@ class BuildPipeline(unittest.TestCase):
             times = [s["starts_at"] for s in c["screenings"]]
             self.assertEqual(times, sorted(times))
 
+    # ---- regions (the "show me one part of the UK" filter) ----
+    def test_every_cinema_has_a_region(self):
+        missing = [c["id"] for c in self.data["cinemas"] if not c["region"]]
+        self.assertEqual(missing, [], f"venues with no region: {missing}")
+
+    def test_region_index_matches_cinemas(self):
+        from collections import Counter
+        counted = Counter(c["region"] for c in self.data["cinemas"])
+        indexed = {r["name"]: r["cinemas"] for r in self.data["regions"]}
+        self.assertEqual(dict(counted), indexed)
+        screenings = {r["name"]: r["screenings"] for r in self.data["regions"]}
+        for name, n in screenings.items():
+            self.assertEqual(n, sum(len(c["screenings"]) for c in self.data["cinemas"]
+                                    if c["region"] == name))
+
+    def test_greater_manchester_is_first_region(self):
+        # this project's home patch is pinned to the top of the filter
+        self.assertEqual(self.data["regions"][0]["name"], "Greater Manchester")
+
+    def test_manchester_venues_are_greater_manchester(self):
+        by_id = {c["id"]: c for c in self.data["cinemas"]}
+        for cid in ["manchester-home", "manchester-printworks-vue", "stockport-light",
+                    "altrincham-vue", "bolton-light", "wigan-omniplex"]:
+            if cid in by_id:      # subset builds (UI tests) pin fewer towns
+                self.assertEqual(by_id[cid]["region"], "Greater Manchester", cid)
+
+    def test_cheshire_venues_on_gm_pages_are_overridden(self):
+        # YLC town pages reach across county lines: these appear on Manchester-area
+        # pages but aren't in Greater Manchester.
+        by_id = {c["id"]: c for c in self.data["cinemas"]}
+        for cid in ["wilmslow-rex", "knutsford-curzon", "warrington-odeon"]:
+            if cid in by_id:
+                self.assertEqual(by_id[cid]["region"], "North West", cid)
+
+
+class RegionMap(unittest.TestCase):
+    def test_every_town_page_is_mapped(self):
+        from build.fetch_pages import CITIES
+        from build.regions import TOWN_REGION
+        missing = [c for c in CITIES if c not in TOWN_REGION]
+        self.assertEqual(missing, [], f"town pages with no region: {missing}")
+
+    def test_regions_are_known_names(self):
+        from build.regions import TOWN_REGION, VENUE_REGION, REGION_ORDER
+        for r in set(TOWN_REGION.values()) | set(VENUE_REGION.values()):
+            self.assertIn(r, REGION_ORDER)
+
+    def test_venue_override_wins_over_town_page(self):
+        from build import regions
+        self.assertEqual(regions.region_for("wilmslow-rex", ["stockport"]), "North West")
+        self.assertEqual(regions.region_for("manchester-home", ["manchester"]),
+                         "Greater Manchester")
+        self.assertIsNone(regions.region_for("somewhere-new", ["not-a-town"]))
+
+    def test_sort_key_puts_greater_manchester_first(self):
+        from build import regions
+        names = ["Wales", "London", "Greater Manchester", "Scotland"]
+        self.assertEqual(sorted(names, key=regions.sort_key)[0], "Greater Manchester")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

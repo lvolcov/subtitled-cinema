@@ -101,9 +101,29 @@ button{font-family:inherit}
 .filters-panel{display:grid;gap:10px;padding-top:1px}
 .filters-panel[hidden]{display:none}
 
+/* region picker — lives in the always-visible slim bar, because "just show me
+   Greater Manchester" is the most-used way to cut 550 UK venues down to size */
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.region-pick{flex:0 0 auto;position:relative;display:inline-flex;max-width:240px}
+.region-pick select{appearance:none;-webkit-appearance:none;background:var(--panel);border:1px solid var(--line);color:var(--tx);
+  border-radius:999px;padding:9px 30px 9px 15px;font-size:.85rem;font-weight:600;font-family:inherit;cursor:pointer;
+  max-width:240px;text-overflow:ellipsis;
+  background-image:linear-gradient(45deg,transparent 50%,var(--mut) 50%),linear-gradient(135deg,var(--mut) 50%,transparent 50%);
+  background-position:calc(100% - 16px) 55%,calc(100% - 11px) 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.region-pick select:hover{border-color:var(--acc2)}
+.region-pick.on select{border-color:var(--acc);color:var(--acc)}
+
 /* primary, always-visible "locate me" action in the slim bar */
 .near-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;background:var(--acc2);border:1px solid var(--acc2);color:#052027;border-radius:999px;padding:9px 15px;cursor:pointer;font-size:.85rem;font-weight:700;white-space:nowrap}
 .near-btn:hover{filter:brightness(1.08)}
+/* on phones the button collapses to the 📍 so the region picker fits on the
+   same two rows the bar had before (see .controls-bar height budget) */
+@media(max-width:640px){
+  .near-label{display:none}
+  .near-btn{padding:9px 12px}
+  .region-pick{flex:1 1 120px;min-width:0;max-width:none}
+  .region-pick select{max-width:100%;width:100%}
+}
 .near-btn[aria-pressed="true"]{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 0 0 3px color-mix(in srgb,var(--acc2) 32%,transparent)}
 
 .datestrip{display:flex;gap:7px;overflow-x:auto;padding:2px;scrollbar-width:thin}

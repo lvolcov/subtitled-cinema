@@ -18,6 +18,7 @@ from pathlib import Path
 
 from .parse_ylc import parse_page
 from .cinema_meta import COORDS
+from . import regions
 from . import posters
 from . import posters_wiki
 from . import imdb
@@ -115,6 +116,7 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
                     "chain": cin.chain,
                     "postcode": cin.postcode,
                     "cities": [],
+                    "region": None,          # filled once every city is known
                     "booking_url": cin.booking_url,
                     "last_checked": checked,
                     "lat": lat,
@@ -158,6 +160,9 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
         if entry["lat"] is None or entry["lng"] is None:
             entry["lat"], entry["lng"] = coords_for(entry["name"], entry["postcode"])
         entry.pop("_seen", None)
+        # region: per-venue override first, else the region of the first town
+        # page it appeared on (see build/regions.py).
+        entry["region"] = regions.region_for(entry["id"], entry["cities"])
         entry["screenings"].sort(key=lambda x: x["starts_at"])
         cinemas.append(entry)
         for s in entry["screenings"]:
@@ -175,10 +180,24 @@ def build(ref_date: date | None = None, now: datetime | None = None) -> dict:
     film_list = sorted(films.values(), key=lambda f: f["title"].lower())
 
     total_screenings = sum(len(c["screenings"]) for c in cinemas)
+
+    # region index for the "Region" filter — only regions that actually have
+    # venues, in REGION_ORDER (Greater Manchester first).
+    region_stats: dict[str, dict] = {}
+    for c in cinemas:
+        r = c["region"]
+        if not r:
+            continue
+        st = region_stats.setdefault(r, {"name": r, "cinemas": 0, "screenings": 0})
+        st["cinemas"] += 1
+        st["screenings"] += len(c["screenings"])
+    region_list = sorted(region_stats.values(), key=lambda r: regions.sort_key(r["name"]))
+
     return {
         "generated_at": checked,
         "timezone": TIMEZONE,
         "cities": CITIES,
+        "regions": region_list,
         "stats": {
             "cinemas": len(cinemas),
             "screenings": total_screenings,

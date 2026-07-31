@@ -16,7 +16,7 @@
 
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+  <link rel="stylesheet" href="assets/styles.css?v=7" />
 </head>
 <body>
   <a class="skip" href="#list">Skip to listings</a>
@@ -61,7 +61,11 @@
           <button class="seg-btn" data-group="film" role="tab" aria-selected="false">Film</button>
           <button class="seg-btn" data-group="time" role="tab" aria-selected="false">Day</button>
         </div>
-        <button class="near-btn" id="nearBtn" type="button" aria-pressed="false" title="Sort cinemas by distance from you">📍 Near me</button>
+        <label class="region-pick" for="regionFilter">
+          <span class="visually-hidden">Region</span>
+          <select id="regionFilter" title="Show one part of the UK"></select>
+        </label>
+        <button class="near-btn" id="nearBtn" type="button" aria-pressed="false" aria-label="Near me — sort cinemas by distance from you" title="Sort cinemas by distance from you"><span aria-hidden="true">📍</span><span class="near-label" id="nearLabel">Near me</span></button>
         <input class="search" id="search" type="search" placeholder="Search a film or cinema…" autocomplete="off" aria-label="Search a film or cinema" />
         <button class="filters-btn" id="filtersBtn" type="button" aria-expanded="false" aria-controls="filtersPanel">
           <span aria-hidden="true">⚙</span> Filters<span class="fcount" id="filterCount" hidden></span>
@@ -119,6 +123,6 @@
 
   <button id="toTop" class="to-top" type="button" aria-label="Back to top" hidden>↑</button>
 
-  <script src="assets/app.js?v=6"></script>
+  <script src="assets/app.js?v=7"></script>
 </body>
 </html>

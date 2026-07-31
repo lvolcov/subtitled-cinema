@@ -8,6 +8,48 @@ This is a continuously-deployed static site (GitHub Actions → GitHub Pages), s
 
 ---
 
+## [v6] — 2026-07-31 — Region filter (Greater Manchester first)
+
+### Added
+- **A "Region" picker in the always-visible top bar** — the fast way to cut ~550
+  UK venues down to your own part of the country. **Greater Manchester is pinned
+  to the top** of the list (this project's home patch); the rest of the UK
+  follows roughly north → south, then Wales, Scotland and the islands.
+- Choosing a region **rescopes the whole page**, not just the listings: the film
+  rail only offers films actually showing there, the cinema picker only lists
+  that region's venues, the date strip only shows days with screenings there,
+  and the stat pill / hero line name the region. Selections the region excludes
+  (a film, a cinema, a date) are dropped rather than silently filtering to zero.
+- The choice is **remembered** (`localStorage`) as a personal default, is
+  **shareable** (`?region=Greater+Manchester`), and shows as a removable chip.
+  A `?region=` link always beats the remembered value.
+- `build/regions.py` maps all 155 source town pages to a region, with per-venue
+  overrides for venues that sit outside the region of the page listing them
+  (Wilmslow, Knutsford, Warrington, Northwich, St Helens, Widnes). `data.json`
+  gains a `region` per cinema and a `regions` index.
+
+### Changed
+- On phones the "Near me" button collapses to its 📍 icon so the region picker
+  fits without adding a row — the sticky bar is now **shorter** than before
+  (164px vs 185px on a 390px viewport).
+
+### Verified against the cinemas' own sites
+- Cross-checked our Greater Manchester Cineworld listings against Cineworld's
+  own booking API over a 22-day window: **13/13 screenings matched exactly** on
+  film, date and time (Didsbury 4/4, Ashton-under-Lyne 5/5, Bolton 4/4), with no
+  invented entries. Two HOME Manchester showtimes were confirmed on homemcr.org.
+- **Gap found (source-level, not ours):** Bolton Cineworld also runs ~55
+  Indian-language screenings (Malayalam/Tamil/Hindi with English subtitles) that
+  yourlocalcinema doesn't list, so they don't reach us either. Another argument
+  for the V2 first-party chain scrape.
+
+### Tests
+- 62 tests (37 parser/pipeline + 25 Playwright UI), up from 45 — including
+  region mapping completeness, the venue-override rule, GM-pinned-first, and UI
+  tests for narrowing, rail/cinema-picker rescoping, deep-links and persistence.
+
+---
+
 ## [v5] — 2026-07-27 — Smart per-film booking links
 
 ### Added

@@ -21,6 +21,11 @@ If you rely on subtitles, finding a screening you can actually watch is painful.
 - **🎬 Real movie posters** for each film, with a graceful gradient-initials fallback.
 - **Pick a film → see every cinema showing it.** A film rail up top (poster + a "showing at N cinemas" count) is the main way in; tap one to filter the whole list to that film, grouped by cinema and sorted by distance, each showtime linking out to booking.
 - **Tap a cinema** name to filter to just that venue; cinema cards link out to Maps.
+- **🗺️ Pick your region** — one control in the top bar cuts ~550 UK venues down
+  to your part of the country (**Greater Manchester is pinned to the top** of the
+  list; then North West, Yorkshire, London, Scotland, Wales…). It narrows
+  everything at once — the film rail, the cinema picker, the dates and the
+  listings — and is remembered for your next visit.
 - **Browse & filter**: search, a **date strip** (All / Today / Tomorrow / then each upcoming day), a **grouped multi-select cinema picker** (tick a whole chain — Vue, Odeon… — or individual venues), access type, and **group by cinema / film / day**. Filters live in a slim collapsible drawer; active filters show as removable chips with a "Clear all".
 - **📍 Nearest** — with your permission, sorts by distance (persisted) and shows miles.
 - **Shareable & bookmarkable** — filters and the open film/cinema live in the URL, so links share exactly what you see and the back button works.
@@ -55,6 +60,7 @@ subtitled-cinema/
 │   ├── fetch_pages.py        # download source pages -> .cache/pages/
 │   ├── parse_ylc.py          # parse both page layouts -> normalised screenings
 │   ├── posters.py            # resolve movie posters -> build/poster_cache.json
+│   ├── regions.py            # town/venue -> UK region (Greater Manchester first)
 │   ├── cinema_meta.py        # hand-curated coordinates for "nearest"
 │   └── build_site.py         # merge + dedupe + posters -> public/data.json
 ├── public/                   # the site GitHub Pages serves
@@ -63,8 +69,8 @@ subtitled-cinema/
 │   ├── manifest.webmanifest
 │   └── data.json             # generated
 ├── tests/
-│   ├── test_parse.py         # 24 parser + pipeline unit tests
-│   ├── test_ui.py            # 21 Playwright UI tests (+ screenshots)
+│   ├── test_parse.py         # 37 parser + pipeline unit tests
+│   ├── test_ui.py            # 25 Playwright UI tests (+ screenshots)
 │   └── screenshots/          # visual output from the UI tests
 ├── .cache/pages/             # committed source snapshot (CI refreshes it)
 ├── .github/workflows/        # build+deploy, and CI tests
@@ -79,7 +85,7 @@ subtitled-cinema/
 make install     # beautifulsoup4 + playwright chromium
 make all         # fetch fresh listings + build public/data.json
 make serve       # http://localhost:8000
-make test        # 45 tests (parser + Playwright UI)
+make test        # 62 tests (parser + Playwright UI)
 ```
 
 No build step for the site itself — `public/` is plain static files.
@@ -87,7 +93,7 @@ No build step for the site itself — `public/` is plain static files.
 ## Testing
 
 - **`tests/test_parse.py`** — showtime parsing (carry-forward times, year rollover), accessibility/certificate extraction, chain detection, both page layouts, and the merge/dedupe pipeline.
-- **`tests/test_ui.py`** — drives the real page in headless Chromium: renders, no mobile overflow, every filter (day/search/cinema/access), group-by, nearest-with-distance, the **film detail modal (film → all cinemas)**, **cinema detail**, **deep-links** (`?view=film:…`), filter chips + clear-all, Esc-to-close, **real posters load**, and **zero console errors**. Expected counts are computed in Python by mirroring the JS rules, so they're not brittle magic numbers. Writes screenshots to `tests/screenshots/`.
+- **`tests/test_ui.py`** — drives the real page in headless Chromium: renders, no mobile overflow, every filter (day/search/cinema/access/**region**), group-by, nearest-with-distance, the **film detail modal (film → all cinemas)**, **cinema detail**, **deep-links** (`?view=film:…`), filter chips + clear-all, Esc-to-close, **real posters load**, and **zero console errors**. Expected counts are computed in Python by mirroring the JS rules, so they're not brittle magic numbers. Writes screenshots to `tests/screenshots/`.
 
 ## Decisions at a glance
 

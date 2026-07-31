@@ -54,7 +54,8 @@ def _flat(data):
     for c in data["cinemas"]:
         for s in c["screenings"]:
             out.append({**s, "cinema_id": c["id"], "chain": c["chain"],
-                        "cinema_name": c["name"], "lat": c["lat"], "lng": c["lng"]})
+                        "cinema_name": c["name"], "region": c["region"],
+                        "lat": c["lat"], "lng": c["lng"]})
     return out
 
 
@@ -66,7 +67,7 @@ def _future(s):
     return _dt(s["starts_at"]) >= NOW - timedelta(minutes=PAST_MIN)
 
 
-def expected_visible(day="all", cinemas=None):
+def expected_visible(day="all", cinemas=None, region=None):
     """Mirror of the JS visibility logic for cross-checking."""
     n = 0
     for s in _flat(DATA):
@@ -76,8 +77,14 @@ def expected_visible(day="all", cinemas=None):
             continue
         if cinemas and s["cinema_id"] not in cinemas:
             continue
+        if region and s["region"] != region:
+            continue
         n += 1
     return n
+
+
+def _cinemas_in(region):
+    return sorted({c["id"] for c in DATA["cinemas"] if c["region"] == region})
 
 
 def _cinemas_by_chain(chain):
@@ -257,6 +264,74 @@ class UI(unittest.TestCase):
         self.assertIsNone(pg.get_attribute("#filtersPanel", "hidden"))
         self.assertEqual(self._summary_count(pg),
                          expected_visible(cinemas=["manchester-trafford-odeon"]))
+        pg.close()
+
+    # ---- region ----
+    def test_region_greater_manchester_is_pinned_first(self):
+        pg = self._page()
+        opts = pg.eval_on_selector_all(
+            "#regionFilter option", "els => els.map(e => e.textContent)")
+        self.assertEqual(opts[0], "All of the UK")
+        self.assertEqual(opts[1], "Greater Manchester")
+        pg.close()
+
+    def test_region_filter_narrows_the_list(self):
+        gm = _cinemas_in("Greater Manchester")
+        other = _cinemas_in("North West")
+        self.assertTrue(gm and other, "fixture needs two regions")
+        pg = self._page()
+        full = self._summary_count(pg)
+        pg.select_option("#regionFilter", "Greater Manchester")
+        narrowed = self._summary_count(pg)
+        self.assertLess(narrowed, full)
+        self.assertEqual(narrowed, expected_visible(region="Greater Manchester"))
+        # nothing from another region survives
+        gm_names = {c["name"] for c in DATA["cinemas"] if c["id"] in gm}
+        shown = pg.eval_on_selector_all(
+            ".group .g-name", "els => [...new Set(els.map(e => e.textContent.trim()))]")
+        self.assertTrue(shown and all(n in gm_names for n in shown))
+        # and it's advertised as an active filter + in the URL
+        chips = pg.inner_text("#activeChips")
+        self.assertIn("Greater Manchester", chips)
+        self.assertIn("region=Greater+Manchester", pg.url)
+        pg.close()
+
+    def test_region_scopes_the_cinema_picker_and_rail(self):
+        nw = _cinemas_in("North West")
+        pg = self._page()
+        pg.select_option("#regionFilter", "North West")
+        self._open_cinema_menu(pg)
+        ids = pg.eval_on_selector_all(
+            "#cinemaMenu .ms-opt input", "els => els.map(e => e.value)")
+        self.assertEqual(sorted(ids), nw)
+        # the film rail only offers films actually showing in that region
+        rail = pg.eval_on_selector_all(
+            "#filmRail .rail-item:not(.all)", "els => els.map(e => e.dataset.film)")
+        in_region = {s["film_id"] for s in _flat(DATA)
+                     if _future(s) and s["region"] == "North West"}
+        self.assertTrue(rail)
+        self.assertEqual(set(rail), in_region)
+        pg.close()
+
+    def test_region_deep_link_and_clearing(self):
+        pg = self._page(query="?region=North+West")
+        self.assertEqual(pg.eval_on_selector("#regionFilter", "e => e.value"), "North West")
+        self.assertEqual(self._summary_count(pg), expected_visible(region="North West"))
+        # the region chip clears it, restoring the whole country
+        pg.click("#activeChips .fchip")
+        self.assertEqual(self._summary_count(pg), expected_visible("all"))
+        self.assertEqual(pg.eval_on_selector("#regionFilter", "e => e.value"), "")
+        pg.close()
+
+    def test_region_is_remembered_between_visits(self):
+        pg = self._page()
+        pg.select_option("#regionFilter", "Greater Manchester")
+        self.assertEqual(pg.evaluate("localStorage.getItem('sc-region')"), "Greater Manchester")
+        pg.goto(BASE + "/index.html")           # a fresh visit, no query string
+        pg.wait_for_selector(".card")
+        self.assertEqual(pg.eval_on_selector("#regionFilter", "e => e.value"), "Greater Manchester")
+        self.assertEqual(self._summary_count(pg), expected_visible(region="Greater Manchester"))
+        pg.evaluate("localStorage.removeItem('sc-region')")
         pg.close()
 
     # ---- access + near ----

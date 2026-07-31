@@ -115,7 +115,20 @@ The orchestrator. In one `build()` call it:
 `build_site` is safe to run in unit tests and offline. Refreshing the cache is a
 separate, explicit step (`python3 -m build.posters` / the CI poster step).
 
-### 2.5 `cinema_meta.py` — hand-curated coordinates
+### 2.5 `regions.py` — which part of the UK a venue is in
+
+The source has no region concept — only ~155 town pages. `regions.py` maps each
+town page to a UK region (`TOWN_REGION`), with per-venue overrides
+(`VENUE_REGION`) because a town page lists everything within travelling
+distance: `wilmslow-rex` and `knutsford-curzon` appear on Manchester-area pages
+but are Cheshire, not Greater Manchester.
+
+`region_for(slug, cities)` = override, else the region of the **first** town page
+the venue was found on. `build_site` stamps it onto each cinema and rolls up a
+`regions` index. `REGION_ORDER` fixes the display order and pins **Greater
+Manchester first** — it's this project's home patch and its most-used filter.
+
+### 2.6 `cinema_meta.py` — hand-curated coordinates
 
 A tiny `slug → (lat, lng)` table. The source pages don't give coordinates, so
 these are curated by hand (venue-level, approximate — good enough to sort by
@@ -135,6 +148,12 @@ Python pipeline and the JavaScript frontend — keep it stable.
   "timezone": "Europe/London",
   "cities": ["manchester", "stockport", "altrincham", "didsbury"],
   "stats": { "cinemas": 12, "screenings": 133, "films": 16 },
+
+  // ---- region index: powers the "Region" picker in the top bar ----
+  // ordered by build/regions.py::REGION_ORDER — Greater Manchester first
+  "regions": [
+    { "name": "Greater Manchester", "cinemas": 18, "screenings": 190 }
+  ],
 
   // ---- film index: powers "group by film" + the film picker dialog ----
   "films": [
@@ -157,6 +176,7 @@ Python pipeline and the JavaScript frontend — keep it stable.
       "chain": "HOME",                   // detected chain, or null
       "postcode": "M15",                 // or null
       "cities": ["manchester"],          // which source page(s) it came from
+      "region": "Greater Manchester",    // UK region (build/regions.py)
       "booking_url": "https://homemcr.org/",   // chain site (best-effort)
       "last_checked": "2026-07-25T09:00:00",
       "lat": 53.4738, "lng": -2.247,     // for "nearest"; null if unknown
@@ -261,11 +281,19 @@ Plain static files — **no framework, no build step, no dependencies.**
 
 ### 5.2 State model & URL
 
+**Region scoping.** The region picker in the always-visible bar is not just
+another row filter: choosing one **rebuilds every region-scoped control** —
+the film rail, the grouped cinema picker, the date strip, the stat pill and the
+hero kicker — and drops any selected film/cinema/date the region excludes
+(`applyRegionScope()`). It's remembered in `localStorage` (`sc-region`) as a
+personal default; a `?region=` link always wins over the remembered value, and
+`?region=` (empty) explicitly means "all of the UK".
+
 The UI state (`search`, `day`, `cinema`, `access`, `groupBy`, `near`, `coords`,
-and `view` = the open dialog) is **serialised to the query string**:
+`region`, and `view` = the open dialog) is **serialised to the query string**:
 
 ```
-?q=odyssey&day=today&cinema=manchester-home&access=subtitled&group=film&near=1&view=film:the-odyssey
+?q=odyssey&day=today&cinema=manchester-home&access=subtitled&group=film&near=1&region=Greater+Manchester&view=film:the-odyssey
 ```
 
 - Filter changes call `writeURL(false)` → `history.replaceState` (no history spam).
@@ -320,12 +348,12 @@ real clock:
 
 Two suites, run by `make test` and in CI (`.github/workflows/ci.yml`).
 
-- **`tests/test_parse.py` (24 tests)** — showtime/date logic (carry-forward,
+- **`tests/test_parse.py` (37 tests)** — showtime/date logic (carry-forward,
   year rollover), accessibility + certificate extraction, chain detection, both
   layouts on synthetic fixtures, the real cached pages, and the merge/dedupe
   pipeline (including cross-city dedupe and the "every cinema has coordinates"
   invariant). Pure Python, no browser.
-- **`tests/test_ui.py` (21 tests)** — serves `public/`, drives headless
+- **`tests/test_ui.py` (25 tests)** — serves `public/`, drives headless
   Chromium via Playwright, and asserts: rendering, no mobile horizontal
   overflow, every filter (day/search/cinema/access), group-by, nearest with
   distances, the **film dialog (film → all cinemas)**, **cinema dialog**,
@@ -359,6 +387,9 @@ Cities are **data, not code**:
    imports it, so a single edit covers both).
 2. Add approximate coordinates for its venues in `cinema_meta.py` (keyed by the
    name slug) so "nearest" works.
+2b. Map the new town page to a region in `regions.py :: TOWN_REGION` (a test
+   fails if any town page is unmapped), and add a `VENUE_REGION` override for
+   any venue on it that sits in a different region.
 3. If a genuinely new source layout appears, extend `parse_ylc.py` — but the two
    existing layouts already cover all of yourlocalcinema.
 
