@@ -1,7 +1,8 @@
 """
 Playwright UI tests for the frontend. Run: python3 -m unittest tests.test_ui -v
 
-Serves public/ over http, injects a deterministic dataset + fixed "now" via
+Serves a throwaway mirror of public/ over http (never public/ itself — see
+_serve_root), injects a deterministic dataset + fixed "now" via
 window.__DATA__ / window.__NOW__ (and window.__COORDS__ where a test needs the
 "near me" path), then asserts the page renders and every control behaves.
 
@@ -15,8 +16,10 @@ the assertions aren't brittle magic numbers. Screenshots land in
 tests/screenshots/ for visual confirmation.
 """
 import json
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import unittest
 from datetime import date, datetime, timedelta
@@ -46,6 +49,7 @@ CENTRE = {"lat": 53.4808, "lng": -2.2426}       # Manchester Piccadilly-ish
 _server = None
 _pw = None
 _browser = None
+_srvdir = None
 DATA = None
 
 
@@ -91,17 +95,35 @@ def _cinemas_by_chain(chain):
     return sorted({s["cinema_id"] for s in _flat(DATA) if s["chain"] == chain})
 
 
+def _serve_root():
+    """A throwaway mirror of public/ to serve the tests from.
+
+    The tests need a data.json matching their pinned town subset, but public/
+    data.json is the real 500+ venue site payload that gets committed and
+    deployed — building the test subset over it silently guts production data.
+    So: symlink public/'s files into a temp dir and write the test data.json
+    there instead. Never write into public/ from a test.
+    """
+    tmp = Path(tempfile.mkdtemp(prefix="subcin-ui-"))
+    for item in (ROOT / "public").iterdir():
+        if item.name != "data.json":
+            (tmp / item.name).symlink_to(item)
+    (tmp / "data.json").write_text(
+        json.dumps(DATA, indent=2, ensure_ascii=False), encoding="utf-8")
+    return tmp
+
+
 def setUpModule():
-    global _server, _pw, _browser, DATA
+    global _server, _pw, _browser, DATA, _srvdir
     # Pin the UI tests to a small, stable subset of towns so assertions stay
     # deterministic (the full national set has, e.g., a cinema literally named
     # "St Albans Odyssey" that would break a search-for-"odyssey" test) and fast.
     build_site.CITIES = ["manchester", "stockport", "altrincham", "didsbury"]
     DATA = build_site.build(ref_date=REF, now=datetime(2026, 7, 24, 9, 0))
-    build_site.main()  # ensure public/data.json exists too, then serve public/
+    _srvdir = _serve_root()
     _server = subprocess.Popen(
         [sys.executable, "-m", "http.server", str(PORT)],
-        cwd=str(ROOT / "public"),
+        cwd=str(_srvdir),
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
     )
     for _ in range(50):
@@ -119,6 +141,7 @@ def tearDownModule():
     if _browser: _browser.close()
     if _pw: _pw.stop()
     if _server: _server.terminate(); _server.wait()
+    if _srvdir: shutil.rmtree(_srvdir, ignore_errors=True)
 
 
 @unittest.skipUnless(HAVE_PW, "playwright not installed")

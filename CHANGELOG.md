@@ -22,6 +22,14 @@ This is a continuously-deployed static site (GitHub Actions → GitHub Pages), s
   theme. Selected controls now use one vivid accent fill (`--fill`/`--on-fill`)
   tuned per theme: crimson with white text in light, bright pink with near-black
   text in dark.
+- **"Near me" is a soft cyan chip** instead of a solid cyan slab with near-black
+  text, which was the same too-dark problem in the light theme. Tinted surface,
+  accent border, accent text; it still flips to the solid accent fill when on.
+- **The UI tests no longer overwrite `public/data.json`.** They build a small
+  pinned-town dataset, and `setUpModule` used to write it straight into
+  `public/` — silently replacing the real ~550-venue payload that gets committed
+  and deployed. Tests now serve a temp mirror of `public/` (symlinked assets +
+  their own `data.json`) and clean it up afterwards.
 
 ---
 

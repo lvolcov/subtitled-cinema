@@ -125,8 +125,13 @@ button{font-family:inherit}
 .region-pick.on select{border-color:var(--acc);color:var(--acc)}
 
 /* primary, always-visible "locate me" action in the slim bar */
-.near-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;background:var(--acc2);border:1px solid var(--acc2);color:#052027;border-radius:999px;padding:9px 15px;cursor:pointer;font-size:.85rem;font-weight:700;white-space:nowrap}
-.near-btn:hover{filter:brightness(1.08)}
+/* a soft cyan chip rather than a solid slab: the deep light-mode cyan with
+   near-black text read as another dark button next to the pill controls */
+.near-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+  background:color-mix(in srgb,var(--acc2) 14%,var(--panel));
+  border:1px solid color-mix(in srgb,var(--acc2) 48%,transparent);
+  color:var(--acc2);border-radius:999px;padding:9px 15px;cursor:pointer;font-size:.85rem;font-weight:700;white-space:nowrap}
+.near-btn:hover{background:color-mix(in srgb,var(--acc2) 24%,var(--panel));border-color:var(--acc2)}
 /* on phones the button collapses to the 📍 so the region picker fits on the
    same two rows the bar had before (see .controls-bar height budget) */
 @media(max-width:640px){
