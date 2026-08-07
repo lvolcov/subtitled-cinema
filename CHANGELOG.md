@@ -8,6 +8,23 @@ This is a continuously-deployed static site (GitHub Actions → GitHub Pages), s
 
 ---
 
+## [Unreleased] — 2026-08-07
+
+### Fixed
+- **"Pick a film" rail: tiles no longer sit at different heights.** A stretched
+  `<button>` vertically centres its own contents, so a tile with a one-line
+  title floated below its two-line neighbours. The rail now aligns tiles to the
+  top and every title reserves both clamped lines, so posters line up top and
+  bottom.
+- **Selected buttons are no longer near-black.** The Cinema/Film/Day toggle, the
+  date chips and "Near me" used a dark-text-on-gradient (and, for dates, a
+  solid `--tx`) treatment that read as a very dark pill — badly so in the light
+  theme. Selected controls now use one vivid accent fill (`--fill`/`--on-fill`)
+  tuned per theme: crimson with white text in light, bright pink with near-black
+  text in dark.
+
+---
+
 ## [v6] — 2026-07-31 — Region filter (Greater Manchester first)
 
 ### Added
