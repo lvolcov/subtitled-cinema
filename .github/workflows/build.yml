@@ -3,13 +3,13 @@ name: Build & deploy site
 # Fully automatic refresh: every 6 hours, on manual trigger, and on push.
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "17 */6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -64,6 +64,16 @@ jobs:
 
       - name: Build data.json
         run: python -m build.build_site
+
+      - name: Commit refreshed listings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): refresh cinema listings"
+            git push origin HEAD:main
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
