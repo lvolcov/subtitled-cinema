@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T22:19:53",
+  "generated_at": "2026-11-09T06:48:01",
   "timezone": "Europe/London",
   "cities": [
     "aberdeen",
@@ -555,7 +555,7 @@
       "id": "dekalog-episodes-ii-and-x",
       "title": "Dekalog Episodes II and X",
       "certificate": null,
-      "poster_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Jerzy_Stuhr_27_stycznia_2018_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "poster_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Criterion_Collection_section_at_Barnes_%26_Noble.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
       "count": 2,
       "cinema_count": 1
     },
@@ -1275,7 +1275,7 @@
       "id": "national-theatre-live-the-motive-and-the-cue",
       "title": "National Theatre Live - The Motive and the Cue",
       "certificate": null,
-      "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
       "count": 19,
       "cinema_count": 19
     },
@@ -1883,7 +1883,7 @@
       "id": "the-peoples-emergency-briefing-film-talk",
       "title": "The Peoples Emergency Briefing Film Talk",
       "certificate": null,
-      "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/cf/2.0_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "poster_url": "https://upload.wikimedia.org/wikipedia/en/3/31/Ghost_town_poster_08.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
       "count": 1,
       "cinema_count": 1
     },
@@ -2212,7 +2212,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.57437,
       "lng": -0.22141,
       "screenings": [
@@ -2949,7 +2949,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 57.14972,
       "lng": -2.09428,
       "screenings": [
@@ -3318,7 +3318,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 57.13994,
       "lng": -2.12189,
       "screenings": [
@@ -3959,7 +3959,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Aberfeldy+Birks+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.622,
       "lng": -3.8655,
       "screenings": [
@@ -4072,7 +4072,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Aberystwyth+Arts+Centre+Ceredigion+SY23+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.37935,
       "lng": -4.05182,
       "screenings": [
@@ -4137,7 +4137,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.75361,
       "lng": -2.37218,
       "screenings": [
@@ -4218,7 +4218,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Acton+Act+One+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5066,
       "lng": 0.2684,
       "screenings": [
@@ -4347,7 +4347,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52573,
       "lng": -0.28139,
       "screenings": [
@@ -4796,7 +4796,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.3725,
       "lng": -0.56003,
       "screenings": [
@@ -4877,7 +4877,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.24997,
       "lng": -0.76838,
       "screenings": [
@@ -5278,7 +5278,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Alnwick+Playhouse+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.41249,
       "lng": -1.70286,
       "screenings": [
@@ -5471,7 +5471,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.3875,
       "lng": -2.349,
       "screenings": [
@@ -5744,7 +5744,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.3873,
       "lng": -2.3513,
       "screenings": [
@@ -5809,7 +5809,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.20332,
       "lng": -1.48426,
       "screenings": [
@@ -6146,7 +6146,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.16142,
       "lng": 0.87164,
       "screenings": [
@@ -6835,7 +6835,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.489,
       "lng": -2.109,
       "screenings": [
@@ -7572,7 +7572,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.8154,
       "lng": -0.80936,
       "screenings": [
@@ -8021,7 +8021,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Ayr+Merlin+Astoria+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.458,
       "lng": -4.629,
       "screenings": [
@@ -8054,7 +8054,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.062,
       "lng": -1.339,
       "screenings": [
@@ -8135,7 +8135,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Barbican+Centre+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52065,
       "lng": -0.09381,
       "screenings": [
@@ -8296,7 +8296,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.64691,
       "lng": -0.18777,
       "screenings": [
@@ -8441,7 +8441,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.5524,
       "lng": -1.4801,
       "screenings": [
@@ -9034,7 +9034,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.11285,
       "lng": -3.23355,
       "screenings": [
@@ -9435,7 +9435,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.58513,
       "lng": 0.46247,
       "screenings": [
@@ -10316,7 +10316,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.576,
       "lng": 0.474,
       "screenings": [
@@ -10669,7 +10669,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.26506,
       "lng": -1.08419,
       "screenings": [
@@ -11006,7 +11006,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.37824,
       "lng": -2.35836,
       "screenings": [
@@ -11055,7 +11055,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.38056,
       "lng": -2.36512,
       "screenings": [
@@ -11456,7 +11456,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.381,
       "lng": -2.359,
       "screenings": [
@@ -11745,7 +11745,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.40817,
       "lng": -0.02581,
       "screenings": [
@@ -12098,7 +12098,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Belper+Ritz+DE56+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.02254,
       "lng": -1.47529,
       "screenings": [
@@ -12147,7 +12147,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.55019,
       "lng": -0.16627,
       "screenings": [
@@ -12212,7 +12212,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Beverley+Parkway+HU17+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.84196,
       "lng": -0.43509,
       "screenings": [
@@ -12309,7 +12309,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45451,
       "lng": 0.13773,
       "screenings": [
@@ -12662,7 +12662,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.89802,
       "lng": -1.15188,
       "screenings": [
@@ -12903,7 +12903,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.39269,
       "lng": -3.02198,
       "screenings": [
@@ -13208,7 +13208,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.47418,
       "lng": -1.91573,
       "screenings": [
@@ -14041,7 +14041,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.47422,
       "lng": -1.92186,
       "screenings": [
@@ -14730,7 +14730,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.47593,
       "lng": -1.90541,
       "screenings": [
@@ -14795,7 +14795,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Birmingham+Mac+Edgbaston+B12+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.46082,
       "lng": -1.88868,
       "screenings": [
@@ -15347,7 +15347,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Birmingham+Mac+Edgbaston+tickets",
           "starts_at": "2027-02-21T14:00:00",
@@ -15372,7 +15372,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.44756,
       "lng": -1.71842,
       "screenings": [
@@ -15709,7 +15709,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.47836,
       "lng": -1.89695,
       "screenings": [
@@ -16126,7 +16126,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Birmingham+Omniplex+B45+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.38867,
       "lng": -2.00886,
       "screenings": [
@@ -16159,7 +16159,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.49411,
       "lng": -1.87239,
       "screenings": [
@@ -16608,7 +16608,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Bishop+Auckland+Reel+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.6384,
       "lng": -1.68852,
       "screenings": [
@@ -16641,7 +16641,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.75692,
       "lng": -2.46288,
       "screenings": [
@@ -16994,7 +16994,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.80174,
       "lng": -3.00381,
       "screenings": [
@@ -17043,7 +17043,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.43774,
       "lng": 0.27144,
       "screenings": [
@@ -18148,7 +18148,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Bognor+Regis+Picturedrome+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.7855,
       "lng": -0.67773,
       "screenings": [
@@ -18197,7 +18197,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.94679,
       "lng": -1.46632,
       "screenings": [
@@ -18534,7 +18534,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.5788,
       "lng": -2.4283,
       "screenings": [
@@ -18999,7 +18999,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.582,
       "lng": -2.429,
       "screenings": [
@@ -19096,7 +19096,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.5876,
       "lng": -2.554,
       "screenings": [
@@ -19625,7 +19625,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Borehamwood+Reel+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.65511,
       "lng": -0.27499,
       "screenings": [
@@ -19658,7 +19658,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.49916,
       "lng": -0.09145,
       "screenings": [
@@ -19755,7 +19755,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Boston+Lincs+Savoy+PE21+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.9707,
       "lng": -0.01236,
       "screenings": [
@@ -19788,7 +19788,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.7183,
       "lng": -1.8792,
       "screenings": [
@@ -20525,7 +20525,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.41604,
       "lng": -0.75398,
       "screenings": [
@@ -21038,7 +21038,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Bracknell+South+Hill+Park+Centre+RG12+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.441,
       "lng": -2.606,
       "screenings": [
@@ -21119,7 +21119,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.79165,
       "lng": -1.74717,
       "screenings": [
@@ -21728,7 +21728,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.79628,
       "lng": -1.75433,
       "screenings": [
@@ -21825,7 +21825,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Bradford+Pictureville+National+Science+and+Media+Museum+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.79056,
       "lng": -1.9099,
       "screenings": [
@@ -21938,7 +21938,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.86912,
       "lng": 0.57169,
       "screenings": [
@@ -22323,7 +22323,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.48295,
       "lng": -0.30791,
       "screenings": [
@@ -22452,7 +22452,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.53833,
       "lng": -3.57949,
       "screenings": [
@@ -22901,7 +22901,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Bridgnorth+Shropshire+Reel+WV16+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.53595,
       "lng": -2.42212,
       "screenings": [
@@ -22934,7 +22934,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Bridgwater+Scott+TA6+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.12792,
       "lng": -3.00838,
       "screenings": [
@@ -23223,7 +23223,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.81264,
       "lng": -0.10069,
       "screenings": [
@@ -23672,7 +23672,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.8353,
       "lng": -0.1379,
       "screenings": [
@@ -23833,7 +23833,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.82497,
       "lng": -0.13938,
       "screenings": [
@@ -24090,7 +24090,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.85736,
       "lng": -0.13681,
       "screenings": [
@@ -24523,7 +24523,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45665,
       "lng": -2.59174,
       "screenings": [
@@ -24972,7 +24972,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52425,
       "lng": -2.60168,
       "screenings": [
@@ -25341,7 +25341,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.46326,
       "lng": -2.60876,
       "screenings": [
@@ -25422,7 +25422,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.4498,
       "lng": -2.49796,
       "screenings": [
@@ -25855,7 +25855,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Bristol+Scott+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.4804,
       "lng": -2.61215,
       "screenings": [
@@ -25936,7 +25936,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Bristol+Showcase+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45815,
       "lng": -2.5846,
       "screenings": [
@@ -26881,7 +26881,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Bristol+Watershed+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45089,
       "lng": -2.59918,
       "screenings": [
@@ -27186,7 +27186,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.46148,
       "lng": -0.1146,
       "screenings": [
@@ -27651,7 +27651,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Broadstairs+Palace+CT10+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.36318,
       "lng": 1.42918,
       "screenings": [
@@ -27781,7 +27781,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.33998,
       "lng": -2.97785,
       "screenings": [
@@ -28166,7 +28166,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.3941,
       "lng": 0.02749,
       "screenings": [
@@ -28455,7 +28455,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.17323,
       "lng": -2.96038,
       "screenings": [
@@ -29048,7 +29048,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.229,
       "lng": -2.32,
       "screenings": [
@@ -29129,7 +29129,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Burnley+Reel+BB11+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.76735,
       "lng": -2.25938,
       "screenings": [
@@ -29162,7 +29162,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.80577,
       "lng": -1.63281,
       "screenings": [
@@ -29419,7 +29419,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.59403,
       "lng": -2.29638,
       "screenings": [
@@ -29804,7 +29804,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.24558,
       "lng": 0.71663,
       "screenings": [
@@ -29901,7 +29901,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.2462,
       "lng": 0.7066,
       "screenings": [
@@ -30206,7 +30206,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.33811,
       "lng": -0.74847,
       "screenings": [
@@ -30527,7 +30527,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.20403,
       "lng": 0.12161,
       "screenings": [
@@ -30592,7 +30592,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.19001,
       "lng": 0.13759,
       "screenings": [
@@ -30817,7 +30817,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.18527,
       "lng": 0.12307,
       "screenings": [
@@ -31097,7 +31097,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Cambridge+Arts+Picturehouse+tickets",
           "starts_at": "2027-02-24T13:30:00",
@@ -31122,7 +31122,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52406,
       "lng": -0.12316,
       "screenings": [
@@ -31171,7 +31171,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.2315,
       "lng": 1.0774,
       "screenings": [
@@ -31220,7 +31220,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Canterbury+The+Gulbenkian+University+of+Kent+CT2+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.29413,
       "lng": 1.08084,
       "screenings": [
@@ -31253,7 +31253,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.46681,
       "lng": -3.1636,
       "screenings": [
@@ -31830,7 +31830,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.47913,
       "lng": -3.17306,
       "screenings": [
@@ -32743,7 +32743,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.46358,
       "lng": -3.16588,
       "screenings": [
@@ -32792,7 +32792,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Cardiff+Chapter+Arts+CF5+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.4836,
       "lng": -3.2047,
       "screenings": [
@@ -33401,7 +33401,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Cardiff+Nantgarw+Pontypridd+Showcase+CF15+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.56561,
       "lng": -3.27453,
       "screenings": [
@@ -34314,7 +34314,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.08655,
       "lng": -4.65232,
       "screenings": [
@@ -34363,7 +34363,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.89058,
       "lng": -2.93053,
       "screenings": [
@@ -34732,7 +34732,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.85854,
       "lng": -4.30846,
       "screenings": [
@@ -35085,7 +35085,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.725,
       "lng": -1.352,
       "screenings": [
@@ -35598,7 +35598,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Catterick+Savoy+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.375,
       "lng": -1.708,
       "screenings": [
@@ -35631,7 +35631,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.40141,
       "lng": 0.53232,
       "screenings": [
@@ -36144,7 +36144,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.73482,
       "lng": 0.47538,
       "screenings": [
@@ -36321,7 +36321,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.73082,
       "lng": 0.476,
       "screenings": [
@@ -36738,7 +36738,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.48939,
       "lng": -0.16592,
       "screenings": [
@@ -36835,7 +36835,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.90271,
       "lng": -2.07539,
       "screenings": [
@@ -37476,7 +37476,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cheltenham+Tivoli+GL50+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.90063,
       "lng": -2.08183,
       "screenings": [
@@ -37605,7 +37605,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.191,
       "lng": -2.89,
       "screenings": [
@@ -37837,7 +37837,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Chester+Picturehouse+tickets",
           "starts_at": "2027-02-24T13:30:00",
@@ -37862,7 +37862,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Chester+Storyhouse+CH1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.1924,
       "lng": -2.8932,
       "screenings": [
@@ -38078,7 +38078,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Chester+Storyhouse+tickets",
           "starts_at": "2027-02-21T14:00:00",
@@ -38103,7 +38103,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.23505,
       "lng": -1.42163,
       "screenings": [
@@ -38440,7 +38440,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.83761,
       "lng": -0.77494,
       "screenings": [
@@ -38761,7 +38761,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Chichester+Cinema+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.8364,
       "lng": -0.7704,
       "screenings": [
@@ -38874,7 +38874,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Chipping+Norton+The+Living+Room+OX7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.90968,
       "lng": -1.52838,
       "screenings": [
@@ -38923,7 +38923,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Chipping+Norton+Theatre+OX7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.942,
       "lng": -1.547,
       "screenings": [
@@ -38972,7 +38972,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Chorley+Reel+PR7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.653,
       "lng": -2.632,
       "screenings": [
@@ -39005,7 +39005,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.theregentmarple.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.73405,
       "lng": -1.77707,
       "screenings": [
@@ -39070,7 +39070,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Clacton+Century+CO15+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.789,
       "lng": 1.1558,
       "screenings": [
@@ -39151,7 +39151,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.46098,
       "lng": -0.13647,
       "screenings": [
@@ -39383,7 +39383,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Clapham+London+Picturehouse+tickets",
           "starts_at": "2027-02-25T11:30:00",
@@ -39408,7 +39408,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Cleethorpes+Parkway+DN35+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.54761,
       "lng": -0.01461,
       "screenings": [
@@ -39697,7 +39697,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.43618,
       "lng": -2.85466,
       "screenings": [
@@ -39762,7 +39762,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.87907,
       "lng": -3.04705,
       "screenings": [
@@ -40179,7 +40179,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.86811,
       "lng": -2.39439,
       "screenings": [
@@ -40260,7 +40260,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Clydebank+Omniplex+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.90435,
       "lng": -4.40152,
       "screenings": [
@@ -40325,7 +40325,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Cockermouth+Kirkgate+Arts+Please+enquire+at+cinema+CA13+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.66002,
       "lng": -3.3678,
       "screenings": [
@@ -40422,7 +40422,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.8898,
       "lng": 0.899,
       "screenings": [
@@ -40471,7 +40471,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Colchester+Firstsite+CO1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.8887,
       "lng": 0.9062,
       "screenings": [
@@ -40591,7 +40591,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Colchester+Firstsite+tickets",
           "starts_at": "2027-02-23T14:00:00",
@@ -40616,7 +40616,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.88838,
       "lng": 0.89586,
       "screenings": [
@@ -41049,7 +41049,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.92333,
       "lng": 0.90093,
       "screenings": [
@@ -41466,7 +41466,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Coleford+Gloucester+Merlin+Studio+GL16+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.796,
       "lng": -2.616,
       "screenings": [
@@ -41499,7 +41499,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Coleford+Merlin+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.796,
       "lng": -2.616,
       "screenings": [
@@ -41532,7 +41532,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Colywn+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.2932,
       "lng": -3.7276,
       "screenings": [
@@ -41565,7 +41565,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Corby+Savoy+NN17+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.48937,
       "lng": -0.70437,
       "screenings": [
@@ -41614,7 +41614,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+White+River+St+Austell+WTW+PL25+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.34123,
       "lng": -4.78001,
       "screenings": [
@@ -41743,7 +41743,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Plaza+Truro+WTW+TR1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.26191,
       "lng": -5.05189,
       "screenings": [
@@ -41872,7 +41872,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Wadebridge+Regal+WTW+PL27+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.51565,
       "lng": -4.83581,
       "screenings": [
@@ -41969,7 +41969,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.41385,
       "lng": -5.0871,
       "screenings": [
@@ -42082,7 +42082,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Falmouth+Phoenix+Merlin+TR11+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.15398,
       "lng": -5.07433,
       "screenings": [
@@ -42131,7 +42131,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Bodmin+Merlin+PL31+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.471,
       "lng": -4.724,
       "screenings": [
@@ -42164,7 +42164,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+St+Ives+Merlin+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.21131,
       "lng": -5.48188,
       "screenings": [
@@ -42197,7 +42197,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Helston+Merlin+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.10132,
       "lng": -5.27322,
       "screenings": [
@@ -42230,7 +42230,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Penzance+Merlin+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.11962,
       "lng": -5.53857,
       "screenings": [
@@ -42263,7 +42263,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Redruth+Merlin+TR15+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.23308,
       "lng": -5.2384,
       "screenings": [
@@ -42312,7 +42312,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Ilfracombe+Embassy+EX34+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.20837,
       "lng": -4.12188,
       "screenings": [
@@ -42345,7 +42345,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Cornwall+Torquay+Merlin+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.46557,
       "lng": -3.52868,
       "screenings": [
@@ -42378,7 +42378,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.40682,
       "lng": -1.51969,
       "screenings": [
@@ -42955,7 +42955,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Coventry+Showcase+CV2+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.43543,
       "lng": -1.42986,
       "screenings": [
@@ -43820,7 +43820,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.08467,
       "lng": -1.5908,
       "screenings": [
@@ -44205,7 +44205,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.12025,
       "lng": -0.18837,
       "screenings": [
@@ -45118,7 +45118,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.09846,
       "lng": -2.45466,
       "screenings": [
@@ -45423,7 +45423,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Cromer+Norwich+Regal+Merlin+NR27+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.93045,
       "lng": 1.30064,
       "screenings": [
@@ -45456,7 +45456,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Crouch+End+Arthouse+N8+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.58186,
       "lng": -0.12003,
       "screenings": [
@@ -45505,7 +45505,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.57975,
       "lng": -0.12368,
       "screenings": [
@@ -45993,7 +45993,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Crouch+End+Picturehouse+tickets",
           "starts_at": "2027-02-24T13:00:00",
@@ -46018,7 +46018,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.37812,
       "lng": -0.12453,
       "screenings": [
@@ -46259,7 +46259,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.41841,
       "lng": -0.07966,
       "screenings": [
@@ -46388,7 +46388,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.945,
       "lng": -3.989,
       "screenings": [
@@ -46533,7 +46533,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.65487,
       "lng": -3.0193,
       "screenings": [
@@ -46854,7 +46854,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.53256,
       "lng": 0.13578,
       "screenings": [
@@ -47079,7 +47079,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Dalston+Rio+E8+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54966,
       "lng": -0.07555,
       "screenings": [
@@ -47112,7 +47112,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.52658,
       "lng": -1.55229,
       "screenings": [
@@ -47577,7 +47577,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Dartmouth+Devon%2C+The+Flavel+TQ6+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.35218,
       "lng": -3.57906,
       "screenings": [
@@ -47674,7 +47674,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.257,
       "lng": -1.1651,
       "screenings": [
@@ -47707,7 +47707,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.94186,
       "lng": -1.4621,
       "screenings": [
@@ -48220,7 +48220,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Derby+QUAD+Cathedral+Quarter+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.9232,
       "lng": -1.4755,
       "screenings": [
@@ -48269,7 +48269,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Derby+Showcase+Westfield+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.91868,
       "lng": -1.47096,
       "screenings": [
@@ -49262,7 +49262,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Dereham+Orion+cinema+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.6814,
       "lng": -0.9403,
       "screenings": [
@@ -49295,7 +49295,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.60745,
       "lng": -1.24044,
       "screenings": [
@@ -49552,7 +49552,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4188,
       "lng": -2.2196,
       "screenings": [
@@ -50129,7 +50129,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Doncaster+Savoy+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.523,
       "lng": -1.133,
       "screenings": [
@@ -50162,7 +50162,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.51366,
       "lng": -1.10341,
       "screenings": [
@@ -50627,7 +50627,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.70998,
       "lng": -2.43875,
       "screenings": [
@@ -50820,7 +50820,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.7139,
       "lng": -2.4382,
       "screenings": [
@@ -50853,7 +50853,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.1566,
       "lng": 1.297,
       "screenings": [
@@ -51094,7 +51094,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.47861,
       "lng": -2.11137,
       "screenings": [
@@ -51559,7 +51559,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Dudley+Showcase+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.51611,
       "lng": -2.07261,
       "screenings": [
@@ -52360,7 +52360,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45444,
       "lng": -0.07238,
       "screenings": [
@@ -52896,7 +52896,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Dulwich+Picturehouse+tickets",
           "starts_at": "2027-03-03T11:00:00",
@@ -52921,7 +52921,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.47754,
       "lng": -3.03201,
       "screenings": [
@@ -53210,7 +53210,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Dundee+DCA+DD1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.45708,
       "lng": -2.97478,
       "screenings": [
@@ -53627,7 +53627,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.48005,
       "lng": -2.92377,
       "screenings": [
@@ -54108,7 +54108,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.07818,
       "lng": -3.39497,
       "screenings": [
@@ -54541,7 +54541,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Durham+Gala+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.77785,
       "lng": -1.57469,
       "screenings": [
@@ -54574,7 +54574,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.7771,
       "lng": -1.5785,
       "screenings": [
@@ -54975,7 +54975,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.7765,
       "lng": -1.5769,
       "screenings": [
@@ -55280,7 +55280,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.51199,
       "lng": -0.30688,
       "screenings": [
@@ -55729,7 +55729,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.75886,
       "lng": -4.17485,
       "screenings": [
@@ -56210,7 +56210,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.7694,
       "lng": 0.2855,
       "screenings": [
@@ -56579,7 +56579,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Eastbourne+-+Towner+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.766,
       "lng": 0.289,
       "screenings": [
@@ -56884,7 +56884,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.96702,
       "lng": -1.35368,
       "screenings": [
@@ -57269,7 +57269,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.94278,
       "lng": -3.20393,
       "screenings": [
@@ -57661,7 +57661,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Edinburgh+Cameo+Picturehouse+tickets",
           "starts_at": "2027-02-24T13:30:00",
@@ -57686,7 +57686,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.94117,
       "lng": -3.21823,
       "screenings": [
@@ -58439,7 +58439,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.95459,
       "lng": -3.19816,
       "screenings": [
@@ -58552,7 +58552,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.93508,
       "lng": -3.10433,
       "screenings": [
@@ -58937,7 +58937,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.94555,
       "lng": -3.20643,
       "screenings": [
@@ -59194,7 +59194,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.98022,
       "lng": -3.17441,
       "screenings": [
@@ -59467,7 +59467,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.95629,
       "lng": -3.18599,
       "screenings": [
@@ -59900,7 +59900,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.9413,
       "lng": -3.2096,
       "screenings": [
@@ -60381,7 +60381,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.62835,
       "lng": -0.03909,
       "screenings": [
@@ -60878,7 +60878,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.42751,
       "lng": -0.55297,
       "screenings": [
@@ -60991,7 +60991,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.4507,
       "lng": 0.056,
       "screenings": [
@@ -61264,7 +61264,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.3915,
       "lng": 0.263,
       "screenings": [
@@ -61553,7 +61553,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.65031,
       "lng": -0.06389,
       "screenings": [
@@ -62306,7 +62306,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.33437,
       "lng": -0.26164,
       "screenings": [
@@ -62755,7 +62755,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.33427,
       "lng": -0.26582,
       "screenings": [
@@ -63051,7 +63051,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Epsom+Picturehouse+tickets",
           "starts_at": "2027-02-24T13:30:00",
@@ -63076,7 +63076,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.37085,
       "lng": -0.36385,
       "screenings": [
@@ -63205,7 +63205,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.72811,
       "lng": -3.5223,
       "screenings": [
@@ -63478,7 +63478,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Exeter+Phoenix+EX4+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.73146,
       "lng": -3.52635,
       "screenings": [
@@ -63527,7 +63527,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.72076,
       "lng": -3.53629,
       "screenings": [
@@ -63672,7 +63672,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.72584,
       "lng": -3.52255,
       "screenings": [
@@ -63977,7 +63977,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Exmouth+Scott+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.6202,
       "lng": -3.41422,
       "screenings": [
@@ -64042,7 +64042,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.00377,
       "lng": -3.7799,
       "screenings": [
@@ -64395,7 +64395,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Falkirk+Community+Trust+EH51+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.00187,
       "lng": -3.78825,
       "screenings": [
@@ -64460,7 +64460,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.88609,
       "lng": -1.24434,
       "screenings": [
@@ -64845,7 +64845,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Fareham+Hampshire+Reel+PO16+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.85213,
       "lng": -1.17885,
       "screenings": [
@@ -64878,7 +64878,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.29213,
       "lng": -0.75451,
       "screenings": [
@@ -65183,7 +65183,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Farnham+Reel+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.2155,
       "lng": -0.79481,
       "screenings": [
@@ -65216,7 +65216,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.44356,
       "lng": -0.40763,
       "screenings": [
@@ -66113,7 +66113,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Fife+Adam+Smith+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.11224,
       "lng": -3.1583,
       "screenings": [
@@ -66242,7 +66242,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Finchley+East+Phoenix+N2+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5885,
       "lng": -0.16377,
       "screenings": [
@@ -66307,7 +66307,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.6048,
       "lng": -0.17356,
       "screenings": [
@@ -66692,7 +66692,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54817,
       "lng": -0.18073,
       "screenings": [
@@ -67109,7 +67109,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5202,
       "lng": -0.0847,
       "screenings": [
@@ -67254,7 +67254,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.57011,
       "lng": -0.10375,
       "screenings": [
@@ -67735,7 +67735,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Fleet+Fleet+Film+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": null,
       "lng": null,
       "screenings": [
@@ -67848,7 +67848,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Folkestone+Silver+Screen+CT20+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.08017,
       "lng": 1.18033,
       "screenings": [
@@ -67897,7 +67897,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Fort+William+Highland+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.817,
       "lng": -5.112,
       "screenings": [
@@ -68074,7 +68074,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Frome+The+Westway+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.23,
       "lng": -2.321,
       "screenings": [
@@ -68139,7 +68139,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.47542,
       "lng": -0.17943,
       "screenings": [
@@ -68476,7 +68476,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Gainsborough+Lincs+Savoy+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.399,
       "lng": -0.773,
       "screenings": [
@@ -68509,7 +68509,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Galashiels+Merlin+Cinema+TD1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.617,
       "lng": -2.804,
       "screenings": [
@@ -68542,7 +68542,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.96937,
       "lng": -1.52343,
       "screenings": [
@@ -69087,7 +69087,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.96144,
       "lng": -1.59923,
       "screenings": [
@@ -69568,7 +69568,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.59808,
       "lng": -0.55572,
       "screenings": [
@@ -69681,7 +69681,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.82289,
       "lng": -4.34205,
       "screenings": [
@@ -70354,7 +70354,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.8726,
       "lng": -4.1382,
       "screenings": [
@@ -70739,7 +70739,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.8569,
       "lng": -4.2532,
       "screenings": [
@@ -71076,7 +71076,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Glasgow+Renfrew+St+Omniplex+G1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.85885,
       "lng": -4.24881,
       "screenings": [
@@ -71109,7 +71109,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Glasgow+Showcase+Barrbridge+Leisure+Centre%2C+Baillieston+G69+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.87638,
       "lng": -4.10083,
       "screenings": [
@@ -71942,7 +71942,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.8789,
       "lng": -4.3716,
       "screenings": [
@@ -72375,7 +72375,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.85371,
       "lng": -4.27423,
       "screenings": [
@@ -72888,7 +72888,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Glasgow+Film+Theatre+GFT+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.93315,
       "lng": -4.02329,
       "screenings": [
@@ -74825,7 +74825,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.8592,
       "lng": -4.25344,
       "screenings": [
@@ -74890,7 +74890,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.86039,
       "lng": -2.25342,
       "screenings": [
@@ -75275,7 +75275,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Goole+Junction+DN14+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.70422,
       "lng": -0.87232,
       "screenings": [
@@ -75308,7 +75308,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Grantham+Lincs+Savoy+NG31+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.912,
       "lng": -0.64,
       "screenings": [
@@ -75341,7 +75341,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Great+Yarmouth+Arc+NR30+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.6079,
       "lng": 1.7377,
       "screenings": [
@@ -75422,7 +75422,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.50252,
       "lng": 0.00366,
       "screenings": [
@@ -76559,7 +76559,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.48965,
       "lng": 0.01502,
       "screenings": [
@@ -77424,7 +77424,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.47945,
       "lng": -0.00968,
       "screenings": [
@@ -78049,7 +78049,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.23763,
       "lng": -0.57808,
       "screenings": [
@@ -78498,7 +78498,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54481,
       "lng": -0.05495,
       "screenings": [
@@ -78883,7 +78883,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Hailsham+-+Pavilion+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.8624,
       "lng": 0.2587,
       "screenings": [
@@ -78964,7 +78964,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Halesowen+Reel+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.46267,
       "lng": -2.01475,
       "screenings": [
@@ -78997,7 +78997,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.72407,
       "lng": -1.86224,
       "screenings": [
@@ -79414,7 +79414,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.77847,
       "lng": -4.02921,
       "screenings": [
@@ -79783,7 +79783,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.55644,
       "lng": -0.17903,
       "screenings": [
@@ -79832,7 +79832,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.78393,
       "lng": 0.10868,
       "screenings": [
@@ -80169,7 +80169,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.78393,
       "lng": 0.10868,
       "screenings": [
@@ -80202,7 +80202,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.99,
       "lng": -1.5372,
       "screenings": [
@@ -80267,7 +80267,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.9929,
       "lng": -1.5352,
       "screenings": [
@@ -80572,7 +80572,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.56972,
       "lng": -0.33996,
       "screenings": [
@@ -80925,7 +80925,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.69043,
       "lng": -1.21112,
       "screenings": [
@@ -81262,7 +81262,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.85608,
       "lng": 0.58089,
       "screenings": [
@@ -81535,7 +81535,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.76366,
       "lng": -0.23902,
       "screenings": [
@@ -81984,7 +81984,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.07989,
       "lng": 0.44551,
       "screenings": [
@@ -82241,7 +82241,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Hebden+Bridge+Picture+House+HX7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.74045,
       "lng": -2.01114,
       "screenings": [
@@ -82290,7 +82290,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.74879,
       "lng": -0.45925,
       "screenings": [
@@ -83043,7 +83043,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.53909,
       "lng": -0.9049,
       "screenings": [
@@ -83115,7 +83115,7 @@
           "title": "The Peoples Emergency Briefing Film Talk",
           "film_id": "the-peoples-emergency-briefing-film-talk",
           "source_url": "more.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/cf/2.0_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/en/3/31/Ghost_town_poster_08.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/title/tt5080556/",
           "book": "https://www.google.com/search?q=%22The+Peoples+Emergency+Briefing+Film+Talk%22+Henley+-+Picturehouse+tickets",
           "starts_at": "2026-11-25T18:15:00",
@@ -83147,7 +83147,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Henley+-+Picturehouse+tickets",
           "starts_at": "2027-02-22T13:30:00",
@@ -83172,7 +83172,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=HERE+Edinburgh+Filmhouse+BSL+Film+Club+details+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.50304,
       "lng": -0.00155,
       "screenings": [
@@ -84373,7 +84373,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.05883,
       "lng": -2.71777,
       "screenings": [
@@ -84854,7 +84854,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Hertford+Beam+The+Wash+SG14+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.797,
       "lng": -0.08,
       "screenings": [
@@ -85054,7 +85054,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Hertford+Beam+The+Wash+tickets",
           "starts_at": "2027-02-21T13:00:00",
@@ -85079,7 +85079,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Hexham+Forum+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.9737,
       "lng": -2.1029,
       "screenings": [
@@ -85112,7 +85112,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.53988,
       "lng": -1.37318,
       "screenings": [
@@ -85385,7 +85385,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.55858,
       "lng": -0.12127,
       "screenings": [
@@ -85931,7 +85931,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.06249,
       "lng": -0.32644,
       "screenings": [
@@ -86028,7 +86028,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.44388,
       "lng": -0.40466,
       "screenings": [
@@ -87085,7 +87085,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52888,
       "lng": -0.0838,
       "screenings": [
@@ -87118,7 +87118,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Hoxton+Whitechapel+Genesis+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52114,
       "lng": -0.05112,
       "screenings": [
@@ -87183,7 +87183,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.645,
       "lng": -1.779,
       "screenings": [
@@ -87248,7 +87248,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.65676,
       "lng": -1.76809,
       "screenings": [
@@ -87697,7 +87697,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.7421,
       "lng": -0.33916,
       "screenings": [
@@ -88098,7 +88098,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.73835,
       "lng": -0.34362,
       "screenings": [
@@ -88595,7 +88595,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.7925,
       "lng": -0.353,
       "screenings": [
@@ -88916,7 +88916,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Hull+Reel+cinema+HU2+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.74544,
       "lng": -0.34756,
       "screenings": [
@@ -88949,7 +88949,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.351,
       "lng": -0.17977,
       "screenings": [
@@ -89318,7 +89318,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.55763,
       "lng": 0.07411,
       "screenings": [
@@ -90615,7 +90615,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Inverness+Eden+Court+Theatre+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 57.47266,
       "lng": -4.22988,
       "screenings": [
@@ -90744,7 +90744,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 57.48238,
       "lng": -4.17788,
       "screenings": [
@@ -91065,7 +91065,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.05243,
       "lng": 1.3511,
       "screenings": [
@@ -91786,7 +91786,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Ipswich+Omniplex+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.0567,
       "lng": 1.15357,
       "screenings": [
@@ -91819,7 +91819,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.53864,
       "lng": -0.10357,
       "screenings": [
@@ -92140,7 +92140,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5363,
       "lng": -0.1037,
       "screenings": [
@@ -92205,7 +92205,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.53446,
       "lng": -0.1066,
       "screenings": [
@@ -92542,7 +92542,7 @@
       ],
       "region": "Islands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 49.18275,
       "lng": -2.11477,
       "screenings": [
@@ -92927,7 +92927,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Kendal+Cumbria+Brewery+Arts+Centre+LA9+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.32429,
       "lng": -2.74752,
       "screenings": [
@@ -93152,7 +93152,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Kensal+Rise+Lexi+NW10+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54118,
       "lng": -0.24817,
       "screenings": [
@@ -93185,7 +93185,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Keswick+Alhambra+CA12+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.6026,
       "lng": -3.13488,
       "screenings": [
@@ -93298,7 +93298,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Kilburn+Kiln+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54333,
       "lng": -0.20001,
       "screenings": [
@@ -93587,7 +93587,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.59992,
       "lng": -4.48693,
       "screenings": [
@@ -94020,7 +94020,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5365,
       "lng": -0.1269,
       "screenings": [
@@ -94133,7 +94133,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Kings+Lynn+Alive+Corn+Exchange+PE30+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.7567,
       "lng": 0.3937,
       "screenings": [
@@ -94166,7 +94166,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Kingsbridge+%2C+Merlin+TQ7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.28629,
       "lng": -3.77815,
       "screenings": [
@@ -94199,7 +94199,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.41162,
       "lng": -0.29986,
       "screenings": [
@@ -95048,7 +95048,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.4112,
       "lng": -0.30343,
       "screenings": [
@@ -95113,7 +95113,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.3027,
       "lng": -2.3717,
       "screenings": [
@@ -95162,7 +95162,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.04945,
       "lng": -2.80019,
       "screenings": [
@@ -95355,7 +95355,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Lancaster+Dukes+LA1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.048,
       "lng": -2.8017,
       "screenings": [
@@ -95468,7 +95468,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.28908,
       "lng": -1.53952,
       "screenings": [
@@ -95725,7 +95725,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.79992,
       "lng": -1.70423,
       "screenings": [
@@ -96302,7 +96302,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.7601,
       "lng": -1.5732,
       "screenings": [
@@ -97119,7 +97119,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Leeds+Cottage+Road+LS6+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.827,
       "lng": -1.5807,
       "screenings": [
@@ -97152,7 +97152,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.79992,
       "lng": -1.54489,
       "screenings": [
@@ -97281,7 +97281,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Leeds+Hyde+Park+Picture+House+LS6+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.81217,
       "lng": -1.56959,
       "screenings": [
@@ -97522,7 +97522,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.7998,
       "lng": -1.425,
       "screenings": [
@@ -98083,7 +98083,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Leeds+Showcase+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.74071,
       "lng": -1.64978,
       "screenings": [
@@ -99092,7 +99092,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.80592,
       "lng": -1.58166,
       "screenings": [
@@ -99461,7 +99461,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.79998,
       "lng": -1.5457,
       "screenings": [
@@ -99798,7 +99798,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.60605,
       "lng": -1.1884,
       "screenings": [
@@ -100167,7 +100167,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Leicester+Phoenix+LE1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.63596,
       "lng": -1.12436,
       "screenings": [
@@ -100488,7 +100488,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.61448,
       "lng": -1.14234,
       "screenings": [
@@ -101177,7 +101177,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Leicester+Showcase+Cinema+de+Lux+Highcross+LE1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.63641,
       "lng": -1.13828,
       "screenings": [
@@ -102330,7 +102330,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Broadway+Letchworth+SG6+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.97784,
       "lng": -0.22833,
       "screenings": [
@@ -102379,7 +102379,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Lewes+Depot+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.8718,
       "lng": -0.0131,
       "screenings": [
@@ -102940,7 +102940,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.22743,
       "lng": -0.53865,
       "screenings": [
@@ -103053,7 +103053,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Lincoln+Kinema+LN10+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.1546,
       "lng": -0.214,
       "screenings": [
@@ -103102,7 +103102,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.22941,
       "lng": -0.00413,
       "screenings": [
@@ -103503,7 +103503,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.40679,
       "lng": -2.98575,
       "screenings": [
@@ -103568,7 +103568,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.44057,
       "lng": -3.04488,
       "screenings": [
@@ -103633,7 +103633,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.40346,
       "lng": -2.98612,
       "screenings": [
@@ -104434,7 +104434,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.40837,
       "lng": -2.99157,
       "screenings": [
@@ -104867,7 +104867,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.40203,
       "lng": -2.98056,
       "screenings": [
@@ -105195,7 +105195,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Liverpool+Picturehouse+FACT+tickets",
           "starts_at": "2027-02-22T13:30:00",
@@ -105220,7 +105220,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Liverpool+Plaza+Community+Cinema+Waterloo+L22+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.47726,
       "lng": -3.02797,
       "screenings": [
@@ -105365,7 +105365,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Liverpool+Showcase+L11+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.44535,
       "lng": -2.91917,
       "screenings": [
@@ -106150,7 +106150,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.35071,
       "lng": -2.87931,
       "screenings": [
@@ -106711,7 +106711,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.88273,
       "lng": -3.5194,
       "screenings": [
@@ -106776,7 +106776,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Llandudno+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.32247,
       "lng": -3.82433,
       "screenings": [
@@ -106969,7 +106969,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.2822,
       "lng": -3.8083,
       "screenings": [
@@ -107242,7 +107242,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.68298,
       "lng": -4.15787,
       "screenings": [
@@ -107563,7 +107563,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.77026,
       "lng": -1.20695,
       "screenings": [
@@ -107996,7 +107996,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Shrops+Ludlow+Assembly+Rooms+SY8+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.36496,
       "lng": -2.69527,
       "screenings": [
@@ -108045,7 +108045,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.88167,
       "lng": -0.41806,
       "screenings": [
@@ -109006,7 +109006,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52793,
       "lng": -0.18363,
       "screenings": [
@@ -109071,7 +109071,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Maidenhead+Norden+Farm+SL6+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5151,
       "lng": -0.72281,
       "screenings": [
@@ -109136,7 +109136,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.52048,
       "lng": -0.7444,
       "screenings": [
@@ -109601,7 +109601,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.26968,
       "lng": 0.51881,
       "screenings": [
@@ -109970,7 +109970,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.476,
       "lng": -2.253,
       "screenings": [
@@ -110019,7 +110019,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4779,
       "lng": -2.2489,
       "screenings": [
@@ -110740,7 +110740,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://homemcr.org/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4738,
       "lng": -2.247,
       "screenings": [
@@ -110885,7 +110885,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4855,
       "lng": -2.2377,
       "screenings": [
@@ -111558,7 +111558,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4709,
       "lng": -2.2967,
       "screenings": [
@@ -111799,7 +111799,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4668,
       "lng": -2.3487,
       "screenings": [
@@ -112520,7 +112520,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.13599,
       "lng": -1.1235,
       "screenings": [
@@ -112985,7 +112985,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5717,
       "lng": -0.7771,
       "screenings": [
@@ -113098,7 +113098,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Melton+Regal+LE13+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.765,
       "lng": -0.886,
       "screenings": [
@@ -113147,7 +113147,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.5745,
       "lng": -1.235,
       "screenings": [
@@ -113244,7 +113244,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.5764,
       "lng": -1.22788,
       "screenings": [
@@ -113805,7 +113805,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Mold+Theatr+Clwyd+CH7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.18125,
       "lng": -3.13855,
       "screenings": [
@@ -114190,7 +114190,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Monmouth+Savoy+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.812,
       "lng": -2.716,
       "screenings": [
@@ -114239,7 +114239,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.59005,
       "lng": -0.14679,
       "screenings": [
@@ -114352,7 +114352,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.07432,
       "lng": -0.80821,
       "screenings": [
@@ -114673,7 +114673,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Newbury+-+Corn+Exchange+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.4008,
       "lng": 1.3228,
       "screenings": [
@@ -114770,7 +114770,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.39972,
       "lng": -1.32392,
       "screenings": [
@@ -115059,7 +115059,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.97289,
       "lng": -1.61923,
       "screenings": [
@@ -116084,7 +116084,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.97258,
       "lng": -1.61286,
       "screenings": [
@@ -116197,7 +116197,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Newcastle+Tyneside+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.97395,
       "lng": -1.61185,
       "screenings": [
@@ -116342,7 +116342,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.00961,
       "lng": -2.22585,
       "screenings": [
@@ -116615,7 +116615,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.57453,
       "lng": -2.98487,
       "screenings": [
@@ -116952,7 +116952,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Newton+Abbot+Devon%2C+Alexandra+Scott+TQ12+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.53051,
       "lng": -3.61225,
       "screenings": [
@@ -116985,7 +116985,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.23793,
       "lng": -0.90267,
       "screenings": [
@@ -117450,7 +117450,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.24,
       "lng": -0.902,
       "screenings": [
@@ -117915,7 +117915,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.259,
       "lng": -2.518,
       "screenings": [
@@ -118252,7 +118252,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.62349,
       "lng": 1.30504,
       "screenings": [
@@ -118957,7 +118957,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.62634,
       "lng": 1.29676,
       "screenings": [
@@ -119326,7 +119326,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.6306,
       "lng": 1.29574,
       "screenings": [
@@ -119590,7 +119590,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Norwich+Picturehouse+tickets",
           "starts_at": "2027-02-22T13:30:00",
@@ -119615,7 +119615,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.43064,
       "lng": -0.10242,
       "screenings": [
@@ -119831,7 +119831,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Norwood+Picturehouse+tickets",
           "starts_at": "2027-02-24T12:45:00",
@@ -119856,7 +119856,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Nottingham+Arc+Beeston+NG9+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.9235,
       "lng": -1.212,
       "screenings": [
@@ -119905,7 +119905,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Nottingham+Arc+Hucknall+NG15+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.0335,
       "lng": -1.1975,
       "screenings": [
@@ -119938,7 +119938,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Nottingham+Broadway+NG1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.95426,
       "lng": -1.14371,
       "screenings": [
@@ -120883,7 +120883,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Nottingham+Cinema+de+Lux+Showcase+NG7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.93585,
       "lng": -1.1761,
       "screenings": [
@@ -121636,7 +121636,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.google.com/search?q=Nottingham+Savoy+NG7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.95796,
       "lng": -1.17253,
       "screenings": [
@@ -121765,7 +121765,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.954,
       "lng": -1.157,
       "screenings": [
@@ -122246,7 +122246,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.49737,
       "lng": -1.47744,
       "screenings": [
@@ -122727,7 +122727,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Okehampton+Merlin+EX20+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.73985,
       "lng": -4.00393,
       "screenings": [
@@ -122760,7 +122760,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.521,
       "lng": -2.137,
       "screenings": [
@@ -123145,7 +123145,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Orkney+KW15+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 58.94182,
       "lng": -3.12969,
       "screenings": [
@@ -123258,7 +123258,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.3773,
       "lng": 0.1019,
       "screenings": [
@@ -123659,7 +123659,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Oxford+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.75201,
       "lng": -1.25785,
       "screenings": [
@@ -123708,7 +123708,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.76626,
       "lng": -1.28101,
       "screenings": [
@@ -123972,7 +123972,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Oxford+Phoenix+Picturehouse+tickets",
           "starts_at": "2027-02-22T12:00:00",
@@ -123997,7 +123997,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Oxford+Ultimate+Picture+Palace+OX4+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.435,
       "lng": -3.566,
       "screenings": [
@@ -124078,7 +124078,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.71581,
       "lng": -1.20971,
       "screenings": [
@@ -124351,7 +124351,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.25738,
       "lng": -0.00604,
       "screenings": [
@@ -124400,7 +124400,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Paisley+Showcase+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.84684,
       "lng": -4.47525,
       "screenings": [
@@ -124977,7 +124977,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.46986,
       "lng": -0.068,
       "screenings": [
@@ -125026,7 +125026,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Penrith+Rheged+CA11+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.66462,
       "lng": -2.78416,
       "screenings": [
@@ -125059,7 +125059,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.39768,
       "lng": -3.43402,
       "screenings": [
@@ -125108,7 +125108,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Peterhead+Arc+Peterhead+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 57.505,
       "lng": 1.7809,
       "screenings": [
@@ -125189,7 +125189,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.371,
       "lng": -4.142,
       "screenings": [
@@ -125238,7 +125238,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.3696,
       "lng": -4.1427,
       "screenings": [
@@ -125767,7 +125767,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.36456,
       "lng": -4.17059,
       "screenings": [
@@ -125896,7 +125896,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.36832,
       "lng": -4.12331,
       "screenings": [
@@ -126537,7 +126537,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Pontardawe+Arts+Centre+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.719,
       "lng": -3.853,
       "screenings": [
@@ -126586,7 +126586,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.7186,
       "lng": -1.95988,
       "screenings": [
@@ -126667,7 +126667,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.716,
       "lng": -1.981,
       "screenings": [
@@ -127372,7 +127372,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Port+Talbot+Reel+SA12+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.59418,
       "lng": -3.81721,
       "screenings": [
@@ -127405,7 +127405,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.84384,
       "lng": -1.09653,
       "screenings": [
@@ -127774,7 +127774,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.79416,
       "lng": -1.10428,
       "screenings": [
@@ -128111,7 +128111,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Powys+Builth+Wells+Wyeside+Arts+Centre+LD2+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.14183,
       "lng": -3.39318,
       "screenings": [
@@ -128160,7 +128160,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Prestatyn+Merlin+Scala+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.337,
       "lng": -3.407,
       "screenings": [
@@ -128193,7 +128193,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Preston+Arc+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.7601,
       "lng": -2.7035,
       "screenings": [
@@ -128242,7 +128242,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.8535,
       "lng": -2.7609,
       "screenings": [
@@ -128275,7 +128275,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.76156,
       "lng": -2.75853,
       "screenings": [
@@ -128772,7 +128772,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.75174,
       "lng": -2.67729,
       "screenings": [
@@ -129061,7 +129061,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.46546,
       "lng": -0.21463,
       "screenings": [
@@ -129126,7 +129126,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Reading+-+Biscuit+Factory+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.9705,
       "lng": -3.1694,
       "screenings": [
@@ -129159,7 +129159,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Reading+-+Showcase+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.43004,
       "lng": -0.88018,
       "screenings": [
@@ -130264,7 +130264,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45247,
       "lng": -0.96977,
       "screenings": [
@@ -130617,7 +130617,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.30596,
       "lng": -1.94483,
       "screenings": [
@@ -130954,7 +130954,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.24,
       "lng": -0.169,
       "screenings": [
@@ -131003,7 +131003,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.23701,
       "lng": -0.20352,
       "screenings": [
@@ -131052,7 +131052,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.google.com/search?q=Rhyl+Merlin+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.32074,
       "lng": -3.49073,
       "screenings": [
@@ -131085,7 +131085,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45907,
       "lng": -0.30734,
       "screenings": [
@@ -131134,7 +131134,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.45832,
       "lng": -0.30531,
       "screenings": [
@@ -131423,7 +131423,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.592,
       "lng": -2.178,
       "screenings": [
@@ -131824,7 +131824,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.google.com/search?q=Rochdale+Reel+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.6136,
       "lng": -2.1553,
       "screenings": [
@@ -131857,7 +131857,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.37983,
       "lng": 0.47571,
       "screenings": [
@@ -132226,7 +132226,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5794,
       "lng": 0.1857,
       "screenings": [
@@ -132755,7 +132755,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.57481,
       "lng": 0.17948,
       "screenings": [
@@ -133044,7 +133044,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Rotherham+Arc+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4262,
       "lng": -1.3555,
       "screenings": [
@@ -133125,7 +133125,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.38799,
       "lng": -1.25727,
       "screenings": [
@@ -133494,7 +133494,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5591,
       "lng": -0.4014,
       "screenings": [
@@ -134455,7 +134455,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.3025,
       "lng": -0.6269,
       "screenings": [
@@ -134584,7 +134584,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.07009,
       "lng": -1.79456,
       "screenings": [
@@ -134697,7 +134697,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.06819,
       "lng": -1.79555,
       "screenings": [
@@ -135034,7 +135034,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Scarborough+Stephen+Joseph+Theatre+YO11+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.2811,
       "lng": -0.40444,
       "screenings": [
@@ -135186,7 +135186,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Scarborough+Stephen+Joseph+Theatre+tickets",
           "starts_at": "2027-02-18T13:45:00",
@@ -135211,7 +135211,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.59092,
       "lng": -0.64482,
       "screenings": [
@@ -135516,7 +135516,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Sevenoaks+Kent+Stag+TN13+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.272,
       "lng": 0.193,
       "screenings": [
@@ -135613,7 +135613,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.38018,
       "lng": -1.46613,
       "screenings": [
@@ -136126,7 +136126,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.40156,
       "lng": -1.41503,
       "screenings": [
@@ -137503,7 +137503,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.381,
       "lng": -1.47,
       "screenings": [
@@ -137648,7 +137648,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Sheffield+Showroom+Cinema+S1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.37725,
       "lng": -1.46547,
       "screenings": [
@@ -137969,7 +137969,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.41508,
       "lng": -1.41311,
       "screenings": [
@@ -138434,7 +138434,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 60.1547,
       "lng": -1.149,
       "screenings": [
@@ -138499,7 +138499,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Shoreham+by+Sea+Ropetackle+Arts+Centre+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.83257,
       "lng": -0.27905,
       "screenings": [
@@ -138596,7 +138596,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.70353,
       "lng": -2.74053,
       "screenings": [
@@ -138869,7 +138869,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.426,
       "lng": 0.1027,
       "screenings": [
@@ -138902,7 +138902,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Sidmouth+Scott+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.68304,
       "lng": -3.23861,
       "screenings": [
@@ -138935,7 +138935,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.341,
       "lng": 0.734,
       "screenings": [
@@ -139032,7 +139032,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.41163,
       "lng": -1.77852,
       "screenings": [
@@ -139385,7 +139385,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=South+Shields+Custom+House+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.995,
       "lng": -0.1363,
       "screenings": [
@@ -139434,7 +139434,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Southampton+Showcase+SO15+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.90831,
       "lng": -1.40973,
       "screenings": [
@@ -140299,7 +140299,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.89477,
       "lng": -1.39364,
       "screenings": [
@@ -140483,7 +140483,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+Southampton+Picturehouse+tickets",
           "starts_at": "2027-02-24T17:00:00",
@@ -140508,7 +140508,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54593,
       "lng": 0.70771,
       "screenings": [
@@ -140941,7 +140941,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.65125,
       "lng": -3.01414,
       "screenings": [
@@ -141358,7 +141358,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=St+Albans+Odyssey+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.7484,
       "lng": -0.3335,
       "screenings": [
@@ -141439,7 +141439,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.453,
       "lng": -2.737,
       "screenings": [
@@ -141728,7 +141728,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.22869,
       "lng": -0.26567,
       "screenings": [
@@ -141969,7 +141969,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.806,
       "lng": -2.116,
       "screenings": [
@@ -142418,7 +142418,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.4347,
       "lng": -0.51264,
       "screenings": [
@@ -142835,7 +142835,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.89906,
       "lng": -0.2075,
       "screenings": [
@@ -143764,7 +143764,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Stirling+Macroberts+Arts+Centre+Stirling+University+Complex+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.1456,
       "lng": -3.9197,
       "screenings": [
@@ -143797,7 +143797,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 56.11805,
       "lng": -3.92954,
       "screenings": [
@@ -144279,7 +144279,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.4084,
       "lng": -2.1494,
       "screenings": [
@@ -144456,7 +144456,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Stockton+on+Tees+Showcase+TS17+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.5353,
       "lng": -1.30472,
       "screenings": [
@@ -145225,7 +145225,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.80577,
       "lng": -1.63281,
       "screenings": [
@@ -145610,7 +145610,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.02419,
       "lng": -2.19289,
       "screenings": [
@@ -146011,7 +146011,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.188,
       "lng": 0.997,
       "screenings": [
@@ -146156,7 +146156,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5425,
       "lng": 0.0114,
       "screenings": [
@@ -146285,7 +146285,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.19365,
       "lng": -1.70969,
       "screenings": [
@@ -146382,7 +146382,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54294,
       "lng": 0.00039,
       "screenings": [
@@ -146847,7 +146847,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.43209,
       "lng": -0.12806,
       "screenings": [
@@ -147248,7 +147248,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.74621,
       "lng": -2.21887,
       "screenings": [
@@ -147537,7 +147537,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Sunderland+Omniplex+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.90821,
       "lng": -1.38048,
       "screenings": [
@@ -147570,7 +147570,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Sutton+Surrey+Omniplex+SM1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.36143,
       "lng": -0.19396,
       "screenings": [
@@ -147603,7 +147603,7 @@
       ],
       "region": "East Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.769,
       "lng": -1.55441,
       "screenings": [
@@ -147940,7 +147940,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.61809,
       "lng": -3.93931,
       "screenings": [
@@ -148325,7 +148325,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.62192,
       "lng": -3.93826,
       "screenings": [
@@ -148742,7 +148742,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.6196,
       "lng": -3.94592,
       "screenings": [
@@ -148775,7 +148775,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.56074,
       "lng": -1.83134,
       "screenings": [
@@ -149160,7 +149160,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.556,
       "lng": -1.781,
       "screenings": [
@@ -149625,7 +149625,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54254,
       "lng": -0.17452,
       "screenings": [
@@ -150058,7 +150058,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.63205,
       "lng": -1.6905,
       "screenings": [
@@ -150555,7 +150555,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.0185,
       "lng": -3.11183,
       "screenings": [
@@ -150956,7 +150956,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.67377,
       "lng": -2.44651,
       "screenings": [
@@ -151597,7 +151597,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.67934,
       "lng": -2.44783,
       "screenings": [
@@ -152062,7 +152062,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.35821,
       "lng": 1.39592,
       "screenings": [
@@ -152463,7 +152463,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.426,
       "lng": 0.749,
       "screenings": [
@@ -152512,7 +152512,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Thirsk+Ritz+YO7+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 54.232,
       "lng": -1.343,
       "screenings": [
@@ -152577,7 +152577,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.48783,
       "lng": 0.28088,
       "screenings": [
@@ -152642,7 +152642,7 @@
       ],
       "region": "Scotland",
       "booking_url": "https://www.google.com/search?q=Thurso+Thurso+Highland+KW14+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 58.58859,
       "lng": -3.55449,
       "screenings": [
@@ -152675,7 +152675,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.43627,
       "lng": -3.56081,
       "screenings": [
@@ -153076,7 +153076,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Totnes+%2C+Dartington+Hall+TQ9+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.4518,
       "lng": -3.6942,
       "screenings": [
@@ -153141,7 +153141,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.3186,
       "lng": -2.20721,
       "screenings": [
@@ -153510,7 +153510,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.15356,
       "lng": 0.29574,
       "screenings": [
@@ -153959,7 +153959,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.54498,
       "lng": -0.47699,
       "screenings": [
@@ -154440,7 +154440,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.6833,
       "lng": -1.50592,
       "screenings": [
@@ -154809,7 +154809,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=Wakefield+Reel+WF1+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.683,
       "lng": -1.497,
       "screenings": [
@@ -154842,7 +154842,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.01331,
       "lng": -1.49511,
       "screenings": [
@@ -155403,7 +155403,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.585,
       "lng": -1.983,
       "screenings": [
@@ -155516,7 +155516,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.38386,
       "lng": -0.41632,
       "screenings": [
@@ -155565,7 +155565,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.44655,
       "lng": -0.19346,
       "screenings": [
@@ -156558,7 +156558,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.google.com/search?q=Wareham+Dorset+Rex+BH20+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.68648,
       "lng": -2.14582,
       "screenings": [
@@ -156783,7 +156783,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.386,
       "lng": -2.581,
       "screenings": [
@@ -157136,7 +157136,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.395,
       "lng": -2.618,
       "screenings": [
@@ -157697,7 +157697,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.google.com/search?q=Waterloo+BFI+Southbank+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.50658,
       "lng": -0.11544,
       "screenings": [
@@ -159785,7 +159785,7 @@
           "title": "Dekalog Episodes II and X",
           "film_id": "dekalog-episodes-ii-and-x",
           "source_url": "more.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Jerzy_Stuhr_27_stycznia_2018_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Criterion_Collection_section_at_Barnes_%26_Noble.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=Dekalog+Episodes+II+and+X",
           "book": "https://www.google.com/search?q=%22Dekalog+Episodes+II+and+X%22+Waterloo+BFI+Southbank+tickets",
           "starts_at": "2026-12-12T14:40:00",
@@ -160729,7 +160729,7 @@
           "title": "Dekalog Episodes II and X",
           "film_id": "dekalog-episodes-ii-and-x",
           "source_url": "more.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Jerzy_Stuhr_27_stycznia_2018_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Criterion_Collection_section_at_Barnes_%26_Noble.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=Dekalog+Episodes+II+and+X",
           "book": "https://www.google.com/search?q=%22Dekalog+Episodes+II+and+X%22+Waterloo+BFI+Southbank+tickets",
           "starts_at": "2026-12-30T20:30:00",
@@ -160754,7 +160754,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.66395,
       "lng": -0.40558,
       "screenings": [
@@ -161139,7 +161139,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.65649,
       "lng": -0.39032,
       "screenings": [
@@ -161508,7 +161508,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Welwyn+Garden+City+Garden+City+Cinema+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.80527,
       "lng": -0.2076,
       "screenings": [
@@ -161573,7 +161573,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5565,
       "lng": -0.29214,
       "screenings": [
@@ -162262,7 +162262,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.52168,
       "lng": -1.99346,
       "screenings": [
@@ -162503,7 +162503,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.38212,
       "lng": 1.33668,
       "screenings": [
@@ -162600,7 +162600,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.34603,
       "lng": -2.97665,
       "screenings": [
@@ -162921,7 +162921,7 @@
       ],
       "region": "North East",
       "booking_url": "https://www.google.com/search?q=Whitley+Bay+Jam+Jar+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 55.04285,
       "lng": -1.44642,
       "screenings": [
@@ -163130,7 +163130,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Widnes+Cheshire+Reel+WA8+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.362,
       "lng": -2.729,
       "screenings": [
@@ -163163,7 +163163,7 @@
       ],
       "region": "Greater Manchester",
       "booking_url": "https://www.google.com/search?q=Wigan+Omniplex+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.5487,
       "lng": -2.6461,
       "screenings": [
@@ -163196,7 +163196,7 @@
       ],
       "region": "North West",
       "booking_url": "https://www.google.com/search?q=Wilmslow+Rex+SK9+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.3269,
       "lng": -2.2314,
       "screenings": [
@@ -163229,7 +163229,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.curzon.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.42033,
       "lng": -0.20528,
       "screenings": [
@@ -163262,7 +163262,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.41987,
       "lng": -0.20485,
       "screenings": [
@@ -163824,7 +163824,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.06147,
       "lng": -1.31782,
       "screenings": [
@@ -163921,7 +163921,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.64994,
       "lng": 0.14292,
       "screenings": [
@@ -164066,7 +164066,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.lightcinemas.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.666,
       "lng": 0.159,
       "screenings": [
@@ -164179,7 +164179,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.78715,
       "lng": -1.48606,
       "screenings": [
@@ -164420,7 +164420,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Woking+Surrey+Nova+GU21+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.319,
       "lng": -0.558,
       "screenings": [
@@ -164949,7 +164949,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Wolverhampton+Lockworks+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.587,
       "lng": -2.128,
       "screenings": [
@@ -165126,7 +165126,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.59521,
       "lng": -2.09146,
       "screenings": [
@@ -165927,7 +165927,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.5947,
       "lng": -0.10655,
       "screenings": [
@@ -166360,7 +166360,7 @@
       ],
       "region": "London",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 51.59687,
       "lng": -0.1086,
       "screenings": [
@@ -166537,7 +166537,7 @@
       ],
       "region": "East of England",
       "booking_url": "https://www.google.com/search?q=Woodbridge+Riverside+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.09112,
       "lng": 1.31923,
       "screenings": [
@@ -166698,7 +166698,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.18937,
       "lng": -2.2186,
       "screenings": [
@@ -166907,7 +166907,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.google.com/search?q=Worcester+Malvern+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.19894,
       "lng": -2.24266,
       "screenings": [
@@ -166972,7 +166972,7 @@
       ],
       "region": "West Midlands",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 52.19487,
       "lng": -2.22228,
       "screenings": [
@@ -167357,7 +167357,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Worthing+Connaught+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.81399,
       "lng": -0.36899,
       "screenings": [
@@ -167550,7 +167550,7 @@
       ],
       "region": "South East",
       "booking_url": "https://www.google.com/search?q=Worthing+Dome+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.81012,
       "lng": -0.36846,
       "screenings": [
@@ -167615,7 +167615,7 @@
       ],
       "region": "Wales",
       "booking_url": "https://www.odeon.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.04452,
       "lng": -2.98908,
       "screenings": [
@@ -168064,7 +168064,7 @@
       ],
       "region": "South West",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 50.9406,
       "lng": -2.62584,
       "screenings": [
@@ -168449,7 +168449,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.myvue.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.9921,
       "lng": -1.09852,
       "screenings": [
@@ -168850,7 +168850,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.picturehouses.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.95913,
       "lng": -1.08489,
       "screenings": [
@@ -169082,7 +169082,7 @@
           "title": "National Theatre Live - The Motive and the Cue",
           "film_id": "national-theatre-live-the-motive-and-the-cue",
           "source_url": "ntlive.html",
-          "poster_url": "https://upload.wikimedia.org/wikipedia/en/e/ed/TheMotiveAndTheCueWestEndPoster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+          "poster_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Johnny_Flynn_TIFF_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
           "imdb_url": "https://www.imdb.com/find/?q=National+Theatre+Live+-+The+Motive+and+the+Cue",
           "book": "https://www.google.com/search?q=%22National+Theatre+Live+-+The+Motive+and+the+Cue%22+York+City+Screen+Picturehouse+tickets",
           "starts_at": "2027-03-04T12:00:00",
@@ -169107,7 +169107,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.everymancinema.com/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.95491,
       "lng": -1.09314,
       "screenings": [
@@ -169236,7 +169236,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.cineworld.co.uk/",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.9587,
       "lng": -1.0825,
       "screenings": [
@@ -169669,7 +169669,7 @@
       ],
       "region": "Yorkshire",
       "booking_url": "https://www.google.com/search?q=York+Student+Cinema+cinema+tickets",
-      "last_checked": "2026-11-08T22:19:53",
+      "last_checked": "2026-11-09T06:48:01",
       "lat": 53.9462,
       "lng": -1.05443,
       "screenings": [
